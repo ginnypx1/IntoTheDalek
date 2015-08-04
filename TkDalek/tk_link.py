@@ -1,67 +1,70 @@
-def tell_joke():
-	"""You must tell a successful joke to link the Doctor and the Dalek"""
+from tkinter import *
 
-	print("\n")
-	print("Which joke do you decide to tell?")
-	print("A) Why do the Daleks eat apples?")
-	print("B) How does a Dalek keep its skin soft?")
-	print("C) Why did the Dalek cross the road?")
-	print("\n")
-
-	joke = input(">  ").lower()
-
+def result_joke(joke, story_tag):
+	"checks the results of the joke told"
+	story_tag.delete(1.0, END)
 	# Dalek laughs, Doctor doens't. Fail.
 	if joke == 'a':
-		print("-"*20)
-		print("The Dalek starts to laugh.")
-		print("'I know this one!' he says.")
-		print("'An apple a day... Keeps the Doctor away!'")
-		print("'HA HA HA HA HA!'")
-		print("\n")
-		print("You look at the Doctor.")
-		print("He isn't amused.")
-		print("The link fails. The Daleks attack!")
-		print("\n")
+		joke_loss = """The Dalek starts to laugh.
+'I know this one!' he says.
+'An apple a day... Keeps the Doctor away!'
+'HA HA HA HA HA!'
+
+You look at the Doctor.
+He isn't amused.
+The link fails. The Daleks attack!"""
+		story_tag.insert(1.0, joke_loss)
 		# DIE
 		return 'death'
 	# Doctor laughs, Dalek doesn't. Fail.
 	elif joke == 'b':
-		print("-"*20)
-		print("'I know this one!' the Doctor says.")
-		print("'EXFOLIATE!'")
-		print("The Doctor cracks up and smacks his knee.")
-		print("'HA HA HA HA HA!'")
-		print("\n")
-		print("You look around the inside of the Dalek.")
-		print("You can both tell. He isn't amused.")
-		print("The link fails. The Daleks attack!")
-		print("\n")
+		joke_loss2 = """'I know this one!' the Doctor says.
+'EXFOLIATE!'
+The Doctor cracks up and smacks his knee.
+'HA HA HA HA HA!'
+
+You look around the inside of the Dalek.
+You can both tell. He isn't amused.
+The link fails. The Daleks attack!"""
+		story_tag.insert(1.0, joke_loss2)
 		# DIE
 		return 'death'
 	# Doctor and Dalek laugh. Link succeeds.
 	elif joke == 'c':
-		print("-"*20)
-		print("'To exterminate humanity!'")
-		print("The Doctor and the Dalek yell at the same time.")
-		print("'HA HA HA HA HA!'")
-		print("\n")
-		print("The ship fills with laughter.")
-		print("Then something wonderful happens.")
-		print("All the images around you become the star being born.")
-		print("It's beautiful. Mezmerizing. You are transported.")
-		print("...And so are the Doctor and the Dalek.")
-		print("\n")
-		print("The Dalek tears up.")
-		print("'How could you destroy when creation is so wonderful?' he says.")
-		print("He is good again.")
-		print("\n")
+		joke_win = """'To exterminate humanity!'
+The Doctor and the Dalek yell at the same time.
+'HA HA HA HA HA!'
+
+The ship fills with laughter.
+Then something wonderful happens.
+All the images around you become the star being born.
+It's beautiful. Mezmerizing. You are transported.
+...And so are the Doctor and the Dalek.
+
+The Dalek tears up.
+'How could you destroy when creation is so wonderful?' he says.
+He is good again."""
+		story_tag.insert(1.0, joke_win)
 		# DIE
 		return 'victory'
 	# not right input, run again.
 	else:
-		print("-"*20)
-		print("I know. They're not the best...")
-		print("...but they're all we got.")
-		print("Please type A, B or C.")
-		print("\n")
-		tell_joke()
+		joke_again: """I know. They're not the best...
+...but they're all we got."""
+		story_tag.insert(1.0, joke_again)
+		
+def tell_joke(story_tag, action_tag):
+	"""You must tell a successful joke to link the Doctor and the Dalek"""
+	story_tag.delete(1.0, END)
+	jokes = {"a": "Why do the Daleks eat apples?",
+		"b": "How does a Dalek keep its skin soft?",
+		"c": "Why did the Dalek cross the road?"}
+	# create game directions
+	joke_dirs = "Which joke do you decide to tell?"
+	story_tag.insert(1.0, joke_dirs)
+
+	# create radio buttons to answer the question
+	joke_var = StringVar()
+	for key, value in jokes.items():
+		Radiobutton(action_tag, text=value, variable=joke_var, value=key).pack(side=TOP, fill=X)
+	joke_but = Button(action_tag, text="Go", command=(lambda: result_joke(joke_var.get(), story_tag))).pack(side=TOP, fill=X)
