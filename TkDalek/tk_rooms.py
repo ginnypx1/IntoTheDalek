@@ -64,14 +64,14 @@ This strange new Dalek appears to be... GOOD."""
 		a_but = Button(entries, text='Enter', command=(lambda: chooseToHelp(a_var.get(), story_box))).pack(side=RIGHT)
 		entries.pack(side=TOP, fill=X)
 
-		def chooseToHelp(self, action, story_tag):
+		def chooseToHelp(self, action, story_tag, action_tag):
 			if action == "no":
 				no_text = "You are shoved back in your Tardis and released into space."
 				story_tag.delete(1.0, END)
 				story_tag.insert(1.0, no_text)
 				exit(1)
 			elif action == "yes":
-				return tk_logic_game.logic_quiz()
+				return tk_logic_game.logic_quiz(story_tag, action_tag)
 			else:
 				story_tag.delete(1.0, END)
 				again_text = "Yes or no. There is no other choice."
@@ -91,7 +91,7 @@ Dalek technology designed this vault to suppress any compassion...
 ...And also to store all of the Dalek's memories."""
 		story_tag.insert(1.0, CortexVault_story)
 		# You try to break into the vault to directly link with the Dalek's processing
-		return tk_vault.crack_code()
+		return tk_vault.crack_code(story_tag, action_tag)
 
 
 class WasteCenter(object):
@@ -117,7 +117,7 @@ Rock Paper Scissors? He can't be serious.
 He is."""
 		story_tag.insert(1.0, WasteCenter_story)
 		# You must come up with a plan to camoflage yourself from the antibodies long enough to find the source of the radiation
-		return tk_rps.rps()
+		return tk_rps.rps(story_tag, action_tag)
 		
 
 class PowerCenter(object):
@@ -136,7 +136,7 @@ The Doctor hands you his sonic screwdriver.
 'You shoot while I twist the right wires!' he orders."""
 		story_tag.insert(1.0, PowerCenter_story)
 		# You must use the sonic screwdriver to stop the radiation leak
-		return tk_zap.seal_crack()
+		return tk_zap.seal_crack(story_tag, action_tag)
 
 
 class ConsciousnessLink(object):
@@ -163,7 +163,7 @@ The Doctor has an idea.
 '...I may be able to sync up with his brain.'"""
 		story_tag.insert(1.0, ConsciousnessLink_story)
 		# You must link the Doctor's brain with the Dalek's and get him to relive the moment he saw the creation of the star
-		return tk_link.tell_joke()
+		return tk_link.tell_joke(story_tag, action_tag)
 
 
 class Victory(object):
