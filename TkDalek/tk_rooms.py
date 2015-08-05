@@ -46,37 +46,35 @@ class Aristotle(object):
 You open the door and shake yourself off, get your bearings.
 You and the Doctor have just rescued the rebel fighter Journey Blue.
 Her shuttle was under attack from the Daleks.
+
 Your Tardis stumbled into the battle and you joined the fight.
 Now you have returned her safely to her rebel base ship.
-
 You expect to enter to cheers, but instead, there is only silence....
 You are surrounded. The rebel officers have been waiting for you.
 They explain: They have captured a strange Dalek and they need your help.
+
 This strange new Dalek appears to be... GOOD."""
 		story_tag.insert(1.0, Aristotle_story)
 
 		# Choice to act in action_box
+		options = ['Yes', 'No']
 		choice = Label(action_tag, text='Will you help confirm the existence of a GOOD Dalek?')
 		choice.pack(side=TOP, fill=X)
 		entries = Frame(action_tag)
 		a_var = StringVar()
-		a_ent = Entry(entries, textvariable=a_var).pack(side=LEFT)
-		a_but = Button(entries, text='Enter', command=(lambda: chooseToHelp(a_var.get(), story_box))).pack(side=RIGHT)
+		for option in options:
+			Radiobutton(action_tag, text=option, variable=a_var, value=option).pack(side=LEFT)
+		a_but = Button(entries, text='Enter', command=(lambda: self.chooseToHelp(a_var.get(), story_tag, action_tag))).pack(side=RIGHT)
 		entries.pack(side=TOP, fill=X)
 
-		def chooseToHelp(self, action, story_tag, action_tag):
-			if action == "no":
-				no_text = "You are shoved back in your Tardis and released into space."
-				story_tag.delete(1.0, END)
-				story_tag.insert(1.0, no_text)
-				exit(1)
-			elif action == "yes":
-				return tk_logic_game.logic_quiz(story_tag, action_tag)
-			else:
-				story_tag.delete(1.0, END)
-				again_text = "Yes or no. There is no other choice."
-				story_tag.insert(1.0, again_text)
-				return 'aristotle'
+	def chooseToHelp(self, action, story_tag, action_tag):
+		if action == "No":
+			no_text = "You are shoved back in your Tardis and released into space."
+			story_tag.delete(1.0, END)
+			story_tag.insert(1.0, no_text)
+			exit(1)
+		else:
+			return tk_logic_game.logic_quiz(story_tag, action_tag)
 
 
 class CortexVault(object):

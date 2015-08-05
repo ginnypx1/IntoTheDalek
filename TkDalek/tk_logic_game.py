@@ -1,10 +1,22 @@
 from tkinter import *
 
+import tk_rooms
+
+def move_on(next_room):
+	return next_room
+		
 # create the function to check the answer, finish the game	
-def check_answer(answer):
+def check_answer(answer, story_tag, action_tag):
 	"checks the answer given to the logic question"
+	# cleans and clears field
 	answer.lower()
 	story_tag.delete(1.0, END)
+	for widget in action_tag.winfo_children():
+		widget.destroy()
+	# creates a next button 
+	next_but = Button(action_tag, text="Next", command=(lambda: move_on(next_var)))
+	next_but.pack(side=LEFT, fill=X)
+	# process answer
 	if "other" in answer:			
 		# display win message
 		solve_text = """You turn away from that Dalek and point to the other one.
@@ -21,7 +33,7 @@ You wait patiently while the shrink ray warms up...
 5... 4... 3... 2... 1..."""
 		story_tag.insert(1.0, solve_text)
 		# proceed to the next room, the Cortex Vault
-		return 'cortex_vault'
+		next_var = 'cortex_vault'
 	else:
 		miss_text = """You tell the guards to release the Dalek.
 They unlock the chains.
@@ -29,10 +41,13 @@ You all hold your breath...
 The Dalek opens fire..."""
 		story_tag.insert(1.0, miss_text)
 		# play Death scene
-		return 'death'
+		next_var = 'death'
 
 def logic_quiz(story_tag, action_tag):
 	"""You must solve a simple logic puzzle to discover the good Dalek"""
+	# clear action_box
+	for widget in action_tag.winfo_children():
+		widget.destroy()
 	# create the game directions
 	logic_dirs = """The rebel officers step aside.
 Two Daleks are wheeled into the center of the room.
@@ -55,6 +70,6 @@ What question do you ask?"""
 	logic_ent.pack(side=TOP, fill=X)
 
 	# create the button to check the answer
-	logic_but = Button(action_tag, text='Ask', command=(lambda: check_answer(logic_var.get())))
+	logic_but = Button(action_tag, text='Ask', command=(lambda: check_answer(logic_var.get(), story_tag, action_tag)))
 	logic_but.pack(side=TOP, fill=X)
 					

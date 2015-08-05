@@ -8,13 +8,13 @@ import tk_rooms
 
 #################### GRAPHICS INIT
 class GameDisplay(Frame):
-	"""Creates a main window in which to play the game"""
+	"""Creates a main window in which to paly the game"""
 	def __init__(self, parent=None):
 		Frame.__init__(self, parent)
 
 		# create a top box to tell the story
 		story = """Are you ready to travel... 
-							INTO THE DALEK?"""
+					INTO THE DALEK?"""
 		story_box = Text(self, bd=2, height=20, width=70, wrap=WORD)
 		story_box.insert(1.0, story)
 		story_box.pack(side=TOP, expand=YES, fill=BOTH)

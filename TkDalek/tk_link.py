@@ -49,7 +49,7 @@ He is good again."""
 		return 'victory'
 	# not right input, run again.
 	else:
-		joke_again: """I know. They're not the best...
+		joke_again = """I know. They're not the best...
 ...but they're all we got."""
 		story_tag.insert(1.0, joke_again)
 		
