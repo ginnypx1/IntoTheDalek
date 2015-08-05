@@ -34,6 +34,7 @@ You wait patiently while the shrink ray warms up...
 		story_tag.insert(1.0, solve_text)
 		# proceed to the next room, the Cortex Vault
 		next_var = 'cortex_vault'
+		return next_var
 	else:
 		miss_text = """You tell the guards to release the Dalek.
 They unlock the chains.
@@ -42,12 +43,12 @@ The Dalek opens fire..."""
 		story_tag.insert(1.0, miss_text)
 		# play Death scene
 		next_var = 'death'
+		return next_var
 
 def logic_quiz(story_tag, action_tag):
 	"""You must solve a simple logic puzzle to discover the good Dalek"""
-	# clear action_box
 	for widget in action_tag.winfo_children():
-		widget.destroy()
+			widget.destroy()
 	# create the game directions
 	logic_dirs = """The rebel officers step aside.
 Two Daleks are wheeled into the center of the room.
