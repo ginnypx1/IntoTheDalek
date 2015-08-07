@@ -27,6 +27,7 @@ class GameDisplay(Frame):
 		quit_space.pack(side=TOP, fill=X)
 
 	def start_game(self, story_tag, action_tag):
+		"calls the first scene of the game"
 		at = Aristotle()
 		at.enter(story_tag, action_tag)
 

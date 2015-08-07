@@ -1,11 +1,14 @@
 from tkinter import *
 
 from cortex_vault import CortexVault
+from death import Death
+from nuts_and_bolts import clear_window, game_over
 
 
 class Aristotle(object):
-
+	"""First scene of the game: Inside the Aristotle"""
 	def enter(self, story_tag, action_tag):
+		"starts the scene in the Aristotle"
 		# Description of room scene in story_box
 		story_tag.delete(1.0, END)
 		Aristotle_story = """The Tardis flickers to life in the control room of the 'Aristotle'.
@@ -34,18 +37,20 @@ This strange new Dalek appears to be... GOOD."""
 		entries.pack(side=TOP, fill=X)
 
 	def chooseToHelp(self, action, story_tag, action_tag):
+		"gives you a choice to act"
+		clear_window(action_tag)
 		if action == "No":
 			no_text = "You are shoved back in your Tardis and released into space."
 			story_tag.delete(1.0, END)
 			story_tag.insert(1.0, no_text)
-			exit(1)
+			game_over(action_tag)
 		else:
 			return self.logic_quiz(story_tag, action_tag)
 
 	def logic_quiz(self, story_tag, action_tag):
-		"""You must solve a simple logic puzzle to discover the good Dalek"""
-		for widget in action_tag.winfo_children():
-			widget.destroy()
+		"you must solve a simple logic puzzle to discover the good Dalek"
+		# clear the action box
+		clear_window(action_tag)
 		# create the game directions
 		logic_dirs = """The rebel officers step aside.
 Two Daleks are wheeled into the center of the room.
@@ -76,8 +81,7 @@ What question do you ask?"""
 		# cleans and clears field
 		answer.lower()
 		story_tag.delete(1.0, END)
-		for widget in action_tag.winfo_children():
-			widget.destroy()
+		clear_window(action_tag)
 		# creates a next button 
 		next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
 		next_but.pack(side=LEFT, fill=X)
@@ -111,6 +115,26 @@ The Dalek opens fire..."""
 			return next_var
 
 	def move_on(self, next_room, story_tag, action_tag):
+		"moves the game into the next scene"
 		if next_room == 'cortex_vault':
 			cv = CortexVault()
 			cv.enter(story_tag, action_tag)
+		else:
+			dt = Death()
+			dt.enter(story_tag, action_tag)
+
+
+if __name__ == '__main__':
+	root = Tk()
+	root.title('Aristotle')
+
+	story_box = Text(root, bd=2, height=20, width=80)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+
+	action_box = Frame(root, height=10, width=50)
+	action_box.pack(side=TOP, expand=YES, fill=BOTH)
+
+	at = Aristotle()
+	at.enter(story_box, action_box)
+
+	root.mainloop()

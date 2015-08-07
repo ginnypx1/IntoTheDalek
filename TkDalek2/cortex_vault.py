@@ -1,10 +1,21 @@
 from tkinter import *
 from random import randint
 
+from death import Death
+from nuts_and_bolts import clear_window
+from waste_center import WasteCenter
+
 
 class CortexVault(object):
+	"""Creates the second scene of the game, in the cortex vault"""
+	def __init__(self):
+		"creates game variables"
+		self.code = "{}{}{}".format(randint(0,1), randint(0,1), randint(0,1))
+		self.count = 0
+		self.guessed_codes = []
 
 	def enter(self, story_tag, action_tag):
+		"starts the cortex vault scene"
 		# Description of room scene
 		story_tag.delete(1.0, END)
 		CortexVault_story = """You find yourself inside a metal hallway, black with red lights.
@@ -18,8 +29,7 @@ Dalek technology designed this vault to suppress any compassion...
 
 	def crack_code(self, story_tag, action_tag):
 		"""You must crack a simple code to advance to the next part of the Dalek"""
-		for widget in action_tag.winfo_children():
-			widget.destroy()
+		clear_window(action_tag)
 		# create the game directions
 		story_tag.delete(1.0, END)
 		dirs = """There's a simple keypad lock on the Dalek's centeral vault.
@@ -37,27 +47,26 @@ Dalek technology designed this vault to suppress any compassion...
 		code_lbl = Label(code_frm, text='[KEYPAD=>]').pack(side=LEFT)
 		code_var = StringVar()
 		code_ent = Entry(code_frm, textvariable=code_var).pack(side=LEFT)
-		code_but = Button(code_frm, text='Enter', command=(lambda: self.check_code(code_var.get(), code_info, story_tag))).pack(side=RIGHT)
+		code_but = Button(code_frm, text='Enter', command=(lambda: self.check_code(code_var.get(), code_info, story_tag, action_tag))).pack(side=RIGHT)
 		code_frm.pack(side=TOP, expand=YES, fill=BOTH)
 
-		# game variables
-		code = "{}{}{}".format(randint(0,1), randint(0,1), randint(0,1))
-		count = 0
-		guessed_codes = []
-
 	# game loop	
-	def check_code(self, guess, info_tag, story_tag):
+	def check_code(self, guess, info_tag, story_tag, action_tag):
 		"checks the entered code"
-		while guess != code and count < 5:
-			# count the number of guesses
-			count += 1
-			guessed_codes.append(guess)
-			info_tag.delete(1.0, END)
-			# if guess == self.code:
-			if guess == code:
-				# display win state
-				story_tag.delete(1.0, END)
-				win_text = """POP! The Dalek vault opens.
+		# count the guesses
+		self.count += 1
+		self.guessed_codes.append(guess)
+		print(self.code)
+		# if guess == code:
+		if guess == self.code:
+			# clears action box
+			clear_window(action_tag)
+			# creates next button
+			next_win_but = next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_win_but.pack(side=LEFT, fill=X)
+			# display win state
+			story_tag.delete(1.0, END)
+			win_text = """POP! The Dalek vault opens.
 Journey Blue steps forward and sticks her hand inside.
 'Wrong move,' says the Doctor.
 You watch as the Dalek unleashes an attack force...
@@ -66,14 +75,20 @@ It is a squadron of  super-fast autonomic antibodies.
 They attack what is giving them pain...
 They surround Journey Blue and they EXTERMINATE.
 The Doctor shouts, 'We have to find somewhere unguareded! Run!'"""
-				story_tag.insert(1.0, win_text)
-				# proceed to the next room
-				return 'waste_center'
-				break
-			elif count == 5:
-				# display loss state
-				story_tag.delete(1.0, END)
-				loss_text = """Oh no. The Dalek vault shuts down....
+			story_tag.insert(1.0, win_text)
+			# proceed to the next room
+			next_var = 'waste_center'
+			return next_var
+		# if there are 5 strikes:
+		elif self.count == 5:
+			# clears action box
+			clear_window(action_tag)
+			# creates next button
+			next_loss_but = next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_loss_but.pack(side=LEFT, fill=X)
+			# display loss state
+			story_tag.delete(1.0, END)
+			loss_text = """Oh no. The Dalek vault shuts down....
 Journey Blue gets out her grapple hook and shoots it.
 'Wrong move,' says the Doctor.
 You watch as the Dalek unleashes an attack force...
@@ -81,13 +96,39 @@ It is a squadron of  super-fast autonomic antibodies.
 
 They attack what is giving them pain... 
 They surround you all and they EXTERMINATE."""
-				story_tag.insert(1.0, loss_text)
-				# DIE
-				return 'death'
-				break
-			else:
-				miss_text = """BZZZZZZ. Incorrect. Try again. {} guess(es) remaining.
+			story_tag.insert(1.0, loss_text)
+			# DIE
+			next_var = 'death'
+			return next_var
+		# or ask for another entry
+		else:
+			miss_text = """BZZZZZZ. Incorrect. Try again. {} guess(es) remaining.
 
-You've tried the codes: {}""".format((5 - count), guessed_codes)
-				info_tag.insert(1.0, miss_text)
-			
+You've tried the codes: {}""".format((5 - self.count), self.guessed_codes)
+			info_tag.config(text=miss_text)
+
+	def move_on(self, next_room, story_tag, action_tag):
+		"moves the game to the next scene, the waste center"
+		if next_room == 'waste_center':
+			print('waste_center')
+			wc = WasteCenter()
+			wc.enter(story_tag, action_tag)
+		else:
+			dt = Death()
+			dt.enter(story_tag, action_tag)
+
+
+if __name__ == '__main__':
+	root = Tk()
+	root.title('Crack the code')
+
+	story_box = Text(root, bd=2, height=20, width=80)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+
+	action_box = Frame(root, height=10, width=50)
+	action_box.pack(side=TOP, expand=YES, fill=BOTH)
+
+	cv = CortexVault()
+	cv.enter(story_box, action_box)
+
+	root.mainloop()
