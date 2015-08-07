@@ -3,6 +3,7 @@ from random import randint
 
 from death import Death
 from nuts_and_bolts import clear_window
+from power_center import PowerCenter
 
 
 class WasteCenter(object):
@@ -17,7 +18,7 @@ class WasteCenter(object):
 		# Description of room scene
 		story_tag.delete(1.0, END)
 		WasteCenter_story = """The waste center looks like the inside of a giant garbage dumpster.
-While you clean off your shoes, the Doctor whips out his sonic screwdriver
+While you clean off your shoes, the Doctor whips out his sonic screwdriver.
 He takes some atmospheric readings.
 He confirms -- this area is unguarded.
 But something very nearby is emitting a very high degree of radiation.
@@ -26,7 +27,7 @@ You cannot stay inside this area for long...
 You must leave. You must find the source of radiation.
 But how can you camoflage yourself?
 The Doctor suggests you rub just enough garbage on yourself...
-...to cover the smell. Yuck.
+"...to cover the smell." Yuck.
 You don't want to.
 		
 The Doctor suggets you solve the impass with a game of RPS.
@@ -40,8 +41,7 @@ He is."""
 		"You must play a game of Rock Paper Scissors"
 		# display game directions
 		rps_dirs = "1.. 2.. 3.. THROW!"
-		story_tag.delete(1.0, END)
-		story_tag.insert(1.0, rps_dirs)
+		rps_lbl = Label(action_tag, text=rps_dirs, height=2).pack(side=TOP)
 
 		# create radio buttons to answer the question
 		rps_var = StringVar()
@@ -95,9 +95,8 @@ You make a run for the Power Center.""".format(hand, self.dr_hand)
 	def move_on(self, next_room, story_tag, action_tag):
 		"moves the game into the next scene"
 		if next_room == 'power_center':
-			print(next_room)
-			#pc = PowerCenter()
-			#pc.enter(story_tag, action_tag)
+			pc = PowerCenter()
+			pc.enter(story_tag, action_tag)
 		else:
 			dt = Death()
 			dt.enter(story_tag, action_tag)	
