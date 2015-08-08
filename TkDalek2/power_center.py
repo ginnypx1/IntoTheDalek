@@ -1,5 +1,6 @@
 from tkinter import *
 
+from consciousness_link import ConsciousnessLink
 from death import Death
 from nuts_and_bolts import clear_window
 
@@ -86,9 +87,8 @@ You feel yourself fading away..."""
 	def move_on(self, next_room, story_tag, action_tag):
 		"moves the game into the next scene"
 		if next_room == 'consciousness_link':
-			print(next_room)
-			#cl = ConsciousnessLink()
-			#cl.enter(story_tag, action_tag)
+			cl = ConsciousnessLink()
+			cl.enter(story_tag, action_tag)
 		else:
 			dt = Death()
 			dt.enter(story_tag, action_tag)	

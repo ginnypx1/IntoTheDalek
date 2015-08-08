@@ -15,6 +15,7 @@ class WasteCenter(object):
 
 	def enter(self, story_tag, action_tag):
 		"starts the scene inside the waste center"
+		clear_window(action_tag)
 		# Description of room scene
 		story_tag.delete(1.0, END)
 		WasteCenter_story = """The waste center looks like the inside of a giant garbage dumpster.
@@ -52,7 +53,6 @@ He is."""
 	def check_throw(self, hand, story_tag, action_tag):
 		"checks the results of a game of rock paper scissors"
 		story_tag.delete(1.0, END)
-		print(hand, self.dr_hand)
 		# wins
 		if self.dr_hand == 'Paper' and hand == 'Scissors' or self.dr_hand == 'Scissors' and hand == 'Rock' or self.dr_hand == 'Rock' and hand == 'Paper':
 			rps_win = """{}, {}:

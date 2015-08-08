@@ -1,7 +1,9 @@
 from tkinter import *
 
-from quitter import Quitter
+
 from aristotle import Aristotle
+from nuts_and_bolts import clear_window
+from quitter import Quitter
 
 
 class GameDisplay(Frame):
@@ -28,6 +30,7 @@ class GameDisplay(Frame):
 
 	def start_game(self, story_tag, action_tag):
 		"calls the first scene of the game"
+		clear_window(action_tag)
 		at = Aristotle()
 		at.enter(story_tag, action_tag)
 
