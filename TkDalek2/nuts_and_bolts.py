@@ -3,7 +3,7 @@ from tkinter import *
 def clear_window(action_tag):
 	"clears the actions inside the action window"
 	for widget in action_tag.winfo_children():
-				widget.destroy()
+		widget.destroy()
 
 def game_over(action_tag):
 	game_over = "Extermination Successful. GAME OVER. The human race is dead."
