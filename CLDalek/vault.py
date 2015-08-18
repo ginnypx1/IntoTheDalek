@@ -12,12 +12,12 @@ def crack_code():
 	print("'But we only get 5 tries, before it shuts down for 24 hours.'")
 	print("\n")
 
-	code = "{}{}{}".format(randint(0,1), randint(0,1), randint(0,1))
+	code = "{}{}{}".format(randint(0, 1), randint(0, 1), randint(0, 1))
 	guess = 222
 	guesses = 0
 
 	while guess != code and guesses < 5:
-				
+		
 		guesses += 1
 		guess = input("[keypad]>  ")
 				
@@ -29,7 +29,7 @@ def crack_code():
 			print("You watch as the Dalek unleashes an attack force...")
 			print("\n")
 			print("It is a squadron of  super-fast autonomic antibodies.")
-			print("They attack what is giving them pain...") 
+			print("They attack what is giving them pain...")
 			print("They surround Journey Blue and they EXTERMINATE.")
 			print("The Doctor shouts, 'We have to find somewhere unguareded! Run!'")
 			print("\n")

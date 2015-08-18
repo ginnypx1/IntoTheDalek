@@ -3,8 +3,8 @@ from random import randint
 
 from nuts_and_bolts import clear_window
 
-class Death(object):
 
+class Death(object):
 	quips = [
 		"You are the Doctor! You are the enemy of the Daleks! You are dead!",
 		"Exterminate!",
@@ -16,7 +16,7 @@ class Death(object):
 		"Seek! Locate! Exterminate!",
 		"Nothing must interfere with the true destiny of the Daleks!! \nYou must be exterminated! Exterminated! EXTERMINATED!!",
 		"YOU ARE AN ENEMY OF THE DALEKS! YOU MUST BE DESTROYED!!"
-	]
+		]
 
 	def enter(self, story_tag, action_tag):
 		# clears the screen
@@ -27,7 +27,9 @@ class Death(object):
 		story_tag.insert(1.0, death_quip)
 		# tells us the game is over
 		game_over = "Extermination Successful. GAME OVER. The human race is dead."
-		death_lab = Label(action_tag, text=game_over).pack(side=TOP, fill=X)
+		death_lab = Label(action_tag, text=game_over)
+		death_lab.config(bg='orange', fg='navy')
+		death_lab.pack(side=TOP, fill=X, pady=5)
 
 
 if __name__ == '__main__':
@@ -35,9 +37,12 @@ if __name__ == '__main__':
 	root.title('You are Dead')
 
 	story_box = Text(root, bd=2, height=20, width=80)
-	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+	story_box.config(bg='navy', fg='gold')
+	story_box.config(bd=2, relief=SUNKEN)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH, padx=10, pady=10)
 
 	action_box = Frame(root, height=10, width=50)
+	action_box.config(bg='orange')
 	action_box.pack(side=TOP, expand=YES, fill=BOTH)
 
 	dt = Death()

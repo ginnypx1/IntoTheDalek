@@ -8,9 +8,8 @@ import vault
 import zap
 
 
-#################### TYPES OF SCENES
+# TYPES OF SCENES
 class Death(object):
-
 	quips = [
 		"You are the Doctor! You are the enemy of the Daleks! You are dead!",
 		"Exterminate!",
@@ -21,8 +20,7 @@ class Death(object):
 		"All enemies of the Daleks must be destroyed! Exterminate!",
 		"Seek! Locate! Exterminate!",
 		"Nothing must interfere with the true destiny of the Daleks!! \nYou must be exterminated! Exterminated! EXTERMINATED!!",
-		"YOU ARE AN ENEMY OF THE DALEKS! YOU MUST BE DESTROYED!!"
-	]
+		"YOU ARE AN ENEMY OF THE DALEKS! YOU MUST BE DESTROYED!!"]
 
 	def enter(self):
 		# chooses a death quip at random from the above list of quips
@@ -35,7 +33,6 @@ class Death(object):
 
 
 class Aristotle(object):
-
 	def enter(self):
 		# Description of room scene
 		print("The Tardis flickers to life in the control room of the 'Aristotle'.")
@@ -49,7 +46,7 @@ class Aristotle(object):
 		print("You are surrounded. The rebel officers have been waiting for you.")
 		print("They explain: They have captured a strange Dalek and they need your help.")
 		print("This strange new Dalek appears to be... GOOD.")
-		
+
 		action = input("Will you help confirm the existence of a GOOD Dalek?  ").lower()
 
 		if action == "no":
@@ -65,7 +62,6 @@ class Aristotle(object):
 
 
 class CortexVault(object):
-
 	def enter(self):
 		# Description of room scene
 		print("-"*20)
@@ -81,7 +77,6 @@ class CortexVault(object):
 
 
 class WasteCenter(object):
-
 	def enter(self):
 		# Description of room scene
 		print("-"*20)
@@ -108,7 +103,6 @@ class WasteCenter(object):
 		
 
 class PowerCenter(object):
-
 	def enter(self):
 		# Description of room scene
 		print("-"*20)
@@ -128,7 +122,6 @@ class PowerCenter(object):
 
 
 class ConsciousnessLink(object):
-
 	def enter(self):
 		# Description of room scene
 		print("-"*20)
@@ -156,7 +149,6 @@ class ConsciousnessLink(object):
 
 
 class Victory(object):
-
 	def enter(self):
 		# Description of room scene
 		print("-"*20)
@@ -180,4 +172,3 @@ class Victory(object):
 		print("\nGAME OVER. YOU WIN. PLEASE PLAY AGAIN.")
 		print("\n")
 		exit(1)
-

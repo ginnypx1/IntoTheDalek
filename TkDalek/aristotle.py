@@ -27,14 +27,20 @@ This strange new Dalek appears to be... GOOD."""
 
 		# Choice to act in action_box
 		options = ['Yes', 'No']
-		choice = Label(action_tag, text='Will you help confirm the existence of a GOOD Dalek?')
-		choice.pack(side=TOP, fill=X)
+		choice = Label(action_tag, bg='orange', fg='navy')
+		choice.config(text='Will you help confirm the existence of a GOOD Dalek?')
+		choice.pack(side=TOP, fill=X, pady=5)
+		# Creates the radiobuttons for yes or no
 		entries = Frame(action_tag)
+		entries.config(bg='orange')
 		a_var = StringVar()
 		for option in options:
-			Radiobutton(action_tag, text=option, variable=a_var, value=option).pack(side=LEFT)
-		a_but = Button(entries, text='Enter', command=(lambda: self.chooseToHelp(a_var.get(), story_tag, action_tag))).pack(side=RIGHT)
-		entries.pack(side=TOP, fill=X)
+			Radiobutton(action_tag, text=option, variable=a_var, value=option, bg='orange').pack(side=TOP)
+		entries.pack(side=TOP, fill=X, pady=5)
+		# creates the button for enter
+		a_but = Button(action_tag, text='ENTER')
+		a_but.config(command=(lambda: self.chooseToHelp(a_var.get(), story_tag, action_tag)))
+		a_but.pack(side=TOP, fill=X)
 
 	def chooseToHelp(self, action, story_tag, action_tag):
 		"gives you a choice to act"
@@ -70,10 +76,12 @@ What question do you ask?"""
 		# create the input box to answer question
 		logic_var = StringVar()
 		logic_ent = Entry(action_tag, textvariable=logic_var)
+		logic_ent.config(bg='orange', fg='navy')
 		logic_ent.pack(side=TOP, fill=X)
 
 		# create the button to check the answer
-		logic_but = Button(action_tag, text='Ask', command=(lambda: self.check_answer(logic_var.get(), story_tag, action_tag)))
+		logic_but = Button(action_tag, text='ASK')
+		logic_but.config(command=(lambda: self.check_answer(logic_var.get(), story_tag, action_tag)))
 		logic_but.pack(side=TOP, fill=X)
 
 	def check_answer(self, answer, story_tag, action_tag):
@@ -82,9 +90,9 @@ What question do you ask?"""
 		answer.lower()
 		story_tag.delete(1.0, END)
 		clear_window(action_tag)
-		# creates a next button 
-		next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-		next_but.pack(side=LEFT, fill=X)
+		# creates a next button
+		next_but = Button(action_tag, text="NEXT", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+		next_but.pack(side=TOP, fill=X)
 		# process answer
 		if "other" in answer:			
 			# display win message
@@ -129,9 +137,12 @@ if __name__ == '__main__':
 	root.title('Aristotle')
 
 	story_box = Text(root, bd=2, height=20, width=80)
-	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+	story_box.config(bg='navy', fg='gold')
+	story_box.config(bd=2, relief=SUNKEN)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH, padx=10, pady=10)
 
 	action_box = Frame(root, height=10, width=50)
+	action_box.config(bg='orange')
 	action_box.pack(side=TOP, expand=YES, fill=BOTH)
 
 	at = Aristotle()

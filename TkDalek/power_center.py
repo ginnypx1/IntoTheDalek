@@ -33,14 +33,21 @@ The Doctor hands you his sonic screwdriver.
 		"You must seal the radiation leak"
 		# create the game directions
 		zap_dirs = "Press 's' to power up the laser gun, then fire..."
-		zap_lbl = Label(action_tag, text=zap_dirs, height=2).pack(side=TOP)
+		zap_lbl = Label(action_tag, text=zap_dirs, height=2)
+		zap_lbl.config(bg='orange', fg='navy')
+		zap_lbl.pack(side=TOP)
 
 		# create the box to load and fire
-		zap_frm = Frame(action_tag)
+		zap_frm = Frame(action_tag, bg='orange')
 		zap_var = StringVar()
-		zap_ent = Entry(zap_frm, textvariable=zap_var).pack(side=LEFT)
-		zap_but = Button(zap_frm, text="Fire!", command=(lambda: self.check_power(zap_var.get(), story_tag, action_tag))).pack(side=RIGHT)
-		zap_frm.pack(side=TOP, expand=YES, fill=X)
+		zap_ent = Entry(zap_frm, textvariable=zap_var, width=25)
+		zap_ent.config(bg='navy', fg='orange')
+		zap_ent.pack(side=TOP)
+		zap_frm.pack(side=TOP, expand=YES, fill=X, pady=5)
+
+		zap_but = Button(action_tag, text="FIRE")
+		zap_but.config(command=(lambda: self.check_power(zap_var.get(), story_tag, action_tag)))
+		zap_but.pack(side=TOP, fill=X)
 
 	def check_power(self, your_power, story_tag, action_tag):
 		"checks to see if you have loaded the gun with enough power"
@@ -60,9 +67,10 @@ You only have a few moments before a large scale Dalek attack hits...
 			story_tag.insert(1.0, zap_win)
 			# progress to the next room, the Consciousness link
 			next_var = 'consciousness_link'
-			# creates a next button 
-			next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_but.pack(side=LEFT, fill=X)
+			# creates a next button
+			next_but = Button(action_tag, text="NEXT")
+			next_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_but.pack(side=TOP, fill=X)
 			return next_var
 		# you don't seal the crack in time
 		elif len(your_power) > 5 and len(your_power) < 10:
@@ -75,9 +83,10 @@ You feel yourself fading away..."""
 			story_tag.insert(1.0, zap_loss)
 			# DIE
 			next_var = 'death'
-			# creates a next button 
-			next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_but.pack(side=LEFT, fill=X)
+			# creates a next button
+			next_but = Button(action_tag, text="NEXT")
+			next_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_but.pack(side=TOP, fill=X)
 			return next_var
 		else:
 			story_tag.delete(1.0, END)
@@ -91,8 +100,7 @@ You feel yourself fading away..."""
 			cl.enter(story_tag, action_tag)
 		else:
 			dt = Death()
-			dt.enter(story_tag, action_tag)	
-	
+			dt.enter(story_tag, action_tag)
 
 
 if __name__ == '__main__':
@@ -100,9 +108,12 @@ if __name__ == '__main__':
 	root.title('Power Center')
 
 	story_box = Text(root, bd=2, height=20, width=80)
-	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+	story_box.config(bg='navy', fg='gold')
+	story_box.config(bd=2, relief=SUNKEN)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH, padx=10, pady=10)
 
 	action_box = Frame(root, height=10, width=50)
+	action_box.config(bg='orange')
 	action_box.pack(side=TOP, expand=YES, fill=BOTH)
 
 	pc = PowerCenter()

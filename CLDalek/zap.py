@@ -8,7 +8,6 @@ def seal_crack():
 	crack_power = 10
 	your_power = input('>  ').lower()
 
-
 	# you seal the crack
 	if len(your_power) >= 10:
 		print("-"*20)

@@ -1,5 +1,6 @@
 from random import randint
 
+
 def rps():
 	"""You must play a game of Rock Paper Scissors"""
 
@@ -8,7 +9,7 @@ def rps():
 	print("\n")
 
 	moves = ['rock', 'paper', 'scissors']
-	dr_hand = moves[randint(0,2)]
+	dr_hand = moves[randint(0, 2)]
 
 	hand = input('>  ')
 

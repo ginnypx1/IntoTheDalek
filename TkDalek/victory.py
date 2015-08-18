@@ -30,16 +30,22 @@ You hop on the Tardis and turn the key. A new adventure awaits... """
 		# game over message in the action screen
 		clear_window(action_tag)
 		game_over = "GAME OVER. YOU WIN. PLEASE PLAY AGAIN."
-		over_lab = Label(action_tag, text=game_over).pack(side=TOP, fill=X)
+		over_lab = Label(action_tag, text=game_over)
+		over_lab.config(bg='orange', fg='navy')
+		over_lab.pack(side=TOP, fill=X, pady=5)
+
 
 if __name__ == '__main__':
 	root = Tk()
 	root.title('Victory')
 
 	story_box = Text(root, bd=2, height=20, width=80)
-	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+	story_box.config(bg='navy', fg='gold')
+	story_box.config(bd=2, relief=SUNKEN)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH, padx=10, pady=10)
 
 	action_box = Frame(root, height=10, width=50)
+	action_box.config(bg='orange')
 	action_box.pack(side=TOP, expand=YES, fill=BOTH)
 
 	vt = Victory()

@@ -1,5 +1,5 @@
-from sys import exit
 from random import randint
+from sys import exit
 
 import rooms
 
@@ -65,4 +65,3 @@ a_map = Map('aristotle')
 a_game = Engine(a_map)
 # begins a game play
 a_game.play()
-

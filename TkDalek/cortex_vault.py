@@ -10,7 +10,7 @@ class CortexVault(object):
 	"""Creates the second scene of the game, in the cortex vault"""
 	def __init__(self):
 		"creates game variables"
-		self.code = "{}{}{}".format(randint(0,1), randint(0,1), randint(0,1))
+		self.code = "{}{}{}".format(randint(0, 1), randint(0, 1), randint(0, 1))
 		self.count = 0
 		self.guessed_codes = []
 
@@ -40,17 +40,24 @@ Dalek technology designed this vault to suppress any compassion...
 		story_tag.insert(1.0, dirs)
 
 		# create the input box to enter a possible code and button to check answer
-		code_info = Label(action_tag)
-		code_info.pack(side=TOP, expand=YES, fill=X)
+		code_info = Label(action_tag, bg='orange', fg='navy')
+		code_info.pack(side=TOP, expand=YES, fill=X, pady=5)
 
-		code_frm = Frame(action_tag)
-		code_lbl = Label(code_frm, text='[KEYPAD=>]').pack(side=LEFT)
+		code_frm = Frame(action_tag, bg='orange')
+		code_lbl = Label(code_frm, text='[KEYPAD=>]')
+		code_lbl.config(bg='white', fg='navy')
+		code_lbl.pack(side=LEFT, padx=120, pady=5)
 		code_var = StringVar()
-		code_ent = Entry(code_frm, textvariable=code_var).pack(side=LEFT)
-		code_but = Button(code_frm, text='Enter', command=(lambda: self.check_code(code_var.get(), code_info, story_tag, action_tag))).pack(side=RIGHT)
+		code_ent = Entry(code_frm, textvariable=code_var)
+		code_ent.config(bg='SkyBlue3', fg='white')
+		code_ent.pack(side=LEFT, pady=5)
 		code_frm.pack(side=TOP, expand=YES, fill=BOTH)
 
-	# game loop	
+		code_but = Button(action_tag, text='ENTER CODE')
+		code_but.config(command=(lambda: self.check_code(code_var.get(), code_info, story_tag, action_tag)))
+		code_but.pack(side=TOP, fill=X)
+
+	# game loop
 	def check_code(self, guess, info_tag, story_tag, action_tag):
 		"checks the entered code"
 		# count the guesses
@@ -62,8 +69,9 @@ Dalek technology designed this vault to suppress any compassion...
 			# clears action box
 			clear_window(action_tag)
 			# creates next button
-			next_win_but = next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_win_but.pack(side=LEFT, fill=X)
+			next_win_but = Button(action_tag, text="NEXT")
+			next_win_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_win_but.pack(side=TOP, fill=X)
 			# display win state
 			story_tag.delete(1.0, END)
 			win_text = """POP! The Dalek vault opens.
@@ -84,8 +92,9 @@ The Doctor shouts, 'We have to find somewhere unguareded! Run!'"""
 			# clears action box
 			clear_window(action_tag)
 			# creates next button
-			next_loss_but = next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_loss_but.pack(side=LEFT, fill=X)
+			next_loss_but = Button(action_tag, text="NEXT")
+			next_loss_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_loss_but.pack(side=TOP, fill=X)
 			# display loss state
 			story_tag.delete(1.0, END)
 			loss_text = """Oh no. The Dalek vault shuts down....
@@ -123,9 +132,12 @@ if __name__ == '__main__':
 	root.title('Crack the code')
 
 	story_box = Text(root, bd=2, height=20, width=80)
-	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+	story_box.config(bg='navy', fg='gold')
+	story_box.config(bd=2, relief=SUNKEN)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH, padx=10, pady=10)
 
 	action_box = Frame(root, height=10, width=50)
+	action_box.config(bg='orange')
 	action_box.pack(side=TOP, expand=YES, fill=BOTH)
 
 	cv = CortexVault()

@@ -9,8 +9,8 @@ class ConsciousnessLink(object):
 	"""Creates the fifth scene for the text adventure game Into the Dalek"""
 	def __init__(self):
 		self.jokes = {"a": "Why do the Daleks eat apples?",
-			"b": "How does a Dalek keep its skin soft?",
-			"c": "Why did the Dalek cross the road?"}
+						"b": "How does a Dalek keep its skin soft?",
+						"c": "Why did the Dalek cross the road?"}
 
 	def enter(self, story_tag, action_tag):
 		"starts the Consciousness Link scene of the game Into the Dalek"
@@ -35,19 +35,24 @@ The Doctor has an idea.
 'Quick. Tell us a joke. If we both laugh...'
 '...I may be able to sync up with his brain.'"""
 		story_tag.insert(1.0, ConsciousnessLink_story)
-		# You must link the Doctor's brain with the Dalek's and get him to relive the moment he saw the creation of the star
+		# You must link the Doctor's brain with the Dalek's
 		return self.tell_joke(story_tag, action_tag)
 
 	def tell_joke(self, story_tag, action_tag):
 		"You must tell a successful joke to link the Doctor and the Dalek"
 		# create game directions
 		joke_dirs = "Which joke do you decide to tell?"
-		joke_lbl = Label(action_tag, text=joke_dirs).pack(side=TOP, fill=X)
+		joke_lbl = Label(action_tag, text=joke_dirs, height=2)
+		joke_lbl.config(fg='navy', bg='orange')
+		joke_lbl.pack(side=TOP, fill=X)
 		# create radio buttons to answer the question
 		joke_var = StringVar()
 		for key, value in self.jokes.items():
-			Radiobutton(action_tag, text=value, variable=joke_var, value=key).pack(side=TOP, fill=X)
-		joke_but = Button(action_tag, text="Go", command=(lambda: self.result_joke(joke_var.get(), story_tag, action_tag))).pack(side=TOP, fill=X)
+			Radiobutton(action_tag, text=value, variable=joke_var, value=key, bg='orange').pack(side=TOP)
+
+		joke_but = Button(action_tag, text="TELL THAT JOKE")
+		joke_but.config(command=(lambda: self.result_joke(joke_var.get(), story_tag, action_tag)))
+		joke_but.pack(side=TOP, fill=X)
 
 	def result_joke(self, joke, story_tag, action_tag):
 		"checks the results of the joke told"
@@ -66,9 +71,10 @@ The link fails. The Daleks attack!"""
 			story_tag.insert(1.0, joke_loss)
 			# DIE
 			next_var = 'death'
-			# creates a next button 
-			next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_but.pack(side=LEFT, fill=X)
+			# creates a next button
+			next_but = Button(action_tag, text="NEXT")
+			next_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_but.pack(side=TOP, fill=X)
 			return next_var
 		# Doctor laughs, Dalek doesn't. Fail.
 		elif joke == 'b':
@@ -83,9 +89,10 @@ The link fails. The Daleks attack!"""
 			story_tag.insert(1.0, joke_loss2)
 			# DIE
 			next_var = 'death'
-			# creates a next button 
-			next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_but.pack(side=LEFT, fill=X)
+			# creates a next button
+			next_but = Button(action_tag, text="NEXT")
+			next_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_but.pack(side=TOP, fill=X)
 			return next_var
 		# Doctor and Dalek laugh. Link succeeds.
 		elif joke == 'c':
@@ -101,13 +108,15 @@ It's beautiful. Mezmerizing. You are transported.
 
 The Dalek tears up.
 'How could you destroy when creation is so wonderful?' he says.
+
 He is good again."""
 			story_tag.insert(1.0, joke_win)
 			# win
 			next_var = 'victory'
-			# creates a next button 
-			next_but = Button(action_tag, text="Next", command=(lambda: self.move_on(next_var, story_tag, action_tag)))
-			next_but.pack(side=LEFT, fill=X)
+			# creates a next button
+			next_but = Button(action_tag, text="NEXT")
+			next_but.config(command=(lambda: self.move_on(next_var, story_tag, action_tag)))
+			next_but.pack(side=TOP, fill=X)
 			return next_var
 
 	def move_on(self, next_room, story_tag, action_tag):
@@ -117,8 +126,7 @@ He is good again."""
 			vt.enter(story_tag, action_tag)
 		else:
 			dt = Death()
-			dt.enter(story_tag, action_tag)	
-	
+			dt.enter(story_tag, action_tag)
 
 
 if __name__ == '__main__':
@@ -126,9 +134,12 @@ if __name__ == '__main__':
 	root.title('Consciousness Link')
 
 	story_box = Text(root, bd=2, height=20, width=80)
-	story_box.pack(side=TOP, expand=YES, fill=BOTH)
+	story_box.config(bg='navy', fg='gold')
+	story_box.config(bd=2, relief=SUNKEN)
+	story_box.pack(side=TOP, expand=YES, fill=BOTH, padx=10, pady=10)
 
 	action_box = Frame(root, height=10, width=50)
+	action_box.config(bg='orange')
 	action_box.pack(side=TOP, expand=YES, fill=BOTH)
 
 	cl = ConsciousnessLink()
