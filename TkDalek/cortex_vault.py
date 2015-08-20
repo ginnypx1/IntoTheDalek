@@ -119,7 +119,6 @@ You've tried the codes: {}""".format((5 - self.count), self.guessed_codes)
 	def move_on(self, next_room, story_tag, action_tag):
 		"moves the game to the next scene, the waste center"
 		if next_room == 'waste_center':
-			print('waste_center')
 			wc = WasteCenter()
 			wc.enter(story_tag, action_tag)
 		else:
