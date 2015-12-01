@@ -103,7 +103,7 @@ The Doctor and the Dalek yell at the same time.
 The ship fills with laughter.
 Then something wonderful happens.
 All the images around you become the star being born.
-It's beautiful. Mezmerizing. You are transported.
+It's beautiful. Mesmerizing. You are transported.
 ...And so are the Doctor and the Dalek.
 
 The Dalek tears up.

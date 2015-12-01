@@ -26,12 +26,12 @@ But something very nearby is emitting a very high degree of radiation.
 You cannot stay inside this area for long...
 
 You must leave. You must find the source of radiation.
-But how can you camoflage yourself?
+But how can you camouflage yourself?
 The Doctor suggests you rub just enough garbage on yourself...
 "...to cover the smell." Yuck.
 You don't want to.
 		
-The Doctor suggets you solve the impass with a game of RPS.
+The Doctor suggests you solve the impasse with a game of RPS.
 Rock Paper Scissors? He can't be serious.
 He is."""
 		story_tag.insert(1.0, WasteCenter_story)
