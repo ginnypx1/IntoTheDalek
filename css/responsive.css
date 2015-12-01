@@ -1,0 +1,40 @@
+
+/*PHONES to iPHONES*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	/*body {
+		background-color: red;
+	}*/
+
+}
+
+/*iPHONES6 to GALAXY*/
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+	/*body {
+		background-color: orange;
+	}*/
+
+}
+
+/*TABLETS*/
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+	/*body {
+		background-color: yellow;
+	}*/
+
+}
+
+/*PRINT*/
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important;
+	}
+	footer,
+	nav {
+		display: none;
+	}
+	img {
+		width: 50%;
+		height: 50%;
+	}
+}
