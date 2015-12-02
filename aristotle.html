@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Into The Dalek | Inside the Aristotle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/hangman_style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-header">
+            <a class="navbar-brand main-logo" href="index.html">Into The Dalek</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="center"><a href="about.html">About</a></li>
+                <li class="right"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="wrapper" class="entry-text container">
+        <h2>Inside the "Aristotle":</h2>
+        <p>The Tardis flickers to life in the control room of the 'Aristotle'.  You open the door and shake yourself off, get your bearings.  You and the Doctor have just rescued the rebel fighter Journey Blue.  Her shuttle was under attack from the Daleks.</p>
+        <p>Your Tardis stumbled into the battle and you joined the fight.  Now you have returned her safely to her rebel base ship.  You expect to enter to cheers, but instead, there is only silence....  You are surrounded. The rebel officers have been waiting for you.  They explain: They have captured a strange Dalek and they need your help.</p>
+        <p>This strange new Dalek appears to be... GOOD.</p>
+        <h3>Will you help confirm the existence of a good Dalek?</h3>
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+
+    <div class="no-go container">
+        <p>You are shoved back in your Tardis and released into space.</p>
+        <h3>GAME OVER</h3>
+        <button id="play-again">Play Again</button>
+    </div>
+
+    <div class="game-window container">
+        <div class="game-directions">
+            <p>The rebel officers step aside.  Two Daleks are wheeled into the center of the room.  One is the 'good' Dalek. The other is evil.  The officers will let you choose one Dalek...  But upon doing so you must release it from its chains.</p>
+            <p>You can ask one Dalek one question. You assume, as is the case with all Daleks... that the real Dalek will only lie. The good Dalek must only tell the truth.</p>
+        </div>
+        <div class="game-play">
+            <h3>What question do you ask?</h3>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="riddle_question">I ask the Dalek on the left:</label>
+                    <input id="riddle_question" class="form-control" type="text" />
+                </div>
+            </form>
+            <button id="ask-question">Ask</button>
+        </div>
+    </div>
+
+    <div class="forward-motion container">
+        <button id="next">Next</button>
+        <button id="death">Next</button>
+    </div>
+
+    <footer>
+        <p>Ghostbird Games</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".no-go").hide();
+            $(".game-window").hide();
+            $(".forward-motion").hide();
+        }); // end document ready function
+    </script>
+    <script src="js/aristotle_riddle.js" type="text/javascript"></script>
+</body>
+</html>
