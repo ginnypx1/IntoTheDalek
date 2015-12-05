@@ -22,22 +22,32 @@
     </nav>
 
     <div id="wrapper" class="entry-text container">
-        <p>Directions will go here.</p>
-        <button>Start Game</button>
+        <p>The waste center looks like the inside of a giant garbage dumpster.</p>
+        <p>While you clean off your shoes, the Doctor whips out his sonic screwdriver.  He takes some atmospheric readings.  He confirms -- this area is unguarded.  But something very nearby is emitting a very high degree of radiation.  You cannot stay inside this area for long...</p>
+        <p>You must leave. You must find the source of radiation.  But how can you camouflage yourself?</p><p>The Doctor suggests you rub just enough garbage on yourself...  "...to cover the smell."</p>
+        <p>Yuck. You don't want to.</p>
+        <p>The Doctor suggests you solve the impasse with a game of RPS.</p>
+        <p>He can't be serious. 'Rock, Paper, Scissors?' you ask.</p>
+        <p>'Of course not! Rock, Paper, Sonic Screwdriver.'</p>
+        <p>He is.</p>
+        <button id="start">Play</button>
     </div>
 
     <div class="game-window container">
         <div class="game-directions">
-            <p>Game Directions will go here.</p>
+            <p>1.. 2.. 3.. THROW!</p>
+        </div>
+        <div class="game-results">
         </div>
         <div class="game-play">
-            <p>Game will go here.
+            <p>Game will go here.</p>
+            <button id="throw">Throw</button>
         </div>
     </div>
 
     <div class="forward-motion container">
-        <p>When finished with the game, results text will go here</p>
-        <button>Next</button>
+        <button id="next">Next</button>
+        <button id="death">Next</button>
     </div>
 
     <footer>
@@ -46,5 +56,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".game-window").hide();
+            $(".forward-motion").hide();
+        }); // end document ready function
+    </script>
+    <script src="js/rps.js" type="text/javascript"></script>
 </body>
 </html>

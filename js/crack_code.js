@@ -40,7 +40,7 @@ $("#guess-code").click(function() {
     var guessString = alreadyGuessed.join(", ");
     // increase the count by one
     count += 1;
-    // console.log the code
+    // testing
     console.log(code);
     // if guess == code:
     if (guess === code) {
