@@ -5,10 +5,6 @@ var loseText = "<p>You lose!</p><p>You take a deep breath....  And cover yoursel
 var drawText = "<p>It's a draw. Throw again.</p>";
 var choices = ["Rock", "Paper", "Sonic Screwdriver"];
 
-// randomly pick rock paper or scissors
-var randNum = Math.floor((Math.random() * 3) + 1) - 1;
-var drHand = choices[randNum];
-
 // GAME FUNCTIONS
 $("#start").click(function () {
     $(".game-window").show();
@@ -27,23 +23,30 @@ $("#death").click(function () {
 
 // When throw button is clicked
 $("#throw").click(function () {
+    // randomly pick rock paper or scissors
+    var randNum = Math.floor((Math.random() * 3) + 1) - 1;
+    var drHand = choices[randNum];
     // clear .game-results
     $(".game-results").text(" ");
     // grab value from radio form, set as var hand
-
+    var hand = $(".game-play input[type='radio']:checked").val();
     // testing
     console.log(drHand);
     console.log(hand);
     // check values for win or loss
-    if (drHand == 'Paper' && hand == 'Sonic Screwdriver') || (drHand == 'Sonic Screwdriver' && hand == 'Rock') || (drHand == 'Rock' && hand == 'Paper') {
+    if ((drHand == 'Paper' && hand == 'Sonic Screwdriver') || (drHand == 'Sonic Screwdriver' && hand == 'Rock') || (drHand == 'Rock' && hand == 'Paper')) {
         // redirect to death
+        $(".game-play").hide();
+        $(".forward-motion").show();
         $("#next").hide();
         // display winText
         $(".game-results").prepend(winText);
         // display drHand vs. hand
         $(".game-results").prepend("<p>" + drHand + " vs. " + hand + "</p>");
-    } else if (drHand == 'Rock' && hand == 'Sonic Screwdriver') || (drHand == 'Paper' && hand == 'Rock') || (drHand == 'Sonic Screwdriver' && hand == 'Paper') {
+    } else if ((drHand == 'Rock' && hand == 'Sonic Screwdriver') || (drHand == 'Paper' && hand == 'Rock') || (drHand == 'Sonic Screwdriver' && hand == 'Paper')) {
         // redirect to power_center
+        $(".game-play").hide();
+        $(".forward-motion").show();
         $("#death").hide();
         // disply loseText
         $(".game-results").prepend(loseText);
