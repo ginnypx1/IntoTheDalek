@@ -22,22 +22,45 @@
     </nav>
 
     <div id="wrapper" class="entry-text container">
-        <p>Directions will go here.</p>
-        <button>Start Game</button>
+        <p>You find yourself inside a giant dome.  Images, moving pictures, are all around you.  Most are horrific images of war, carnage, violence.</p>
+        <p>The Doctor explains that these are the Dalek's memories.  He urges you to look away. They will only destroy your soul.</p>
+        <p>But you see one memory that is shockingly beautiful...  You move in closer....</p>
+        <p>The Doctor explains that you're watching the creation of a star. This could be it. This could be the memory you're looking for...</p>
+        <p>'I need to form a link to the Dalek brain...', the Doctor explains.  'I need him to think he is seeing this again for the first time.'</p>
+        <p>'Quick. Tell us a joke. If we both laugh  ...I may be able to sync up with his brain.'</p>
+        <button id="start">Tell a Joke</button>
     </div>
 
     <div class="game-window container">
-        <div class="game-directions">
-            <p>Game Directions will go here.</p>
-        </div>
         <div class="game-play">
-            <p>Game will go here.
-        </div>
+            <div class="game-directions">
+                <p>Which joke do you decide to tell?</p>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="apples">
+                    Why do the Daleks eat apples?
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="skin">
+                    How does a Dalek keep its skin soft?
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="road">
+                    Why did the Dalek cross the road?
+              </label>
+            </div>
+            <button id="joke">Tell a Joke</button>
+        </div>   
     </div>
 
     <div class="forward-motion container">
-        <p>When finished with the game, results text will go here</p>
-        <button>Next</button>
+        <button id="next">Next</button>
+        <button id="death">Next</button>
     </div>
 
     <footer>
@@ -46,5 +69,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $(".game-window").hide();
+            $(".forward-motion").hide();
+        }); // end document ready function
+    </script>
+    <script src="js/tell_joke.js" type="text/javascript"></script>
 </body>
 </html>
