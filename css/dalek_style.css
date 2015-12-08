@@ -19,6 +19,18 @@ ul li {
 .navbar {
     margin-bottom: 0px;
 }
+/* FLEXBOX ____________________________________*/
+.laser {
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: space-around;
+}
+.laser li {
+    margin: auto;
+}
 /*FONTS___________________*/
 
 /*COLORS___________________*/
