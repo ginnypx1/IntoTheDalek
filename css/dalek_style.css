@@ -32,10 +32,36 @@ ul li {
     margin: auto;
 }
 /*FONTS___________________*/
-
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+button,
+footer,
+h1, h2, h3, h4, h5, h6,
+.navbar {
+    font-family: 'Roboto', sans-serif;
+}
+footer {
+    text-align: center;
+}
+h1 {
+    font-size: 4em;
+}
+.title {
+    font-size: 3em;
+}
+.title-two {
+    text-align: right;
+}
 /*COLORS___________________*/
 
 /*SPACING___________________*/
+.container {
+    max-width: 800px;
+}
+.entry-text {
+    min-height: 800px;
+}
 
 /*ICONS___________________*/
 @font-face {
