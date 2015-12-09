@@ -32,9 +32,6 @@ $("#throw").click(function () {
     $(".game-results").text(" ");
     // grab value from radio form, set as var hand
     var hand = $(".game-play input[type='radio']:checked").val();
-    // testing
-    console.log(drHand);
-    console.log(hand);
     // check values for win or loss
     if ((drHand == 'Paper' && hand == 'Sonic Screwdriver') || (drHand == 'Sonic Screwdriver' && hand == 'Rock') || (drHand == 'Rock' && hand == 'Paper')) {
         // redirect to death

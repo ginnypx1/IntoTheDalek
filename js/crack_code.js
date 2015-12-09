@@ -8,7 +8,7 @@ var code = String(x) + String(y) + String(z);
 
 var count = 0;
 var alreadyGuessed = [];
-var winText = "<p>The Dalek vault opens.  Journey Blue steps forward and sticks her hand inside.</p><p>'Wrong move,' says the Doctor.</p><p>You watch as the Dalek unleashes an attack force... A squadron of super-fast autonomic antibodies that attack what is giving them pain...  They surround Journey Blue and they EXTERMINATE.</p><p>The Doctor shouts, 'We have to find somewhere unguareded! Run!'</p>"
+var winText = "<p>The Dalek vault opens.  Journey Blue steps forward and sticks her hand inside.</p><p>'Wrong move,' says the Doctor.</p><p>You watch as the Dalek unleashes an attack force... A squadron of super-fast autonomic antibodies that attack what is giving them pain...  They surround Journey Blue and they EXTERMINATE.</p><p>The Doctor shouts, 'We have to find somewhere unguarded! Run!'</p>"
 var loseText = "<p>The Dalek vault shuts down...</p><p>Journey Blue gets out her grapple hook and shoots it.</p><p>'Wrong move,' says the Doctor.  You watch as the Dalek unleashes an attack force...  A squadron of super-fast autonomic antibodies that attack what is giving them pain...</p><p>They surround you all and they EXTERMINATE.</p>"
 var guessAgain = "BZZZZZZ. Incorrect. Try again."
 var winTitle = "<h1>POP!</h1>";
