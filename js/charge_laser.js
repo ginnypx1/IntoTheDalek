@@ -1,8 +1,9 @@
 // GAME VARIABLES
 
-var winText = "<p>Everything goes quiet. You look to the Doctor.  'It worked,' he says. 'It is sealed.'</p><p>However, you both know... something is very, very wrong...</p><p>By stopping the leak, you 'fixed' the Dalek.  He reverts to his old evil ways and contacts the main Dalek ship.  You only have a few moments before a large scale Dalek attack hits...</p><p>'Quick!' The Doctor yells. 'We must find his consciousness! We must discover what made him believe he was GOOD...'</p>";
-var loseText = "<p>Your attack was not enough!  You must try again!  ...But you're too weak! You can't press the button!</p><p>You feel yourself fading away...</p>";
+var winText = "<p>Everything goes quiet. You look to the Doctor.</p><p>'It worked,' he says. 'It is sealed.'</p><p>However, you both know... something is very, very wrong...</p><p>By stopping the leak, you 'fixed' the Dalek.  He reverts to his old evil ways and contacts the main Dalek ship.  You only have a few moments before a large scale Dalek attack hits...</p><p>'Quick!' The Doctor yells. 'We must find his consciousness! We must discover what made him believe he was GOOD...'</p>";
+var loseText = "<p>Your attack was not enough!  You must try again!</p><p>...But you're too weak! You can't press the button!</p><p>You feel yourself fading away...</p>";
 var count = 0;
+var title = "<h1>The Dust Settles:</h1>";
 
 // GAME FUNCTIONS
 
@@ -26,7 +27,7 @@ $("#shoot").click(function () {
     // create a shoot graphic
     var pop = "<h2>POP!</h2>";
     // put it inside the shoot flexbox
-    $(".laser").prepend(pop);
+    $(".laser").prepend(pop).addClass("pop");
     // increase count by 1
     count += 1;
 });
@@ -37,13 +38,15 @@ $("#done").click(function () {
     // if count > 10
     if (count >= 10) {
         // redirect to victory
-        $(".forward-motion").show();
+        $(".forward").show();
         $("#death").hide();
         $(".forward-motion").prepend(winText);
+        $(".forward-title").prepend(title).addClass("title-two");
     } else {
         // redirect to death
-        $(".forward-motion").show();
+        $(".forward").show();
         $("#next").hide();
         $(".forward-motion").prepend(loseText);
+        $(".forward-title").prepend(title).addClass("title-two");
     }
 });

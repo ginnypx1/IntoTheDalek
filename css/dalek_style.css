@@ -27,6 +27,7 @@ ul li {
 }
 .laser li {
     margin: auto;
+    font-size: 8em;
 }
 /*FONTS___________________*/
 body {
@@ -43,18 +44,19 @@ footer {
     text-align: center;
 }
 h1 {
+    font-size: 3em;
+}
+.main-header {
     font-size: 4em;
 }
-.title {
+.title,
+#username {
     font-size: 3em;
 }
 .button-group,
 .form-inline,
 .title-two {
     text-align: right;
-}
-#username {
-    font-size: 3em;
 }
 /*COLORS___________________*/
 a:visited,
@@ -63,10 +65,12 @@ footer {
     color: #102372; /* tardis blue */
 }
 a:hover,
-a:active {
+a:active,
+.pop {
     color: orange;
 }
-.btn-primary {
+.btn-primary,
+.pop {
     background-color: #102372; /* tardis blue */
 }
 /*SPACING___________________*/
@@ -85,6 +89,10 @@ a:active {
 #yes, #no,
 #next, #death {
     width: 75px;
+}
+.pop {
+    padding: 15px;
+    margin: 15px;
 }
 /*ICONS___________________*/
 @font-face {

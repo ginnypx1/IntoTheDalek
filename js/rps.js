@@ -1,9 +1,11 @@
 // GAME VARIABLES
 
-var winText = "<p>You win!</p><p>No garbage for you.  Unfortunately, that means the second you walk out the door... You are attacked and killed.</p>";
-var loseText = "<p>You lose!</p><p>You take a deep breath....  And cover yourself in garbage.</p><p>You step outside. It works! The Dalek ignores you.  Now... You must follow the source of the radiation...  and stop the leak in order to complete your quest.</p><p>You make a run for the Power Center.</p>";
+var winText = "<p>No garbage for you.  Unfortunately, that means the second you walk out the door... You are attacked and killed.</p>";
+var loseText = "<p>You take a deep breath....  And cover yourself in garbage.</p><p>You step outside. It works! The Dalek ignores you.  Now... You must follow the source of the radiation...  and stop the leak in order to complete your quest.</p><p>You make a run for the Power Center.</p>";
 var drawText = "<p>It's a draw. Throw again.</p>";
 var choices = ["Rock", "Paper", "Sonic Screwdriver"];
+var winTitle = "You Win!";
+var loseTitle = "You Lose!";
 
 // GAME FUNCTIONS
 $("#start").click(function () {
@@ -37,19 +39,21 @@ $("#throw").click(function () {
     if ((drHand == 'Paper' && hand == 'Sonic Screwdriver') || (drHand == 'Sonic Screwdriver' && hand == 'Rock') || (drHand == 'Rock' && hand == 'Paper')) {
         // redirect to death
         $(".game-play").hide();
-        $(".forward-motion").show();
+        $(".forward").show();
         $("#next").hide();
         // display winText
         $(".game-results").prepend(winText);
+        $(".title-two").text(winTitle);
         // display drHand vs. hand
         $(".game-results").prepend("<p>" + drHand + " vs. " + hand + "</p>");
     } else if ((drHand == 'Rock' && hand == 'Sonic Screwdriver') || (drHand == 'Paper' && hand == 'Rock') || (drHand == 'Sonic Screwdriver' && hand == 'Paper')) {
         // redirect to power_center
         $(".game-play").hide();
-        $(".forward-motion").show();
+        $(".forward").show();
         $("#death").hide();
         // disply loseText
         $(".game-results").prepend(loseText);
+        $(".title-two").text(loseTitle);
         // display drHand vs. hand
         $(".game-results").prepend("<p>" + drHand + " vs. " + hand + "</p>");
     } else {

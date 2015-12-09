@@ -22,46 +22,61 @@
         </div>
     </nav>
 
-    <div id="wrapper" class="entry-text container">
-        <p>You find yourself inside a giant dome.  Images, moving pictures, are all around you.  Most are horrific images of war, carnage, violence.</p>
-        <p>The Doctor explains that these are the Dalek's memories.  He urges you to look away. They will only destroy your soul.</p>
-        <p>But you see one memory that is shockingly beautiful...  You move in closer....</p>
-        <p>The Doctor explains that you're watching the creation of a star. This could be it. This could be the memory you're looking for...</p>
-        <p>'I need to form a link to the Dalek brain...', the Doctor explains.  'I need him to think he is seeing this again for the first time.'</p>
-        <p>'Quick. Tell us a joke. If we both laugh  ...I may be able to sync up with his brain.'</p>
-        <button id="start">Tell a Joke</button>
-    </div>
+    <div class="wrapper container">
+        <div class="entry-text">
+            <h1 class="title-two">Consciousness Link:</h1>
+            <p>You find yourself inside a giant dome.  Images, moving pictures, are all around you.  Most are horrific images of war, carnage, violence.</p>
+            <p>The Doctor explains that these are the Dalek's memories.  He urges you to look away. They will only destroy your soul.</p>
+            <p>But you see one memory that is shockingly beautiful...  You move in closer....</p>
+            <p>The Doctor explains that you're watching the creation of a star. This could be it. This could be the memory you're looking for...</p>
+            <p>'I need to form a link to the Dalek brain...', the Doctor explains.  'I need him to think he is seeing this again for the first time.'</p>
+            <p>'Quick. Tell us a joke. If we both laugh  ...I may be able to sync up with his brain.'</p>
+            <h3>Know any good jokes?</h3>
+            <div class="button-group">
+                <button class="btn btn-primary" id="start">Try One</button>
+            </div>
+        </div>
 
-    <div class="game-window container">
-        <div class="game-play">
-            <div class="game-directions">
-                <p>Which joke do you decide to tell?</p>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="apples">
-                    Why do the Daleks eat apples?
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="skin">
-                    How does a Dalek keep its skin soft?
-                </label>
-            </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="road">
-                    Why did the Dalek cross the road?
-              </label>
-            </div>
-            <button id="joke">Tell a Joke</button>
-        </div>   
-    </div>
+        <div class="game-window">
+            <div class="game-play">
+                <h1 class="title-two">Tell a Joke:</h1>
+                <div class="game-directions">
+                    <p>Which one will you break out?</p>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="apples">
+                        Why do the Daleks eat apples?
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="skin">
+                        How does a Dalek keep its skin soft?
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="road">
+                        Why did the Dalek cross the road?
+                  </label>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" id="joke">Tell Joke</button>
+                </div>
+            </div>   
+        </div>
 
-    <div class="forward-motion container">
-        <button id="next">Next</button>
-        <button id="death">Next</button>
+        <div class="forward">
+            <div class="forward-title">
+            </div>
+            <div class="forward-motion">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-primary" id="next">Next</button>
+                <button class="btn btn-primary" id="death">Next</button>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -73,7 +88,7 @@
     <script>
         $(document).ready(function () {
             $(".game-window").hide();
-            $(".forward-motion").hide();
+            $(".forward").hide();
         }); // end document ready function
     </script>
     <script src="js/tell_joke.js" type="text/javascript"></script>
