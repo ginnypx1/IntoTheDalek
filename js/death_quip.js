@@ -5,10 +5,10 @@
         "<p>Only one race can survive!</p>",
         "<p>Attack and Destroy!</p>",
         "<p>You will be exterminated!</p>",
-        "<p>Your forces will be exterminated! Annihilate! EXTERMINATE!</p>",
-        "<p>All enemies of the Daleks must be destroyed! Exterminate!</p>",
+        "<p>Your forces will be exterminated! Annihilate!</p><p>EXTERMINATE!</p>",
+        "<p>All enemies of the Daleks must be destroyed!</p><p>Exterminate!</p>",
         "<p>Seek! Locate! Exterminate!</p>",
-        "<p>Nothing must interfere with the true destiny of the Daleks!! \nYou must be exterminated! Exterminated! EXTERMINATED!!</p>",
+        "<p>Nothing must interfere with the true destiny of the Daleks!!</p><p>You must be exterminated! Exterminated! EXTERMINATED!!</p>",
         "<p>YOU ARE AN ENEMY OF THE DALEKS! YOU MUST BE DESTROYED!!</p>",
 ];
 
@@ -27,6 +27,6 @@ $(document).ready(function () {
     var randNum = Math.floor((Math.random() * 10 + 1) - 1);
     var quip = quips[randNum];
     // load onto entry text
-    $(".entry-text").prepend(quip);
+    $(".quip").prepend(quip);
 });
     

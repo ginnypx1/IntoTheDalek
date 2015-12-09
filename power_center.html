@@ -21,25 +21,40 @@
         </div>
     </nav>
 
-    <div id="wrapper" class="entry-text container">
-        <p>You find yourself inside what looks to be the guts of a central computer.  Wires, links and gauges are everywhere.</p>
-        <p>The Doctor swings his sonic screwdriver around... 'There!' He shouts, pointing to a large ray of light.  'The radiation leak!'</p>
-        <p>You must plug the leak so you can continue your quest.</p>
-        <p>The Doctor hands you his sonic screwdriver.</p>
-        <p>'You shoot while I twist the right wires!' he orders.</p>
-        <button id="start">Shoot</button>
-    </div>
-
-    <div class="game-window container">
-        <div class="game-play laser">
+    <div class="wrapper container">
+        <div class="entry-text">
+            <h1 class="title-two">The Power Center:</h1>
+            <p>You find yourself inside what looks to be the guts of a central computer.  Wires, links and gauges are everywhere.</p>
+            <p>The Doctor swings his sonic screwdriver around... 'There!' He shouts, pointing to a large ray of light.  'The radiation leak!'</p>
+            <p>You must plug the leak so you can continue your quest.</p>
+            <p>The Doctor hands you his sonic screwdriver.</p>
+            <p>'You shoot while I twist the right wires!' he orders.</p>
+            <h3>Are you ready?</h3>
+            <div class="button-group">
+                <button class="btn btn-primary" id="start">Lock &amp; Load</button>
+            </div>
         </div>
-        <button id="shoot">Shoot</button>
-        <button id="done">Done</button>
-    </div>
 
-    <div class="forward-motion container">
-        <button id="next">Next</button>
-        <button id="death">Next</button>
+        <div class="game-window">
+            <h1 class="title-two">Give 'Em Hell:</h1>
+            <div class="game-play laser">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-primary" id="shoot">Shoot</button>
+                <button class="btn btn-primary" id="done">Done</button>
+            </div>
+        </div>
+
+        <div class="forward">
+            <div class="forward-title">
+            </div>
+            <div class="forward-motion">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-primary" id="next">Next</button>
+                <button class="btn btn-primary" id="death">Next</button>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -51,7 +66,7 @@
     <script>
         $(document).ready(function () {
             $(".game-window").hide();
-            $(".forward-motion").hide();
+            $(".forward").hide();
         }); // end document ready function
     </script>
     <script src="js/charge_laser.js" type="text/javascript"></script>
