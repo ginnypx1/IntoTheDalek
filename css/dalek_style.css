@@ -54,14 +54,29 @@ h1 {
 .title-two {
     text-align: right;
 }
-/*COLORS___________________*/
-
-/*SPACING___________________*/
-.container {
-    max-width: 800px;
+#username {
+    font-size: 3em;
 }
-.entry-text {
+/*COLORS___________________*/
+a:visited,
+a:link {
+    color: #102372; /* tardis blue */
+}
+a:hover,
+a:active {
+    color: orange;
+}
+.btn-primary {
+    background-color: #102372; /* tardis blue */
+}
+/*SPACING___________________*/
+.btn-lg {
+    margin-top: 50px;
+}
+.wrapper {
     min-height: 800px;
+    max-width: 800px;
+    margin-top: 25px;
 }
 
 /*ICONS___________________*/
