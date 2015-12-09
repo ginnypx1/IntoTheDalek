@@ -82,7 +82,8 @@ a:active {
     margin-top: 25px;
 }
 #ask-question,
-#yes, #no {
+#yes, #no,
+#next, #death {
     width: 75px;
 }
 /*ICONS___________________*/

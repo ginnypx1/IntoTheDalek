@@ -1,8 +1,10 @@
 // VARIABLES
 
-var winText = "<p>You turn away from that Dalek and point to the other one.  You tell the guards to release him. They unlock the chains.  You all hold your breath... The Dalek does not kill you.  It's a miracle. A good Dalek does exist.</p><p>The Doctor asks, 'Do you have a shrink ray on board?'  Journey Blue answers, 'Of course!'  The Doctor explains his plan: you'll use the shrink ray.  You will journey into the good Dalek's mind.  You wait patiently while the shrink ray warms up...</p><p>5... 4... 3... 2... 1...</p>";
+var winText = "<p>You turn away from that Dalek and point to the other one.  You tell the guards to release him.</p><p>They unlock the chains...</p><p>The Dalek does not kill you.  It's a miracle.</p><p>A good Dalek does exist.</p><p>The Doctor asks, 'Do you have a shrink ray on board?'</p><p>Journey Blue answers, 'Of course!'</p><p>The Doctor explains his plan: you'll use the shrink ray to journey inside the good Dalek's mind.</p><p>You wait patiently while the shrink ray warms up...</p><p>5... 4... 3... 2... 1...</p>";
 
-var loseText = "<p>You tell the guards to release the Dalek.  They unlock the chains.  You all hold your breath...  The Dalek opens fire...</p>";
+var loseText = "<p>You tell the guards to release the Dalek.</p><p>They unlock the chains...</p><p>The Dalek opens fire...</p>";
+
+var title = "<h1>Hold your breath:</h1>"
 
 // GAME FUNCTIONS
 // if yes, play riddle game
@@ -38,15 +40,17 @@ $("#ask-question").click(function() {
     var correct = my_guess.search("other");
     if (correct !== -1) {
         $(".game-window").hide();
-        $(".forward-motion").show();
+        $(".forward").show();
         $("#death").hide();
         // in .forward-motion, add directions: 
         $(".forward-motion").prepend(winText);
+        $(".forward-title").prepend(title).addClass("title-two");
     } else {
         $(".game-window").hide();
-        $(".forward-motion").show();
+        $(".forward").show();
         $("#next").hide();
         // in .forward-motion, show death sentence:
         $(".forward-motion").prepend(loseText);  
+        $(".forward-title").prepend(title).addClass("title-two");
     }
 });
