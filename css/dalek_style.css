@@ -12,9 +12,6 @@ img {
 ul li {
     list-style: none;
 }
-.versions li {
-    list-style-type: circle;
-}
 /*NAVBAR___________________*/
 .navbar {
     margin-bottom: 0px;
@@ -51,6 +48,8 @@ h1 {
 .title {
     font-size: 3em;
 }
+.button-group,
+.form-inline,
 .title-two {
     text-align: right;
 }
@@ -59,7 +58,8 @@ h1 {
 }
 /*COLORS___________________*/
 a:visited,
-a:link {
+a:link,
+footer {
     color: #102372; /* tardis blue */
 }
 a:hover,
@@ -73,12 +73,18 @@ a:active {
 .btn-lg {
     margin-top: 50px;
 }
+.button-group {
+    margin-top: 10px;
+}
 .wrapper {
     min-height: 800px;
     max-width: 800px;
     margin-top: 25px;
 }
-
+#ask-question,
+#yes, #no {
+    width: 75px;
+}
 /*ICONS___________________*/
 @font-face {
     font-family: 'icomoon';
