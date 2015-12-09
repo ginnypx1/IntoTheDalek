@@ -38,8 +38,11 @@
 
         <div class="no-go">
             <p>You are shoved back in your Tardis and released into space.</p>
-            <h3>GAME OVER</h3>
-            <button id="play-again">Play Again</button>
+            <br>
+            <h1 class="title-two">GAME OVER</h1>
+            <div class="button-group">
+                <button class="btn btn-primary" id="play-again">Play Again</button>
+            </div>
         </div>
 
         <div class="game-window">
@@ -63,11 +66,17 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="forward-motion container">
-        <button id="next">Next</button>
-        <button id="death">Next</button>
+        <div class="forward">
+            <div class="forward-title">
+            </div>
+            <div class="forward-motion">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-primary" id="next">Next</button>
+                <button class="btn btn-primary" id="death">Next</button>
+            </div>
+        </div>
     </div>
 
     <footer>
@@ -80,7 +89,7 @@
         $(document).ready(function () {
             $(".no-go").hide();
             $(".game-window").hide();
-            $(".forward-motion").hide();
+            $(".forward").hide();
         }); // end document ready function
     </script>
     <script src="js/aristotle_riddle.js" type="text/javascript"></script>

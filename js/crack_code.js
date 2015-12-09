@@ -8,9 +8,11 @@ var code = String(x) + String(y) + String(z);
 
 var count = 0;
 var alreadyGuessed = [];
-var winText = "<p>POP! The Dalek vault opens.  Journey Blue steps forward and sticks her hand inside.  'Wrong move,' says the Doctor.  You watch as the Dalek unleashes an attack force...</p><p>It is a squadron of  super-fast autonomic antibodies.  They attack what is giving them pain...  They surround Journey Blue and they EXTERMINATE.  The Doctor shouts, 'We have to find somewhere unguareded! Run!'</p>"
-var loseText = "<p>Oh no. The Dalek vault shuts down...  Journey Blue gets out her grapple hook and shoots it.  'Wrong move,' says the Doctor.  You watch as the Dalek unleashes an attack force...  It is a squadron of  super-fast autonomic antibodies.</p><p>They attack what is giving them pain...  They surround you all and they EXTERMINATE.</p>"
+var winText = "<p>The Dalek vault opens.  Journey Blue steps forward and sticks her hand inside.</p><p>'Wrong move,' says the Doctor.</p><p>You watch as the Dalek unleashes an attack force... A squadron of super-fast autonomic antibodies that attack what is giving them pain...  They surround Journey Blue and they EXTERMINATE.</p><p>The Doctor shouts, 'We have to find somewhere unguareded! Run!'</p>"
+var loseText = "<p>The Dalek vault shuts down...</p><p>Journey Blue gets out her grapple hook and shoots it.</p><p>'Wrong move,' says the Doctor.  You watch as the Dalek unleashes an attack force...  A squadron of super-fast autonomic antibodies that attack what is giving them pain...</p><p>They surround you all and they EXTERMINATE.</p>"
 var guessAgain = "BZZZZZZ. Incorrect. Try again."
+var winTitle = "<h1>POP!</h1>";
+var lossTitle = "<h1>BZZ!</h1>";
 
 
 // GAME FUNCTIONS
@@ -45,26 +47,28 @@ $("#guess-code").click(function() {
     // if guess == code:
     if (guess === code) {
         $(".game-window").hide();
-        $(".forward-motion").show();
+        $(".forward").show();
         // redirect to waste center
         $("#death").hide();
         // display winText
         $(".forward-motion").prepend(winText);
+        $(".forward-title").prepend(winTitle).addClass("title-two");
     // else if count == 5:
     } else if (count === 5) {
         $(".game-window").hide();
-        $(".forward-motion").show();
+        $(".forward").show();
         // redirect to death
         $("#next").hide();
         // display lossText
         $(".forward-motion").prepend(loseText);
+        $(".forward-title").prepend(lossTitle).addClass("title-two");
     // else:
     } else {
-        // display guessAgain
-        $(".game-directions").prepend("<p>BZZZZZZ. Guess Again.</p>");
         // display guessesRemaining
         $(".game-directions").prepend("<p>" + (5 - count) + " guess(es) remaining.</p>");
         // display guessesTried
         $(".game-directions").prepend("<p>You've tried the codes: " + guessString + "</p>");
+        // display guessAgain
+        $(".game-directions").prepend("<h2>BZZZZZZ. Guess Again.</h2>");
     }
 });
