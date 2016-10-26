@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="titleView" id="BYZ-38-t0r" customClass="ViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to travel..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znh-UR-xXd">
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS3-67-jGP">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Start the Tardis">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...INTO THE DALEK?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-mm-RPL">
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dalekSketch" translatesAutoresizingMaskIntoConstraints="NO" id="uG2-8o-DCv"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gUS-mm-RPL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0lO-hv-RH0"/>
+                            <constraint firstItem="uG2-8o-DCv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="1Dr-o3-6g5"/>
+                            <constraint firstItem="gUS-mm-RPL" firstAttribute="top" secondItem="uG2-8o-DCv" secondAttribute="bottom" constant="8" id="1N0-n9-l5q"/>
+                            <constraint firstItem="uG2-8o-DCv" firstAttribute="top" secondItem="znh-UR-xXd" secondAttribute="bottom" constant="8" id="8k0-aM-SsL"/>
+                            <constraint firstItem="uG2-8o-DCv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C6G-KP-sfT"/>
+                            <constraint firstItem="gUS-mm-RPL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Fl6-8q-SWF"/>
+                            <constraint firstItem="gUS-mm-RPL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="G98-7I-qtm"/>
+                            <constraint firstItem="znh-UR-xXd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HWs-sd-RwG"/>
+                            <constraint firstItem="iS3-67-jGP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="SV9-oG-YWF"/>
+                            <constraint firstItem="znh-UR-xXd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="TNV-Zr-zTP"/>
+                            <constraint firstItem="znh-UR-xXd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="WQq-Ga-STg"/>
+                            <constraint firstAttribute="trailing" secondItem="iS3-67-jGP" secondAttribute="trailing" id="d5l-wV-itY"/>
+                            <constraint firstItem="iS3-67-jGP" firstAttribute="top" secondItem="gUS-mm-RPL" secondAttribute="bottom" constant="16" id="oz9-he-gTi"/>
+                            <constraint firstItem="znh-UR-xXd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="vEe-wB-6Vf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iS3-67-jGP" secondAttribute="bottom" id="wgk-3O-2vi"/>
+                            <constraint firstItem="iS3-67-jGP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y4F-Fo-XMS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="138.75"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="js0-nD-uvZ">
+            <objects>
+                <viewController storyboardIdentifier="storyView" id="7h8-1m-448" customClass="StoryViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k8B-tU-Emz"/>
+                        <viewControllerLayoutGuide type="bottom" id="awv-n9-vU7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UFE-3O-FPi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSb-Nz-3pj">
+                                <string key="text">  The Tardis flickers to life in the control room of the 'Aristotle'.  You open the door and shake yourself off, get your bearings.  You and the Doctor have just rescued the rebel fighter Journey Blue.  Her shuttle was under attack from the Daleks. Your Tardis stumbled into the battle and you joined the fight.  Now you have returned her safely to her rebel base ship.  You expect to enter to cheers, but instead, there is only silence...</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDI-mW-YeX">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="awv-n9-vU7" firstAttribute="top" secondItem="zDI-mW-YeX" secondAttribute="bottom" id="1dX-NT-COe"/>
+                            <constraint firstItem="dSb-Nz-3pj" firstAttribute="centerX" secondItem="UFE-3O-FPi" secondAttribute="centerX" id="25B-ad-ikU"/>
+                            <constraint firstItem="dSb-Nz-3pj" firstAttribute="width" secondItem="UFE-3O-FPi" secondAttribute="width" multiplier="0.9" id="HBx-3c-G7F"/>
+                            <constraint firstItem="zDI-mW-YeX" firstAttribute="leading" secondItem="UFE-3O-FPi" secondAttribute="leading" id="LGn-nL-eNo"/>
+                            <constraint firstAttribute="trailing" secondItem="zDI-mW-YeX" secondAttribute="trailing" id="P0j-B3-DMM"/>
+                            <constraint firstItem="dSb-Nz-3pj" firstAttribute="height" secondItem="UFE-3O-FPi" secondAttribute="height" multiplier="0.8" id="Tvs-yK-b3h"/>
+                            <constraint firstItem="zDI-mW-YeX" firstAttribute="height" secondItem="UFE-3O-FPi" secondAttribute="height" multiplier="0.1" id="YvO-mT-Lt0"/>
+                            <constraint firstItem="dSb-Nz-3pj" firstAttribute="top" secondItem="k8B-tU-Emz" secondAttribute="bottom" constant="8" id="saT-av-b7A"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViB-Yk-0Sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="139"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="Ei5-ay-KDN">
+            <objects>
+                <viewController storyboardIdentifier="choiceView" id="eKU-ux-Nq2" customClass="ChoiceViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sno-4v-i8o"/>
+                        <viewControllerLayoutGuide type="bottom" id="NbH-S6-UrP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qd5-wG-vgC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-7H-O9U">
+                                <string key="text">  You are surrounded. The rebel officers have been waiting for you.  They explain: They have captured a strange Dalek and they need your help. This strange new Dalek appears to be... GOOD. Will you help confirm the existence of a good Dalek?</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Io-iY-ray">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="8RO-2M-sUO"/>
+                                    <constraint firstAttribute="height" constant="31" id="uIW-kR-wzg"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT5-K9-9vr">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-5F-DU6">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Io-iY-ray" firstAttribute="centerX" secondItem="Qd5-wG-vgC" secondAttribute="centerX" id="1jP-8k-S7c"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="top" secondItem="Sno-4v-i8o" secondAttribute="bottom" constant="8" id="8wc-hS-Qqa"/>
+                            <constraint firstItem="cJ3-5F-DU6" firstAttribute="height" secondItem="4Io-iY-ray" secondAttribute="height" id="EFL-JR-dBg"/>
+                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="eT5-K9-9vr" secondAttribute="bottom" constant="20" id="Pp3-BI-P7x"/>
+                            <constraint firstItem="eT5-K9-9vr" firstAttribute="trailing" secondItem="Qd5-wG-vgC" secondAttribute="trailingMargin" id="Tnu-DJ-wWq"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="width" secondItem="Qd5-wG-vgC" secondAttribute="width" multiplier="0.9" id="XsJ-By-7Kc"/>
+                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="4Io-iY-ray" secondAttribute="bottom" constant="20" id="YS6-16-Dbf"/>
+                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="cJ3-5F-DU6" secondAttribute="bottom" constant="20" id="hTn-hG-1kD"/>
+                            <constraint firstItem="eT5-K9-9vr" firstAttribute="height" secondItem="4Io-iY-ray" secondAttribute="height" id="iTW-F0-ZWu"/>
+                            <constraint firstItem="4Io-iY-ray" firstAttribute="leading" secondItem="cJ3-5F-DU6" secondAttribute="trailing" constant="15" id="p8U-L8-0xx"/>
+                            <constraint firstItem="cJ3-5F-DU6" firstAttribute="leading" secondItem="Qd5-wG-vgC" secondAttribute="leadingMargin" id="rkY-bD-mtf"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="height" secondItem="Qd5-wG-vgC" secondAttribute="height" multiplier="0.8" id="sf6-qf-Atw"/>
+                            <constraint firstItem="eT5-K9-9vr" firstAttribute="leading" secondItem="4Io-iY-ray" secondAttribute="trailing" constant="15" id="xQP-dg-tVU"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="centerX" secondItem="Qd5-wG-vgC" secondAttribute="centerX" id="ybr-TO-T9c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0b-ci-cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="139"/>
+        </scene>
+        <!--Riddle View Controller-->
+        <scene sceneID="Ily-Zm-tvi">
+            <objects>
+                <viewController storyboardIdentifier="riddleView" id="4Ra-qf-WJC" customClass="RiddleViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="agH-xt-vc1"/>
+                        <viewControllerLayoutGuide type="bottom" id="hGr-0l-Bkf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cTf-y1-EEL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twoDaleks" translatesAutoresizingMaskIntoConstraints="NO" id="c5K-2d-gj0"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeO-4H-4QM">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Solve the Riddle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-TN-xnk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CES-MQ-1vu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPr-RD-kB7">
+                                <string key="text">You assume, as is the case with all Daleks... that the real Dalek will only lie. The good Dalek must only tell the truth.  What question do you ask?</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cAe-TN-xnk" firstAttribute="centerX" secondItem="cTf-y1-EEL" secondAttribute="centerX" id="3Hy-SO-TTY"/>
+                            <constraint firstItem="c5K-2d-gj0" firstAttribute="centerX" secondItem="cTf-y1-EEL" secondAttribute="centerX" id="5vp-S3-4kQ"/>
+                            <constraint firstItem="hGr-0l-Bkf" firstAttribute="top" secondItem="eeO-4H-4QM" secondAttribute="bottom" id="Cc1-k9-1fH"/>
+                            <constraint firstItem="cAe-TN-xnk" firstAttribute="top" secondItem="MPr-RD-kB7" secondAttribute="bottom" constant="15" id="b44-ZQ-hAA"/>
+                            <constraint firstItem="c5K-2d-gj0" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.4" id="ggb-Ba-Pzi"/>
+                            <constraint firstItem="eeO-4H-4QM" firstAttribute="leading" secondItem="cTf-y1-EEL" secondAttribute="leading" id="i35-A5-UyZ"/>
+                            <constraint firstItem="c5K-2d-gj0" firstAttribute="top" secondItem="agH-xt-vc1" secondAttribute="bottom" id="lLW-6t-xPz"/>
+                            <constraint firstItem="MPr-RD-kB7" firstAttribute="width" secondItem="cTf-y1-EEL" secondAttribute="width" multiplier="0.9" id="ldf-jd-t7E"/>
+                            <constraint firstItem="c5K-2d-gj0" firstAttribute="width" secondItem="cTf-y1-EEL" secondAttribute="width" multiplier="0.9" id="no3-IR-IBD"/>
+                            <constraint firstItem="MPr-RD-kB7" firstAttribute="centerX" secondItem="cTf-y1-EEL" secondAttribute="centerX" id="ozI-o7-Coa"/>
+                            <constraint firstItem="cAe-TN-xnk" firstAttribute="width" secondItem="cTf-y1-EEL" secondAttribute="width" multiplier="0.9" id="qCV-Jc-An1"/>
+                            <constraint firstItem="MPr-RD-kB7" firstAttribute="top" secondItem="c5K-2d-gj0" secondAttribute="bottom" constant="8" id="qyY-oW-z0t"/>
+                            <constraint firstAttribute="trailing" secondItem="eeO-4H-4QM" secondAttribute="trailing" id="tfl-wj-Sr9"/>
+                            <constraint firstItem="eeO-4H-4QM" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.1" id="zJ2-Om-I4x"/>
+                            <constraint firstItem="MPr-RD-kB7" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.3" id="ztd-cS-88E"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWz-zq-zAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="805"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="kEE-1P-VKv">
+            <objects>
+                <viewController storyboardIdentifier="codeView" id="ilH-UK-gku" customClass="CodeViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6OS-BP-WUU"/>
+                        <viewControllerLayoutGuide type="bottom" id="i8F-Sk-rpu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rFR-wd-uwD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikv-Zj-GRt">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Crack the Code">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSq-JU-ToN">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dSq-JU-ToN" secondAttribute="height" multiplier="1:1" id="47n-WV-keR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-bd-gi3">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QYG-bd-gi3" secondAttribute="height" multiplier="1:1" id="LlL-8U-0G9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="72T-hj-dFa"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t8-Bi-ELF">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9t8-Bi-ELF" secondAttribute="height" multiplier="1:1" id="hGz-P6-cxm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyP-r8-vjO">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PyP-r8-vjO" secondAttribute="height" multiplier="1:1" id="wAz-Sv-ag3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="100"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Py-Xx-OfE">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Py-Xx-OfE" secondAttribute="height" multiplier="1:1" id="1Qb-a6-Uul"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="100"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have tried the codes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nr-HE-Mv8">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[&quot;000&quot;, &quot;111&quot;]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aIj-81-6sd">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aIj-81-6sd" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.9" id="0hr-cJ-iIP"/>
+                            <constraint firstItem="9t8-Bi-ELF" firstAttribute="top" secondItem="1Py-Xx-OfE" secondAttribute="bottom" constant="15" id="1Hd-UD-4Wr"/>
+                            <constraint firstItem="QYG-bd-gi3" firstAttribute="trailing" secondItem="rFR-wd-uwD" secondAttribute="trailingMargin" id="49n-M3-XVU"/>
+                            <constraint firstItem="9t8-Bi-ELF" firstAttribute="centerX" secondItem="rFR-wd-uwD" secondAttribute="centerX" id="696-Fe-u3z"/>
+                            <constraint firstItem="PyP-r8-vjO" firstAttribute="top" secondItem="6OS-BP-WUU" secondAttribute="bottom" constant="8" id="9Pb-e4-LJJ"/>
+                            <constraint firstItem="72T-hj-dFa" firstAttribute="centerX" secondItem="rFR-wd-uwD" secondAttribute="centerX" id="CfF-dw-9mG"/>
+                            <constraint firstItem="aIj-81-6sd" firstAttribute="centerX" secondItem="rFR-wd-uwD" secondAttribute="centerX" id="ExO-79-HnP"/>
+                            <constraint firstAttribute="trailing" secondItem="ikv-Zj-GRt" secondAttribute="trailing" id="FO4-Vo-Tcn"/>
+                            <constraint firstItem="1Nr-HE-Mv8" firstAttribute="top" secondItem="72T-hj-dFa" secondAttribute="bottom" constant="8" id="GJN-qG-7tY"/>
+                            <constraint firstItem="72T-hj-dFa" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.9" id="KC6-rh-Rlr"/>
+                            <constraint firstItem="72T-hj-dFa" firstAttribute="top" secondItem="9t8-Bi-ELF" secondAttribute="bottom" constant="8" id="RPn-pS-PLM"/>
+                            <constraint firstItem="1Py-Xx-OfE" firstAttribute="trailing" secondItem="rFR-wd-uwD" secondAttribute="trailingMargin" id="SPy-ez-Us0"/>
+                            <constraint firstItem="1Nr-HE-Mv8" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.9" id="STB-37-Mjl"/>
+                            <constraint firstItem="dSq-JU-ToN" firstAttribute="leading" secondItem="rFR-wd-uwD" secondAttribute="leadingMargin" id="Tai-v3-h1X"/>
+                            <constraint firstItem="dSq-JU-ToN" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.28" id="YgF-AD-qse"/>
+                            <constraint firstItem="1Py-Xx-OfE" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.43" id="Z6Z-d0-R4c"/>
+                            <constraint firstItem="ikv-Zj-GRt" firstAttribute="leading" secondItem="rFR-wd-uwD" secondAttribute="leading" id="gFb-xF-QW4"/>
+                            <constraint firstItem="ikv-Zj-GRt" firstAttribute="height" secondItem="rFR-wd-uwD" secondAttribute="height" multiplier="0.1" id="ihF-NA-FWI"/>
+                            <constraint firstItem="PyP-r8-vjO" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.43" id="j80-Tn-s5V"/>
+                            <constraint firstItem="aIj-81-6sd" firstAttribute="top" secondItem="1Nr-HE-Mv8" secondAttribute="bottom" constant="8" id="jJ7-4r-4gm"/>
+                            <constraint firstItem="QYG-bd-gi3" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.28" id="n5o-6R-pbH"/>
+                            <constraint firstItem="9t8-Bi-ELF" firstAttribute="width" secondItem="rFR-wd-uwD" secondAttribute="width" multiplier="0.28" id="nkb-jX-nbt"/>
+                            <constraint firstItem="1Py-Xx-OfE" firstAttribute="top" secondItem="6OS-BP-WUU" secondAttribute="bottom" constant="8" id="q19-xE-1rL"/>
+                            <constraint firstItem="i8F-Sk-rpu" firstAttribute="top" secondItem="ikv-Zj-GRt" secondAttribute="bottom" id="sah-G5-gqJ"/>
+                            <constraint firstItem="QYG-bd-gi3" firstAttribute="top" secondItem="1Py-Xx-OfE" secondAttribute="bottom" constant="15" id="sgx-Xw-bOT"/>
+                            <constraint firstItem="ikv-Zj-GRt" firstAttribute="top" secondItem="aIj-81-6sd" secondAttribute="bottom" constant="8" id="uAr-Te-cP7"/>
+                            <constraint firstItem="1Nr-HE-Mv8" firstAttribute="centerX" secondItem="rFR-wd-uwD" secondAttribute="centerX" id="wID-pD-pNA"/>
+                            <constraint firstItem="dSq-JU-ToN" firstAttribute="top" secondItem="PyP-r8-vjO" secondAttribute="bottom" constant="15" id="wr9-PB-Cfc"/>
+                            <constraint firstItem="PyP-r8-vjO" firstAttribute="leading" secondItem="rFR-wd-uwD" secondAttribute="leadingMargin" id="z5v-TV-yfy"/>
+                            <constraint firstItem="1Nr-HE-Mv8" firstAttribute="top" secondItem="72T-hj-dFa" secondAttribute="bottom" constant="8" id="zgW-BH-zXq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yWW-bZ-IKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="766.875" y="807.04225352112678"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yrL-is-TmG">
+            <objects>
+                <viewController storyboardIdentifier="rpssView" id="Iz8-ql-KEi" customClass="RPSSViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qfP-SN-8SK"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPm-ht-LGY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cvi-vu-end">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Oe-MS-wOF">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Sonic Screwdriver">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj3-cl-0tz">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Paper">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRQ-qe-RlQ">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Rock">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sonicScrewdriver" translatesAutoresizingMaskIntoConstraints="NO" id="XNO-AY-gxJ"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'Rock, Paper, Scissors?' you ask. 'Of course not! Rock, Paper, Sonic Screwdriver.'&quot;" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-9w-LcP">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kPm-ht-LGY" firstAttribute="top" secondItem="2Oe-MS-wOF" secondAttribute="bottom" constant="15" id="5IO-Gd-oDQ"/>
+                            <constraint firstItem="QRQ-qe-RlQ" firstAttribute="top" secondItem="Zlc-9w-LcP" secondAttribute="bottom" constant="15" id="8wI-f2-8HZ"/>
+                            <constraint firstItem="Zlc-9w-LcP" firstAttribute="centerX" secondItem="cvi-vu-end" secondAttribute="centerX" id="G2g-gQ-DK0"/>
+                            <constraint firstItem="XNO-AY-gxJ" firstAttribute="centerX" secondItem="cvi-vu-end" secondAttribute="centerX" id="Gnw-Re-e4B"/>
+                            <constraint firstItem="XNO-AY-gxJ" firstAttribute="width" secondItem="cvi-vu-end" secondAttribute="width" multiplier="0.9" id="KdC-Rs-PHW"/>
+                            <constraint firstItem="2Oe-MS-wOF" firstAttribute="height" secondItem="cvi-vu-end" secondAttribute="height" multiplier="0.1" id="P6Z-hf-R2O"/>
+                            <constraint firstItem="XNO-AY-gxJ" firstAttribute="top" secondItem="qfP-SN-8SK" secondAttribute="bottom" id="Trm-ck-9CB"/>
+                            <constraint firstItem="2Oe-MS-wOF" firstAttribute="top" secondItem="Wj3-cl-0tz" secondAttribute="bottom" constant="15" id="W2X-Re-NyH"/>
+                            <constraint firstItem="2Oe-MS-wOF" firstAttribute="width" secondItem="cvi-vu-end" secondAttribute="width" multiplier="0.9" id="Zow-Kj-sG9"/>
+                            <constraint firstItem="Wj3-cl-0tz" firstAttribute="centerX" secondItem="cvi-vu-end" secondAttribute="centerX" id="atA-uh-iVh"/>
+                            <constraint firstItem="Wj3-cl-0tz" firstAttribute="height" secondItem="cvi-vu-end" secondAttribute="height" multiplier="0.1" id="f7T-fd-vAd"/>
+                            <constraint firstItem="2Oe-MS-wOF" firstAttribute="centerX" secondItem="cvi-vu-end" secondAttribute="centerX" id="gpz-JM-LRu"/>
+                            <constraint firstItem="XNO-AY-gxJ" firstAttribute="height" secondItem="cvi-vu-end" secondAttribute="height" multiplier="0.3" id="gyO-OE-Hjb"/>
+                            <constraint firstItem="Wj3-cl-0tz" firstAttribute="width" secondItem="cvi-vu-end" secondAttribute="width" multiplier="0.9" id="ij0-E6-nF1"/>
+                            <constraint firstItem="Zlc-9w-LcP" firstAttribute="top" secondItem="XNO-AY-gxJ" secondAttribute="bottom" constant="15" id="imc-XP-7Az"/>
+                            <constraint firstItem="QRQ-qe-RlQ" firstAttribute="width" secondItem="cvi-vu-end" secondAttribute="width" multiplier="0.9" id="nqB-AF-hY9"/>
+                            <constraint firstItem="Wj3-cl-0tz" firstAttribute="top" secondItem="QRQ-qe-RlQ" secondAttribute="bottom" constant="15" id="qMg-sP-7rD"/>
+                            <constraint firstItem="QRQ-qe-RlQ" firstAttribute="centerX" secondItem="cvi-vu-end" secondAttribute="centerX" id="t5O-1I-qSm"/>
+                            <constraint firstItem="QRQ-qe-RlQ" firstAttribute="height" secondItem="cvi-vu-end" secondAttribute="height" multiplier="0.1" id="tTx-hh-jSD"/>
+                            <constraint firstItem="Zlc-9w-LcP" firstAttribute="width" secondItem="cvi-vu-end" secondAttribute="width" multiplier="0.9" id="v9Z-5j-Xcg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gdh-ob-tiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391.25" y="808.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dalekSketch" width="379" height="220"/>
+        <image name="door" width="595" height="335"/>
+        <image name="sonicScrewdriver" width="337" height="70"/>
+        <image name="twoDaleks" width="183" height="121"/>
+    </resources>
+</document>
