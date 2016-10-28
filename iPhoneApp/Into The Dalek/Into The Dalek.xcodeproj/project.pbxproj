@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3455AC381DC3CE61001C3580 /* DeathViewController.swift */; };
 		3479E8DF1DBE79F300D9591E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8DE1DBE79F300D9591E /* AppDelegate.swift */; };
 		3479E8E11DBE79F300D9591E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8E01DBE79F300D9591E /* ViewController.swift */; };
 		3479E8E41DBE79F300D9591E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3479E8E21DBE79F300D9591E /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3455AC381DC3CE61001C3580 /* DeathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathViewController.swift; sourceTree = "<group>"; };
 		3479E8DB1DBE79F300D9591E /* Into The Dalek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Into The Dalek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3479E8DE1DBE79F300D9591E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3479E8E01DBE79F300D9591E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				3479E8E01DBE79F300D9591E /* ViewController.swift */,
 				3479E8F01DBE7A1A00D9591E /* Story.swift */,
 				3479E9021DBED53700D9591E /* StoryViewController.swift */,
+				3455AC381DC3CE61001C3580 /* DeathViewController.swift */,
 				3479E8F61DBE7A8F00D9591E /* ChoiceViewController.swift */,
 				3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */,
 				3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */,
@@ -156,6 +159,7 @@
 			files = (
 				3479E8FB1DBE7AB600D9591E /* CodeViewController.swift in Sources */,
 				3479E8FD1DBE7AC900D9591E /* RPSSViewController.swift in Sources */,
+				3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */,
 				3479E8E11DBE79F300D9591E /* ViewController.swift in Sources */,
 				3479E8F91DBE7AA100D9591E /* RiddleViewController.swift in Sources */,
 				3479E9031DBED53700D9591E /* StoryViewController.swift in Sources */,
@@ -323,6 +327,7 @@
 				3479E8EF1DBE79F300D9591E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

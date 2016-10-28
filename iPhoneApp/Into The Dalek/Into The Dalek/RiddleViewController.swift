@@ -9,11 +9,17 @@
 import UIKit
 
 class RiddleViewController: UIViewController {
+    
+    @IBOutlet weak var lblRiddleText: UILabel!
+    @IBOutlet weak var txtInputRiddle: UITextField!
+    
+    let riddleText = "Remember:\n\nOne Dalek lies.\n\nThe other tells the truth.\n\nYou decide to ask the Dalek on the left:"
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // load riddle directions
+        lblRiddleText.text = riddleText
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +27,10 @@ class RiddleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func solveRiddleACTION(_ sender: AnyObject) {
+        // if txtInputRiddle contains "other", increase pageCount, segue to story[2]
+        // else, segue to deathView
+    }
 
     /*
     // MARK: - Navigation

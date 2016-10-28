@@ -32,6 +32,9 @@
                                 <state key="normal" title="Start the Tardis">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startGameACTION:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBL-Gg-o6x"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...INTO THE DALEK?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUS-mm-RPL">
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="30"/>
@@ -77,8 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSb-Nz-3pj">
-                                <string key="text">  The Tardis flickers to life in the control room of the 'Aristotle'.  You open the door and shake yourself off, get your bearings.  You and the Doctor have just rescued the rebel fighter Journey Blue.  Her shuttle was under attack from the Daleks. Your Tardis stumbled into the battle and you joined the fight.  Now you have returned her safely to her rebel base ship.  You expect to enter to cheers, but instead, there is only silence...</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoryText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dSb-Nz-3pj">
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,6 +91,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextPageACTION:" destination="7h8-1m-448" eventType="touchUpInside" id="ZoG-iA-b3w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,6 +108,9 @@
                             <constraint firstItem="dSb-Nz-3pj" firstAttribute="top" secondItem="k8B-tU-Emz" secondAttribute="bottom" constant="8" id="saT-av-b7A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblTextView" destination="dSb-Nz-3pj" id="4Qj-ze-Oec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViB-Yk-0Sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,51 +128,117 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-7H-O9U">
-                                <string key="text">  You are surrounded. The rebel officers have been waiting for you.  They explain: They have captured a strange Dalek and they need your help. This strange new Dalek appears to be... GOOD. Will you help confirm the existence of a good Dalek?</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChoiceText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Fe-7H-O9U">
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Io-iY-ray">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="tbc-OQ-0S5">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="8RO-2M-sUO"/>
-                                    <constraint firstAttribute="height" constant="31" id="uIW-kR-wzg"/>
+                                    <constraint firstAttribute="height" constant="28" id="Y5Y-ss-czf"/>
                                 </constraints>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT5-K9-9vr">
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="No"/>
+                                    <segment title="Yes"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segAcceptOrDeclineACTION:" destination="eKU-ux-Nq2" eventType="valueChanged" id="NKs-VU-OcU"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="top" secondItem="Sno-4v-i8o" secondAttribute="bottom" constant="8" id="8wc-hS-Qqa"/>
+                            <constraint firstItem="tbc-OQ-0S5" firstAttribute="width" secondItem="Qd5-wG-vgC" secondAttribute="width" multiplier="0.9" id="AKK-Zi-rCt"/>
+                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="tbc-OQ-0S5" secondAttribute="bottom" constant="20" id="POr-KR-1ec"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="width" secondItem="Qd5-wG-vgC" secondAttribute="width" multiplier="0.9" id="XsJ-By-7Kc"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="height" secondItem="Qd5-wG-vgC" secondAttribute="height" multiplier="0.8" id="sf6-qf-Atw"/>
+                            <constraint firstItem="tbc-OQ-0S5" firstAttribute="centerX" secondItem="Qd5-wG-vgC" secondAttribute="centerX" id="y07-lV-5TX"/>
+                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="centerX" secondItem="Qd5-wG-vgC" secondAttribute="centerX" id="ybr-TO-T9c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblChoiceText" destination="6Fe-7H-O9U" id="WkZ-fx-f9Q"/>
+                        <outlet property="segYesNoOUTLET" destination="tbc-OQ-0S5" id="UBQ-NP-mPy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0b-ci-cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1389.375" y="138.75"/>
+        </scene>
+        <!--Death View Controller-->
+        <scene sceneID="LIP-VZ-qil">
+            <objects>
+                <viewController storyboardIdentifier="deathView" id="tUN-pP-sgQ" customClass="DeathViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qlJ-oG-XyL"/>
+                        <viewControllerLayoutGuide type="bottom" id="qJh-IP-isU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Gp-Dn-hhB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to travel..." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIZ-9B-BPj">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ3-5F-DU6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xI5-Nf-0Gv">
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainACTION:" destination="tUN-pP-sgQ" eventType="touchUpInside" id="qbV-7Q-pTJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extermination Successful. The human race is dead.  Care to rewind the tardis and try it all again?&quot;" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28V-u6-0qk">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctors" translatesAutoresizingMaskIntoConstraints="NO" id="AhM-dW-zkO"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lossText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbG-B9-TTv">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Io-iY-ray" firstAttribute="centerX" secondItem="Qd5-wG-vgC" secondAttribute="centerX" id="1jP-8k-S7c"/>
-                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="top" secondItem="Sno-4v-i8o" secondAttribute="bottom" constant="8" id="8wc-hS-Qqa"/>
-                            <constraint firstItem="cJ3-5F-DU6" firstAttribute="height" secondItem="4Io-iY-ray" secondAttribute="height" id="EFL-JR-dBg"/>
-                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="eT5-K9-9vr" secondAttribute="bottom" constant="20" id="Pp3-BI-P7x"/>
-                            <constraint firstItem="eT5-K9-9vr" firstAttribute="trailing" secondItem="Qd5-wG-vgC" secondAttribute="trailingMargin" id="Tnu-DJ-wWq"/>
-                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="width" secondItem="Qd5-wG-vgC" secondAttribute="width" multiplier="0.9" id="XsJ-By-7Kc"/>
-                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="4Io-iY-ray" secondAttribute="bottom" constant="20" id="YS6-16-Dbf"/>
-                            <constraint firstItem="NbH-S6-UrP" firstAttribute="top" secondItem="cJ3-5F-DU6" secondAttribute="bottom" constant="20" id="hTn-hG-1kD"/>
-                            <constraint firstItem="eT5-K9-9vr" firstAttribute="height" secondItem="4Io-iY-ray" secondAttribute="height" id="iTW-F0-ZWu"/>
-                            <constraint firstItem="4Io-iY-ray" firstAttribute="leading" secondItem="cJ3-5F-DU6" secondAttribute="trailing" constant="15" id="p8U-L8-0xx"/>
-                            <constraint firstItem="cJ3-5F-DU6" firstAttribute="leading" secondItem="Qd5-wG-vgC" secondAttribute="leadingMargin" id="rkY-bD-mtf"/>
-                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="height" secondItem="Qd5-wG-vgC" secondAttribute="height" multiplier="0.8" id="sf6-qf-Atw"/>
-                            <constraint firstItem="eT5-K9-9vr" firstAttribute="leading" secondItem="4Io-iY-ray" secondAttribute="trailing" constant="15" id="xQP-dg-tVU"/>
-                            <constraint firstItem="6Fe-7H-O9U" firstAttribute="centerX" secondItem="Qd5-wG-vgC" secondAttribute="centerX" id="ybr-TO-T9c"/>
+                            <constraint firstItem="AhM-dW-zkO" firstAttribute="height" secondItem="6Gp-Dn-hhB" secondAttribute="height" multiplier="0.2" id="1lM-Yw-md7"/>
+                            <constraint firstAttribute="trailing" secondItem="xI5-Nf-0Gv" secondAttribute="trailing" id="2Fa-UB-d9M"/>
+                            <constraint firstItem="XIZ-9B-BPj" firstAttribute="centerX" secondItem="6Gp-Dn-hhB" secondAttribute="centerX" id="6BU-eK-97c"/>
+                            <constraint firstItem="28V-u6-0qk" firstAttribute="width" secondItem="6Gp-Dn-hhB" secondAttribute="width" multiplier="0.9" id="9LB-Lv-6vn"/>
+                            <constraint firstItem="XIZ-9B-BPj" firstAttribute="width" secondItem="6Gp-Dn-hhB" secondAttribute="width" multiplier="0.9" id="HzZ-jj-Czv"/>
+                            <constraint firstItem="28V-u6-0qk" firstAttribute="top" secondItem="AhM-dW-zkO" secondAttribute="bottom" constant="8" id="KI7-zW-aHp"/>
+                            <constraint firstItem="dbG-B9-TTv" firstAttribute="centerX" secondItem="6Gp-Dn-hhB" secondAttribute="centerX" id="LJi-mm-oUB"/>
+                            <constraint firstItem="28V-u6-0qk" firstAttribute="centerX" secondItem="6Gp-Dn-hhB" secondAttribute="centerX" id="Sps-gx-5R0"/>
+                            <constraint firstItem="xI5-Nf-0Gv" firstAttribute="leading" secondItem="6Gp-Dn-hhB" secondAttribute="leading" id="TIE-Ob-YVc"/>
+                            <constraint firstItem="dbG-B9-TTv" firstAttribute="width" secondItem="6Gp-Dn-hhB" secondAttribute="width" multiplier="0.9" id="WV7-WL-rqb"/>
+                            <constraint firstItem="qJh-IP-isU" firstAttribute="top" secondItem="xI5-Nf-0Gv" secondAttribute="bottom" id="YBq-FG-RKS"/>
+                            <constraint firstItem="dbG-B9-TTv" firstAttribute="top" secondItem="qlJ-oG-XyL" secondAttribute="bottom" id="bI2-3f-EQG"/>
+                            <constraint firstItem="AhM-dW-zkO" firstAttribute="top" secondItem="XIZ-9B-BPj" secondAttribute="bottom" constant="8" id="dY2-8Z-rGH"/>
+                            <constraint firstItem="AhM-dW-zkO" firstAttribute="width" secondItem="6Gp-Dn-hhB" secondAttribute="width" multiplier="0.9" id="eD3-5v-rMM"/>
+                            <constraint firstItem="dbG-B9-TTv" firstAttribute="height" secondItem="6Gp-Dn-hhB" secondAttribute="height" multiplier="0.175" id="lcn-h3-GIi"/>
+                            <constraint firstItem="XIZ-9B-BPj" firstAttribute="top" secondItem="dbG-B9-TTv" secondAttribute="bottom" constant="8" id="mKa-Pr-bL0"/>
+                            <constraint firstItem="AhM-dW-zkO" firstAttribute="centerX" secondItem="6Gp-Dn-hhB" secondAttribute="centerX" id="ppM-0J-7J2"/>
+                            <constraint firstItem="xI5-Nf-0Gv" firstAttribute="top" secondItem="28V-u6-0qk" secondAttribute="bottom" constant="16" id="sZ2-S2-VQ1"/>
+                            <constraint firstItem="XIZ-9B-BPj" firstAttribute="height" secondItem="6Gp-Dn-hhB" secondAttribute="height" multiplier="0.175" id="ugD-eZ-VYw"/>
+                            <constraint firstItem="xI5-Nf-0Gv" firstAttribute="height" secondItem="6Gp-Dn-hhB" secondAttribute="height" multiplier="0.1" id="zYb-or-Nti"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblDeathText" destination="28V-u6-0qk" id="YpJ-ap-ThJ"/>
+                        <outlet property="lblLossText" destination="dbG-B9-TTv" id="k0m-hY-cdm"/>
+                        <outlet property="lbldeathQuip" destination="XIZ-9B-BPj" id="ISX-N5-JkR"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B0b-ci-cz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqK-g9-eHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="139"/>
+            <point key="canvasLocation" x="2016" y="139"/>
         </scene>
         <!--Riddle View Controller-->
         <scene sceneID="Ily-Zm-tvi">
@@ -185,17 +259,17 @@
                                 <state key="normal" title="Solve the Riddle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="solveRiddleACTION:" destination="4Ra-qf-WJC" eventType="touchUpInside" id="iqv-Uh-962"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-TN-xnk">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CES-MQ-1vu"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your question here." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-TN-xnk">
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPr-RD-kB7">
-                                <string key="text">You assume, as is the case with all Daleks... that the real Dalek will only lie. The good Dalek must only tell the truth.  What question do you ask?</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riddle Directions" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPr-RD-kB7">
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -205,6 +279,7 @@
                         <constraints>
                             <constraint firstItem="cAe-TN-xnk" firstAttribute="centerX" secondItem="cTf-y1-EEL" secondAttribute="centerX" id="3Hy-SO-TTY"/>
                             <constraint firstItem="c5K-2d-gj0" firstAttribute="centerX" secondItem="cTf-y1-EEL" secondAttribute="centerX" id="5vp-S3-4kQ"/>
+                            <constraint firstItem="eeO-4H-4QM" firstAttribute="top" secondItem="cAe-TN-xnk" secondAttribute="bottom" constant="16" id="7dE-TC-TFS"/>
                             <constraint firstItem="hGr-0l-Bkf" firstAttribute="top" secondItem="eeO-4H-4QM" secondAttribute="bottom" id="Cc1-k9-1fH"/>
                             <constraint firstItem="cAe-TN-xnk" firstAttribute="top" secondItem="MPr-RD-kB7" secondAttribute="bottom" constant="15" id="b44-ZQ-hAA"/>
                             <constraint firstItem="c5K-2d-gj0" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.4" id="ggb-Ba-Pzi"/>
@@ -217,9 +292,13 @@
                             <constraint firstItem="MPr-RD-kB7" firstAttribute="top" secondItem="c5K-2d-gj0" secondAttribute="bottom" constant="8" id="qyY-oW-z0t"/>
                             <constraint firstAttribute="trailing" secondItem="eeO-4H-4QM" secondAttribute="trailing" id="tfl-wj-Sr9"/>
                             <constraint firstItem="eeO-4H-4QM" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.1" id="zJ2-Om-I4x"/>
-                            <constraint firstItem="MPr-RD-kB7" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.3" id="ztd-cS-88E"/>
+                            <constraint firstItem="MPr-RD-kB7" firstAttribute="height" secondItem="cTf-y1-EEL" secondAttribute="height" multiplier="0.2" id="ztd-cS-88E"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblRiddleText" destination="MPr-RD-kB7" id="tw1-ID-R0l"/>
+                        <outlet property="txtInputRiddle" destination="cAe-TN-xnk" id="Dyo-NN-PeD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWz-zq-zAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -409,6 +488,7 @@
     </scenes>
     <resources>
         <image name="dalekSketch" width="379" height="220"/>
+        <image name="doctors" width="140" height="90"/>
         <image name="door" width="595" height="335"/>
         <image name="sonicScrewdriver" width="337" height="70"/>
         <image name="twoDaleks" width="183" height="121"/>

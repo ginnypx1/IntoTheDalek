@@ -20,6 +20,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func startGameACTION(_ sender: AnyObject) {
+        // segue to story title
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        
+    }
 
+    
 }
 
