@@ -26,6 +26,7 @@ class StoryViewController: UIViewController {
     }
     
     @IBAction func nextPageACTION(_ sender: AnyObject) {
+        print(pageCount)
         switch pageCount {
         case 0:
             // transition to choice/ choiceView
@@ -36,6 +37,11 @@ class StoryViewController: UIViewController {
             // transition to riddle/ riddleView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "riddleView") as! RiddleViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        case 3:
+            // transition to crack code/ codeView
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "codeView") as! CodeViewController
             self.present(nextViewController, animated:true, completion:nil)
         case (story.count-1):
             // segue to play again screen

@@ -28,8 +28,20 @@ class RiddleViewController: UIViewController {
     }
     
     @IBAction func solveRiddleACTION(_ sender: AnyObject) {
-        // if txtInputRiddle contains "other", increase pageCount, segue to story[2]
-        // else, segue to deathView
+        if (!(txtInputRiddle.text?.isEmpty)!) {
+            // if txtInputRiddle contains "other", increase pageCount, segue to story[2]
+            if (txtInputRiddle.text?.localizedStandardContains("other") == true) {
+                pageCount += 1
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
+                self.present(nextViewController, animated:true, completion:nil)
+            } else {
+                // segue to deathView
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
+                self.present(nextViewController, animated:true, completion:nil)
+            }
+        } // TODO: alert if text in textfield is invalid
     }
 
     /*
