@@ -43,6 +43,16 @@ class StoryViewController: UIViewController {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "codeView") as! CodeViewController
             self.present(nextViewController, animated:true, completion:nil)
+        case 5:
+            // transition to RpssView
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "rpssView") as! RPSSViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        case 7:
+            // transition to laserView
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "laserView") as! LaserViewController
+            self.present(nextViewController, animated:true, completion:nil)
         case (story.count-1):
             // segue to play again screen
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)

@@ -37,6 +37,7 @@ class RiddleViewController: UIViewController {
                 self.present(nextViewController, animated:true, completion:nil)
             } else {
                 // segue to deathView
+                deathNumber = 1
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
                 self.present(nextViewController, animated:true, completion:nil)

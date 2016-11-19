@@ -122,6 +122,7 @@ class CodeViewController: UIViewController {
                 }
             } else {
                 // segue to death
+                deathNumber = 2
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
                 self.present(nextViewController, animated:true, completion:nil)

@@ -19,6 +19,7 @@
 		3479E8FB1DBE7AB600D9591E /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */; };
 		3479E8FD1DBE7AC900D9591E /* RPSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8FC1DBE7AC900D9591E /* RPSSViewController.swift */; };
 		3479E9031DBED53700D9591E /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E9021DBED53700D9591E /* StoryViewController.swift */; };
+		34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D439D31DE0C342004C8B54 /* LaserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		3479E8FC1DBE7AC900D9591E /* RPSSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSSViewController.swift; sourceTree = "<group>"; };
 		3479E9021DBED53700D9591E /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		34D439D31DE0C342004C8B54 /* LaserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */,
 				3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */,
 				3479E8FC1DBE7AC900D9591E /* RPSSViewController.swift */,
+				34D439D31DE0C342004C8B54 /* LaserViewController.swift */,
 				3479E8E21DBE79F300D9591E /* Main.storyboard */,
 				3479E8E51DBE79F300D9591E /* Assets.xcassets */,
 				3479E8E71DBE79F300D9591E /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				3479E9031DBED53700D9591E /* StoryViewController.swift in Sources */,
 				3479E8F71DBE7A8F00D9591E /* ChoiceViewController.swift in Sources */,
 				3479E8DF1DBE79F300D9591E /* AppDelegate.swift in Sources */,
+				34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */,
 				3479E8F11DBE7A1A00D9591E /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

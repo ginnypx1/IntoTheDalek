@@ -9,6 +9,7 @@
 import UIKit
 
 var isDead = false
+var deathNumber: Int = 0
 
 class DeathViewController: UIViewController {
     
@@ -38,7 +39,7 @@ class DeathViewController: UIViewController {
         // generate a random quip
         let randomNumber:UInt32 = arc4random_uniform(UInt32(deathQuips.count))
         // load the text
-        lblLossText.text = lossText[pageCount]
+        lblLossText.text = lossText[deathNumber]
         lbldeathQuip.text = deathQuips[Int(randomNumber)]
         lblDeathText.text = deathText
     }
