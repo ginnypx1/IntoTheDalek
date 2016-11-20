@@ -8,10 +8,12 @@
 
 import UIKit
 
+
 class StoryViewController: UIViewController {
 
     @IBOutlet weak var lblTextView: UILabel!
     
+    // MARK: - Apple Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,8 @@ class StoryViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Navigation
     
     @IBAction func nextPageACTION(_ sender: AnyObject) {
         print(pageCount)
@@ -53,10 +57,15 @@ class StoryViewController: UIViewController {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "laserView") as! LaserViewController
             self.present(nextViewController, animated:true, completion:nil)
-        case (story.count-1):
-            // segue to play again screen
+        case 10:
+            // transition to jokeView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "jokeView") as! JokeViewController
+            self.present(nextViewController, animated:true, completion:nil)
+        case 12:
+            // transition to victoryView
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "victoryView") as! VictoryViewController
             self.present(nextViewController, animated:true, completion:nil)
         default:
             // increase the page count

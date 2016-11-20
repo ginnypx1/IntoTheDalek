@@ -8,8 +8,10 @@
 
 import UIKit
 
+
 var isDead = false
 var deathNumber: Int = 0
+
 
 class DeathViewController: UIViewController {
     
@@ -33,6 +35,8 @@ class DeathViewController: UIViewController {
     let deathText = // tag on all the deaths
     "Extermination Successful.\n\nThe human race is dead.\n\nCare to rewind the tardis and try it all again?"
 
+    // MARK: - Apple Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,6 +52,8 @@ class DeathViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Restart Game
     
     @IBAction func playAgainACTION(_ sender: AnyObject) {
         // reset all variables

@@ -8,13 +8,15 @@
 
 import UIKit
 
+
 class ChoiceViewController: UIViewController {
     
     @IBOutlet weak var lblChoiceText: UILabel!
     @IBOutlet weak var segYesNoOUTLET: UISegmentedControl!
     
-    
     let choiceText = "  You are surrounded by soldiers with guns. The rebel officers have been waiting for you. They explain: They have captured a strange Dalek and they need your help.\n\n  This strange new Dalek appears to be... GOOD.\n\n  Will you help confirm the existence of a good Dalek?"
+    
+    // MARK: - Apple Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +30,16 @@ class ChoiceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Accept mission
+    
     @IBAction func segAcceptOrDeclineACTION(_ sender: AnyObject) {
         switch segYesNoOUTLET.selectedSegmentIndex {
         case 0:
-            // load death
+            deathNumber = 0
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
             self.present(nextViewController, animated:true, completion:nil)
-            
         case 1:
-            // load story[1] in StoryViewController
             pageCount += 1
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController

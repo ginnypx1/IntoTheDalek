@@ -31,7 +31,6 @@ class RPSSViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -57,9 +56,6 @@ class RPSSViewController: UIViewController {
         chooseDoctorHand()
         playerHand = choices[0]
         
-        print("doctor Hand: \(doctorHand)")
-        print("player Hand: \(playerHand)")
-        
         if (doctorHand == "sonic screwdriver") {
             // you win, transition to death
             deathNumber = 3
@@ -81,9 +77,6 @@ class RPSSViewController: UIViewController {
         chooseDoctorHand()
         playerHand = choices[1]
         
-        print("doctor Hand: \(doctorHand)")
-        print("player Hand: \(playerHand)")
-        
         if (doctorHand == "rock") {
             // you win, transition to death
             deathNumber = 3
@@ -92,6 +85,7 @@ class RPSSViewController: UIViewController {
             self.present(nextViewController, animated:true, completion:nil)
         } else if (doctorHand == "sonic screwdriver") {
             // you lose, pageCount += 1, transition to story[6]
+            pageCount += 1
             pageCount += 1
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
@@ -104,9 +98,6 @@ class RPSSViewController: UIViewController {
     @IBAction func chooseSonicScrewdriver(_ sender: Any) {
         chooseDoctorHand()
         playerHand = choices[2]
-        
-        print("doctor Hand: \(doctorHand)")
-        print("player Hand: \(playerHand)")
         
         if (doctorHand == "paper") {
             // you win, transition to death

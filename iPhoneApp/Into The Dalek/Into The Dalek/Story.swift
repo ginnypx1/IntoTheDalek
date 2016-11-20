@@ -30,7 +30,7 @@ let story : [String] = [
     // transitions to joke (pageCount = 10)
     "  Ha! Good one!\n\n  'To exterminate humanity!' The Doctor and the Dalek yell at the same time. 'HA HA HA HA HA!'\n\n  The ship fills with laughter. Then something wonderful happens. All the images around you become the star being born. It's beautiful. Mesmerizing. You are transported. ...And so are the Doctor and the Dalek.\n\n  The Dalek tears up. 'How could you destroy when creation is so wonderful?' he says.\n\n  He is good again.",
     "  Victory!\n\n  You tumble out of the Dalek... and find yourself back in the control room of the 'Aristotle.'\n\n  The Doctor stares intensely at the 'good' Dalek. You can tell - He is disturbed... The Dalek only saw darkness inside him. You try to reassure him that it all worked out anyways. 'But it would have been nice if we could have figured out how to make them all good...'",
-    "  The good Dalek sends a signal to his mothership. He tells the rest of the Dalek force: 'The 'Aristotle' has been destroyed.' The rebels can now operate completely under the Dalek radar.\n\n  You leave them with a new soldier -- the good Dalek.\n\n  You hop on the Tardis and turn the key.\n\n  A new adventure awaits..."
+    // transition to Victory (pageCount = 12)
 ]
 
 // when games are lost, these should be displayed
@@ -40,7 +40,7 @@ let lossText: [String] = [
     // lose riddle
     "  You tell the guards to release the Dalek.\n\n  They unlock the chains...\n\n  The Dalek opens fire...",
     // lose crack code
-    "BZZZ!\n\n  The Dalek vault shuts down...\n\n  Journey Blue gets out her grapple hook and shoots it.\n\n  'Wrong move,' says the Doctor. You watch as the Dalek unleashes an attack force... A squadron of super-fast autonomic antibodies that attack what is giving them pain...\n\n  They surround you all and they EXTERMINATE.",
+    "BZZZ!\n\n  The Dalek vault shuts down...\n\n  Journey Blue shoots it.\n\n  'Wrong move,' says the Doctor. A squadron of super-fast autonomic antibodies attack what is giving them pain...\n\n  They surround you...",
     // win rpss
     "You Win!\n\n No garbage for you. Unfortunately, that means the second you walk out the door... You are attacked and killed.",
     // lose laser (too little power)
@@ -48,7 +48,7 @@ let lossText: [String] = [
     // lose laser (too much power)
     "Your attack was too strong! You melted the ship!\n\n  ...You float into the vastness of space...",
     // tell wrong joke apple
-    "Ha! Good one!\n\n  The Dalek starts to laugh. 'I know this one!' he says.\n\n  'An apple a day... Keeps the Doctor away! HA HA HA HA HA!'\n\n  You look at the Doctor. He isn't amused.\n\n  The link fails. The Daleks attack!",
+    "The Dalek starts to laugh.\n\n  'An apple a day... Keeps the Doctor away! HA HA HA HA HA!'\n\n  You look at the Doctor. He isn't amused.\n\n  The link fails. The Daleks attack!",
     // tell wrong joke skin
-    "Ha! Good one!\n\n  'I know this one!' the Doctor says.\n\n  'EXFOLIATE!' The Doctor cracks up and smacks his knee. 'HA HA HA HA HA!'\n\n  You look around the inside of the Dalek. You can both tell by the flashing red lights. He isn't amused.\n\n  The link fails. The Daleks attack!",
+    "'EXFOLIATE!' The Doctor cracks up and smacks his knee. 'HA HA HA HA HA!'\n\n  You look around the inside of the Dalek. You can both tell by the flashing red lights. He isn't amused.\n\n  The link fails. The Daleks attack!",
 ]

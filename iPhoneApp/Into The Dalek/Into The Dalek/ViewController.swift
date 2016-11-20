@@ -8,7 +8,10 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
+    
+    // MARK: - Apple Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +22,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Start Game
 
     @IBAction func startGameACTION(_ sender: AnyObject) {
         // segue to story title
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
         self.present(nextViewController, animated:true, completion:nil)
-        
     }
 
     

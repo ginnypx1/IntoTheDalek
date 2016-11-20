@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CodeViewController: UIViewController {
     
     @IBOutlet weak var lblCodePart1: UILabel!
@@ -43,7 +44,6 @@ class CodeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -54,6 +54,8 @@ class CodeViewController: UIViewController {
     }
     */
     
+    // MARK: - Generate Dalek Code
+    
     func generateCode() {
         let part1 = Int(arc4random_uniform(2))
         let part2 = Int(arc4random_uniform(2))
@@ -61,7 +63,7 @@ class CodeViewController: UIViewController {
         correctAnswer = "\(part1)\(part2)\(part3)"
     }
     
-    // MARK: - Actions
+    // MARK: - Play Guessing Game
     
     @IBAction func pressZero(_ sender: Any) {
         labelNumber += 1
@@ -81,6 +83,7 @@ class CodeViewController: UIViewController {
             break
         }
     }
+    
     @IBAction func pressOne(_ sender: Any) {
         labelNumber += 1
         // add one to the next label
@@ -107,7 +110,6 @@ class CodeViewController: UIViewController {
             if (tries < 4) {
                 if (tryCode == correctAnswer) {
                     pageCount += 1
-                    // segue to story[3]
                     let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                     let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
                     self.present(nextViewController, animated:true, completion:nil)
@@ -121,17 +123,11 @@ class CodeViewController: UIViewController {
                     labelNumber = 0
                 }
             } else {
-                // segue to death
                 deathNumber = 2
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
                 self.present(nextViewController, animated:true, completion:nil)
             }
         }
-
-        
-        
     }
-    
-
 }

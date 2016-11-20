@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RiddleViewController: UIViewController {
     
     @IBOutlet weak var lblRiddleText: UILabel!
@@ -15,6 +16,8 @@ class RiddleViewController: UIViewController {
     
     let riddleText = "Remember:\n\nOne Dalek lies.\n\nThe other tells the truth.\n\nYou decide to ask the Dalek on the left:"
 
+    // MARK: - Apple Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +30,8 @@ class RiddleViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Solve Riddle
+    
     @IBAction func solveRiddleACTION(_ sender: AnyObject) {
         if (!(txtInputRiddle.text?.isEmpty)!) {
             // if txtInputRiddle contains "other", increase pageCount, segue to story[2]
@@ -36,7 +41,6 @@ class RiddleViewController: UIViewController {
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
                 self.present(nextViewController, animated:true, completion:nil)
             } else {
-                // segue to deathView
                 deathNumber = 1
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController

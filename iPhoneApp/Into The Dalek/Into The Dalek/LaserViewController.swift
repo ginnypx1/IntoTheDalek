@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class LaserViewController: UIViewController {
 
     @IBOutlet var laserLabels: [UILabel]!
     
     var shotCount: Int = -1
+    
+    // MARK: - Apple Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,8 @@ class LaserViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Shoot Laser
     
     func displayLoad() {
         var shot = 0
@@ -74,7 +79,7 @@ class LaserViewController: UIViewController {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
             self.present(nextViewController, animated:true, completion:nil)
         } else {
-            // pageCount += 1, transition to story
+            // transition to story
             pageCount += 1
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController

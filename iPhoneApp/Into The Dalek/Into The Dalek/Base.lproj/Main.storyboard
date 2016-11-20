@@ -258,6 +258,63 @@
             </objects>
             <point key="canvasLocation" x="2016" y="139"/>
         </scene>
+        <!--Victory View Controller-->
+        <scene sceneID="Tsa-bi-f4y">
+            <objects>
+                <viewController storyboardIdentifier="victoryView" id="jOZ-Ah-9oj" customClass="VictoryViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dfH-aR-mM5"/>
+                        <viewControllerLayoutGuide type="bottom" id="oP7-jf-GHB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kzx-w0-Mdy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43v-09-e7w">
+                                <rect key="frame" x="0.0" y="432" width="320" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgain:" destination="jOZ-Ah-9oj" eventType="touchUpInside" id="N3l-ad-7Y7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoryText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-P6-0nL">
+                                <rect key="frame" x="16" y="227" width="288" height="190"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tardis" translatesAutoresizingMaskIntoConstraints="NO" id="fsZ-Mi-LfW">
+                                <rect key="frame" x="16" y="20" width="288" height="192"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fsZ-Mi-LfW" firstAttribute="width" secondItem="kzx-w0-Mdy" secondAttribute="width" multiplier="0.9" id="1Nl-Q3-zau"/>
+                            <constraint firstItem="GxD-P6-0nL" firstAttribute="centerX" secondItem="kzx-w0-Mdy" secondAttribute="centerX" id="4HZ-Lf-6fe"/>
+                            <constraint firstAttribute="trailing" secondItem="43v-09-e7w" secondAttribute="trailing" id="OyG-Na-8AQ"/>
+                            <constraint firstItem="43v-09-e7w" firstAttribute="height" secondItem="kzx-w0-Mdy" secondAttribute="height" multiplier="0.1" id="S3g-Sh-Yk5"/>
+                            <constraint firstItem="43v-09-e7w" firstAttribute="leading" secondItem="kzx-w0-Mdy" secondAttribute="leading" id="UFh-98-zac"/>
+                            <constraint firstItem="43v-09-e7w" firstAttribute="top" secondItem="GxD-P6-0nL" secondAttribute="bottom" constant="15" id="aJr-BO-CR9"/>
+                            <constraint firstItem="oP7-jf-GHB" firstAttribute="top" secondItem="43v-09-e7w" secondAttribute="bottom" id="cUc-to-t7N"/>
+                            <constraint firstItem="GxD-P6-0nL" firstAttribute="top" secondItem="fsZ-Mi-LfW" secondAttribute="bottom" constant="15" id="gIH-Cg-bSB"/>
+                            <constraint firstItem="GxD-P6-0nL" firstAttribute="width" secondItem="kzx-w0-Mdy" secondAttribute="width" multiplier="0.9" id="h6L-uF-KJ7"/>
+                            <constraint firstItem="fsZ-Mi-LfW" firstAttribute="centerX" secondItem="kzx-w0-Mdy" secondAttribute="centerX" id="lqI-2a-k7v"/>
+                            <constraint firstItem="fsZ-Mi-LfW" firstAttribute="height" secondItem="kzx-w0-Mdy" secondAttribute="height" multiplier="0.4" id="nsW-Ae-hAO"/>
+                            <constraint firstItem="fsZ-Mi-LfW" firstAttribute="top" secondItem="dfH-aR-mM5" secondAttribute="bottom" id="yOM-DO-fAf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblVictoryText" destination="GxD-P6-0nL" id="pbQ-hX-ZBk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJ4-bT-vMb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2634.375" y="140"/>
+        </scene>
         <!--Riddle View Controller-->
         <scene sceneID="Ily-Zm-tvi">
             <objects>
@@ -509,7 +566,7 @@
                                     <action selector="chooseRock:" destination="Iz8-ql-KEi" eventType="touchUpInside" id="YLR-dg-gJt"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sonicScrewdriver" translatesAutoresizingMaskIntoConstraints="NO" id="XNO-AY-gxJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screwdriver" translatesAutoresizingMaskIntoConstraints="NO" id="XNO-AY-gxJ">
                                 <rect key="frame" x="16" y="20" width="288" height="144"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-9w-LcP">
@@ -806,12 +863,93 @@
             </objects>
             <point key="canvasLocation" x="2017.5" y="807.5"/>
         </scene>
+        <!--Joke View Controller-->
+        <scene sceneID="wfZ-PX-2no">
+            <objects>
+                <viewController storyboardIdentifier="jokeView" id="Q11-Ze-tCa" customClass="JokeViewController" customModule="Into_The_Dalek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jfq-QD-IF9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ynr-MI-W2P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uwr-mb-Vuj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn0-J3-gWu">
+                                <rect key="frame" x="16" y="417" width="288" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Why did the Dalek cross the road?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tellRoadJoke:" destination="Q11-Ze-tCa" eventType="touchUpInside" id="PGJ-OH-ha8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlF-KK-Msb">
+                                <rect key="frame" x="16" y="354" width="288" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <state key="normal" title="How does a Dalek keep his skin soft?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tellSkinCareJoke:" destination="Q11-Ze-tCa" eventType="touchUpInside" id="hLv-9L-oSp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb2-Qb-Sem">
+                                <rect key="frame" x="16" y="291" width="288" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <state key="normal" title="Why do the Daleks eat apples?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tellAppleJoke:" destination="Q11-Ze-tCa" eventType="touchUpInside" id="As1-03-cbo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daleks" translatesAutoresizingMaskIntoConstraints="NO" id="vSN-Fs-I9z">
+                                <rect key="frame" x="16" y="20" width="288" height="256"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fn0-J3-gWu" firstAttribute="top" secondItem="PlF-KK-Msb" secondAttribute="bottom" constant="15" id="1vH-1t-rap"/>
+                            <constraint firstItem="PlF-KK-Msb" firstAttribute="top" secondItem="Jb2-Qb-Sem" secondAttribute="bottom" constant="15" id="2CB-PW-6vx"/>
+                            <constraint firstItem="PlF-KK-Msb" firstAttribute="top" secondItem="Jb2-Qb-Sem" secondAttribute="bottom" constant="15" id="2LW-gk-jxr"/>
+                            <constraint firstItem="vSN-Fs-I9z" firstAttribute="width" secondItem="uwr-mb-Vuj" secondAttribute="width" multiplier="0.9" id="3UI-P5-6xY"/>
+                            <constraint firstItem="PlF-KK-Msb" firstAttribute="height" secondItem="uwr-mb-Vuj" secondAttribute="height" multiplier="0.1" id="9z5-fP-QXx"/>
+                            <constraint firstItem="Fn0-J3-gWu" firstAttribute="top" secondItem="PlF-KK-Msb" secondAttribute="bottom" constant="15" id="Jy7-bm-LKV"/>
+                            <constraint firstItem="Fn0-J3-gWu" firstAttribute="height" secondItem="uwr-mb-Vuj" secondAttribute="height" multiplier="0.1" id="K0Q-Rf-0Dj"/>
+                            <constraint firstItem="Fn0-J3-gWu" firstAttribute="width" secondItem="uwr-mb-Vuj" secondAttribute="width" multiplier="0.9" id="Lls-h6-IV7"/>
+                            <constraint firstItem="vSN-Fs-I9z" firstAttribute="centerX" secondItem="uwr-mb-Vuj" secondAttribute="centerX" id="NpN-Ka-6fm"/>
+                            <constraint firstItem="PlF-KK-Msb" firstAttribute="width" secondItem="uwr-mb-Vuj" secondAttribute="width" multiplier="0.9" id="P1e-m1-fDq"/>
+                            <constraint firstItem="vSN-Fs-I9z" firstAttribute="top" secondItem="jfq-QD-IF9" secondAttribute="bottom" id="Tb8-xP-3O7"/>
+                            <constraint firstItem="Fn0-J3-gWu" firstAttribute="centerX" secondItem="uwr-mb-Vuj" secondAttribute="centerX" id="Vm6-F9-hUO"/>
+                            <constraint firstItem="Jb2-Qb-Sem" firstAttribute="top" secondItem="vSN-Fs-I9z" secondAttribute="bottom" constant="15" id="WKT-yQ-omP"/>
+                            <constraint firstItem="Ynr-MI-W2P" firstAttribute="top" secondItem="Fn0-J3-gWu" secondAttribute="bottom" constant="15" id="ZmS-Do-YBn"/>
+                            <constraint firstItem="PlF-KK-Msb" firstAttribute="centerX" secondItem="uwr-mb-Vuj" secondAttribute="centerX" id="cij-YN-OGM"/>
+                            <constraint firstItem="Jb2-Qb-Sem" firstAttribute="centerX" secondItem="uwr-mb-Vuj" secondAttribute="centerX" id="czd-Ss-pGu"/>
+                            <constraint firstItem="Jb2-Qb-Sem" firstAttribute="height" secondItem="uwr-mb-Vuj" secondAttribute="height" multiplier="0.1" id="hEx-rq-rnK"/>
+                            <constraint firstItem="Jb2-Qb-Sem" firstAttribute="width" secondItem="uwr-mb-Vuj" secondAttribute="width" multiplier="0.9" id="qGv-W2-tqh"/>
+                            <constraint firstItem="PlF-KK-Msb" firstAttribute="top" secondItem="Jb2-Qb-Sem" secondAttribute="bottom" constant="15" id="tit-Eq-vFB"/>
+                            <constraint firstItem="Fn0-J3-gWu" firstAttribute="top" secondItem="PlF-KK-Msb" secondAttribute="bottom" constant="15" id="xcd-zR-2c9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdW-Bl-tQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2640" y="808.75"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dalekSketch" width="379" height="220"/>
+        <image name="daleks" width="1280" height="720"/>
         <image name="doctors" width="140" height="90"/>
         <image name="door" width="595" height="335"/>
+        <image name="screwdriver" width="600" height="412"/>
         <image name="sonicScrewdriver" width="337" height="70"/>
+        <image name="tardis" width="480" height="480"/>
         <image name="twoDaleks" width="183" height="121"/>
     </resources>
 </document>
