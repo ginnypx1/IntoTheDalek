@@ -1,18 +1,17 @@
 //
-//  RPSSViewController.swift
+//  RoshamboViewController.swift
 //  Into The Dalek
 //
-//  Created by Ginny Pennekamp on 10/24/16.
-//  Copyright © 2016 GhostBirdGames. All rights reserved.
+//  Created by Ginny Pennekamp on 3/12/17.
+//  Copyright © 2017 GhostBirdGames. All rights reserved.
 //
 
 import UIKit
 
-
-class RPSSViewController: UIViewController {
+class RoshamboViewController: UIViewController {
 
     @IBOutlet weak var lblResults: UILabel!
-
+    
     var choices: [String] = ["rock", "paper", "sonic screwdriver"]
     
     var doctorHand: String?
@@ -22,24 +21,24 @@ class RPSSViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         lblResults.text = "'Rock, Paper, Scissors?' you ask.\n\n  'Of course not! Rock, Paper, Sonic Screwdriver.'"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     // MARK: - RPSS Game Functions
     
@@ -115,6 +114,5 @@ class RPSSViewController: UIViewController {
             displayDraw()
         }
     }
-    
 
 }

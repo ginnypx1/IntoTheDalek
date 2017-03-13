@@ -17,8 +17,8 @@
 		3479E8F71DBE7A8F00D9591E /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8F61DBE7A8F00D9591E /* ChoiceViewController.swift */; };
 		3479E8F91DBE7AA100D9591E /* RiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */; };
 		3479E8FB1DBE7AB600D9591E /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */; };
-		3479E8FD1DBE7AC900D9591E /* RPSSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8FC1DBE7AC900D9591E /* RPSSViewController.swift */; };
 		3479E9031DBED53700D9591E /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E9021DBED53700D9591E /* StoryViewController.swift */; };
+		3494B94A1E765C4F00BFBC7D /* RoshamboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3494B9491E765C4F00BFBC7D /* RoshamboViewController.swift */; };
 		34B7FF341DE2024A00B30BCE /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B7FF331DE2024A00B30BCE /* JokeViewController.swift */; };
 		34B7FF381DE20F2900B30BCE /* VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */; };
 		34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D439D31DE0C342004C8B54 /* LaserViewController.swift */; };
@@ -37,8 +37,8 @@
 		3479E8F61DBE7A8F00D9591E /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiddleViewController.swift; sourceTree = "<group>"; };
 		3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
-		3479E8FC1DBE7AC900D9591E /* RPSSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSSViewController.swift; sourceTree = "<group>"; };
 		3479E9021DBED53700D9591E /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		3494B9491E765C4F00BFBC7D /* RoshamboViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboViewController.swift; sourceTree = "<group>"; };
 		34B7FF331DE2024A00B30BCE /* JokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VictoryViewController.swift; sourceTree = "<group>"; };
 		34D439D31DE0C342004C8B54 /* LaserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				3479E8F61DBE7A8F00D9591E /* ChoiceViewController.swift */,
 				3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */,
 				3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */,
-				3479E8FC1DBE7AC900D9591E /* RPSSViewController.swift */,
+				3494B9491E765C4F00BFBC7D /* RoshamboViewController.swift */,
 				34D439D31DE0C342004C8B54 /* LaserViewController.swift */,
 				34B7FF331DE2024A00B30BCE /* JokeViewController.swift */,
 				34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */,
@@ -168,7 +168,7 @@
 			files = (
 				3479E8FB1DBE7AB600D9591E /* CodeViewController.swift in Sources */,
 				34B7FF381DE20F2900B30BCE /* VictoryViewController.swift in Sources */,
-				3479E8FD1DBE7AC900D9591E /* RPSSViewController.swift in Sources */,
+				3494B94A1E765C4F00BFBC7D /* RoshamboViewController.swift in Sources */,
 				3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */,
 				3479E8E11DBE79F300D9591E /* ViewController.swift in Sources */,
 				3479E8F91DBE7AA100D9591E /* RiddleViewController.swift in Sources */,
