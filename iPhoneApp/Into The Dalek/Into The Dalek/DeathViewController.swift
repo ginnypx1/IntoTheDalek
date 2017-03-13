@@ -47,11 +47,6 @@ class DeathViewController: UIViewController {
         lbldeathQuip.text = deathQuips[Int(randomNumber)]
         lblDeathText.text = deathText
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: - Restart Game
     
@@ -64,15 +59,5 @@ class DeathViewController: UIViewController {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "titleView") as! ViewController
         self.present(nextViewController, animated:true, completion:nil)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

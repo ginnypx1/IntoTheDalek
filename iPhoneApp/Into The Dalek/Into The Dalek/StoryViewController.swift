@@ -21,11 +21,6 @@ class StoryViewController: UIViewController {
         // load story[pageCount] as lblTextView.text
         lblTextView.text = story[pageCount]
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: - Navigation
     
@@ -50,7 +45,7 @@ class StoryViewController: UIViewController {
         case 5:
             // transition to RpssView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "rpssView") as! RPSSViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "rpssView") as! RoshamboViewController
             self.present(nextViewController, animated:true, completion:nil)
         case 7:
             // transition to laserView
@@ -74,16 +69,5 @@ class StoryViewController: UIViewController {
             lblTextView.text = story[pageCount]
         }
     }
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
