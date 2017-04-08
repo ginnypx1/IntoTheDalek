@@ -1,11 +1,34 @@
 # Into The Dalek
-Plays a simple text based adventure game
+"Into The Dalek" is a simple text based adventure game, based on the _Doctor Who_ episode: "Into The Dalek." Initially developed as a Python coding exercise, you can play "Into the Dalek" in several different formats:
 
-A text based adventure game based on Doctor Who's "Into the Dalek":
-  - iPhoneApp/IntoTheDalek/IntoTheDalek.xcodeproj plays an iPhone version of "Into The Dalek".
-  - CLDalek/into_the_dalek.py plays "Into the Dalek" in the command line
-  - TKDalek/tk_into_the_dalek.py plays "Into the Dalek" in a Tkinter widget
+* iPhoneApp/IntoTheDalek/IntoTheDalek.xcodeproj runs an **iOS App** version of "Into The Dalek"
+* ginnypx1.github.io/IntoTheDalek shows off a **JavaScript/HTML** web version of "Into the Dalek"
+* CLDalek/into_the_dalek.py plays "Into The Dalek" on the **command line**
+* TkDalek/tk_into_the_dalek.py plays "Into The Dalek" in a **Tkinter widget**
 
-Check out this project at: ginnypx1.github.io/IntoTheDalek
+## Install:
 
-A version for the web is currently under construction (lacking illustrations) at: http://ginnypx1.github.io/IntoTheDalek/
+1. Clone or download my repository:
+` $ https://github.com/ginnypx1/IntoTheDalek.git `
+
+2. Enter the "IntoTheDalek" directory:
+` $ cd /IntoTheDalek-master/ `
+
+3. To open "IntoTheDalek" in X-Code:
+` $ open IntoTheDalek/Into\ The\ Dalek/Into\ The\ Dalek.xcodeproj `
+
+To open hangman on the command line:
+` $ python3 CLDalek/into_the_dalek.py `
+
+To open Hangmonkey in TKinter:
+` $ python3 TkDalek/tk_into_the_dalek.py `
+
+To check out "Into The Dalek" on the web: http://ginnypx1.github.io/IntoTheDalek
+
+## Instructions
+
+Start the Tardis, sit back and enjoy.
+
+** Improvements
+
+Original art needs to be loaded into both the web and iOS versions of "Into the Dalek".
