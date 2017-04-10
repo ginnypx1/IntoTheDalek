@@ -29,6 +29,15 @@ ul li {
     margin: auto;
     font-size: 8em;
 }
+/*FLEXBOX___________________*/
+#screenshot-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#screenshot-gallery img {
+    padding: 1rem;
+}
 /*FONTS___________________*/
 body {
     font-family: 'Open Sans Condensed', sans-serif;
