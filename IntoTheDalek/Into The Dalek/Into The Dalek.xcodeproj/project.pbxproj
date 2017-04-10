@@ -69,6 +69,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3431B4A61E9BD4BF0057ADDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3404ABB31E787D9F00CA6CD9 /* RiddleViewKeyboardExtension.swift */,
+				3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */,
+				3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */,
+				3404ABB71E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3431B4A71E9BD4C60057ADDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3479E8F01DBE7A1A00D9591E /* Story.swift */,
+				3404ABB91E788C8500CA6CD9 /* PageModel.swift */,
+				3404ABBF1E78BB2D00CA6CD9 /* CodeModel.swift */,
+				3404ABC31E78CA3500CA6CD9 /* RoshamboModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3431B4A81E9BD4CD0057ADDC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3479E8E01DBE79F300D9591E /* ViewController.swift */,
+				3479E9021DBED53700D9591E /* StoryViewController.swift */,
+				3455AC381DC3CE61001C3580 /* DeathViewController.swift */,
+				3479E8F61DBE7A8F00D9591E /* ChoiceViewController.swift */,
+				3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */,
+				3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */,
+				3494B9491E765C4F00BFBC7D /* RoshamboViewController.swift */,
+				34D439D31DE0C342004C8B54 /* LaserViewController.swift */,
+				34B7FF331DE2024A00B30BCE /* JokeViewController.swift */,
+				34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		3479E8D21DBE79F200D9591E = {
 			isa = PBXGroup;
 			children = (
@@ -89,24 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				3479E8DE1DBE79F300D9591E /* AppDelegate.swift */,
-				3479E8E01DBE79F300D9591E /* ViewController.swift */,
-				3479E8F01DBE7A1A00D9591E /* Story.swift */,
-				3404ABB91E788C8500CA6CD9 /* PageModel.swift */,
-				3479E9021DBED53700D9591E /* StoryViewController.swift */,
-				3455AC381DC3CE61001C3580 /* DeathViewController.swift */,
-				3479E8F61DBE7A8F00D9591E /* ChoiceViewController.swift */,
-				3479E8F81DBE7AA100D9591E /* RiddleViewController.swift */,
-				3404ABB31E787D9F00CA6CD9 /* RiddleViewKeyboardExtension.swift */,
-				3404ABBF1E78BB2D00CA6CD9 /* CodeModel.swift */,
-				3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */,
-				3479E8FA1DBE7AB600D9591E /* CodeViewController.swift */,
-				3404ABC31E78CA3500CA6CD9 /* RoshamboModel.swift */,
-				3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */,
-				3494B9491E765C4F00BFBC7D /* RoshamboViewController.swift */,
-				34D439D31DE0C342004C8B54 /* LaserViewController.swift */,
-				34B7FF331DE2024A00B30BCE /* JokeViewController.swift */,
-				34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */,
-				3404ABB71E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift */,
+				3431B4A71E9BD4C60057ADDC /* Model */,
+				3431B4A61E9BD4BF0057ADDC /* View */,
+				3431B4A81E9BD4CD0057ADDC /* Controllers */,
 				3479E8E21DBE79F300D9591E /* Main.storyboard */,
 				3479E8E51DBE79F300D9591E /* Assets.xcassets */,
 				3479E8E71DBE79F300D9591E /* LaunchScreen.storyboard */,
@@ -147,6 +171,7 @@
 				TargetAttributes = {
 					3479E8DA1DBE79F200D9591E = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B875NM54ML;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -330,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B875NM54ML;
 				INFOPLIST_FILE = "Into The Dalek/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ghostbirdgames.Into-The-Dalek";
@@ -342,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B875NM54ML;
 				INFOPLIST_FILE = "Into The Dalek/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ghostbirdgames.Into-The-Dalek";
