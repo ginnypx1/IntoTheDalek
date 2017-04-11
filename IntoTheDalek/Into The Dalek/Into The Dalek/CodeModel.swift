@@ -20,7 +20,7 @@ class CrackCode {
     // MARK: Properties
     
     var tries: Int = 0
-    var doorCode: String = "000"
+    var doorCode: String = ""
     
     // MARK: - Generates doorCode
     

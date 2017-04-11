@@ -14,6 +14,9 @@
 		3404ABC21E78BC9F00CA6CD9 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */; };
 		3404ABC41E78CA3500CA6CD9 /* RoshamboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABC31E78CA3500CA6CD9 /* RoshamboModel.swift */; };
 		3404ABC61E78CBD300CA6CD9 /* RoshamboViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */; };
+		34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B281E9D5EDC006A34FF /* PageModelTests.swift */; };
+		34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */; };
+		34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */; };
 		3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3455AC381DC3CE61001C3580 /* DeathViewController.swift */; };
 		3479E8DF1DBE79F300D9591E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8DE1DBE79F300D9591E /* AppDelegate.swift */; };
 		3479E8E11DBE79F300D9591E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8E01DBE79F300D9591E /* ViewController.swift */; };
@@ -31,6 +34,16 @@
 		34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D439D31DE0C342004C8B54 /* LaserViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		34407B211E9D5EA4006A34FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3479E8D31DBE79F200D9591E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3479E8DA1DBE79F200D9591E;
+			remoteInfo = "Into The Dalek";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3404ABB31E787D9F00CA6CD9 /* RiddleViewKeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiddleViewKeyboardExtension.swift; sourceTree = "<group>"; };
 		3404ABB71E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DalekTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +52,11 @@
 		3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		3404ABC31E78CA3500CA6CD9 /* RoshamboModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboModel.swift; sourceTree = "<group>"; };
 		3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboViewModel.swift; sourceTree = "<group>"; };
+		34407B1C1E9D5EA2006A34FF /* Into The DalekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Into The DalekTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34407B201E9D5EA4006A34FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34407B281E9D5EDC006A34FF /* PageModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModelTests.swift; sourceTree = "<group>"; };
+		34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeModelTests.swift; sourceTree = "<group>"; };
+		34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboModelTests.swift; sourceTree = "<group>"; };
 		3455AC381DC3CE61001C3580 /* DeathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathViewController.swift; sourceTree = "<group>"; };
 		3479E8DB1DBE79F300D9591E /* Into The Dalek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Into The Dalek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3479E8DE1DBE79F300D9591E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34407B191E9D5EA2006A34FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3479E8D81DBE79F200D9591E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,10 +133,22 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		34407B1D1E9D5EA4006A34FF /* Into The DalekTests */ = {
+			isa = PBXGroup;
+			children = (
+				34407B201E9D5EA4006A34FF /* Info.plist */,
+				34407B281E9D5EDC006A34FF /* PageModelTests.swift */,
+				34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */,
+				34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */,
+			);
+			path = "Into The DalekTests";
+			sourceTree = "<group>";
+		};
 		3479E8D21DBE79F200D9591E = {
 			isa = PBXGroup;
 			children = (
 				3479E8DD1DBE79F300D9591E /* Into The Dalek */,
+				34407B1D1E9D5EA4006A34FF /* Into The DalekTests */,
 				3479E8DC1DBE79F300D9591E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				3479E8DB1DBE79F300D9591E /* Into The Dalek.app */,
+				34407B1C1E9D5EA2006A34FF /* Into The DalekTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +180,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		34407B1B1E9D5EA2006A34FF /* Into The DalekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34407B251E9D5EA7006A34FF /* Build configuration list for PBXNativeTarget "Into The DalekTests" */;
+			buildPhases = (
+				34407B181E9D5EA2006A34FF /* Sources */,
+				34407B191E9D5EA2006A34FF /* Frameworks */,
+				34407B1A1E9D5EA2006A34FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34407B221E9D5EA4006A34FF /* PBXTargetDependency */,
+			);
+			name = "Into The DalekTests";
+			productName = "Into The DalekTests";
+			productReference = 34407B1C1E9D5EA2006A34FF /* Into The DalekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3479E8DA1DBE79F200D9591E /* Into The Dalek */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3479E8ED1DBE79F300D9591E /* Build configuration list for PBXNativeTarget "Into The Dalek" */;
@@ -165,10 +221,16 @@
 		3479E8D31DBE79F200D9591E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = GhostBirdGames;
 				TargetAttributes = {
+					34407B1B1E9D5EA2006A34FF = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = B875NM54ML;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3479E8DA1DBE79F200D9591E;
+					};
 					3479E8DA1DBE79F200D9591E = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = B875NM54ML;
@@ -190,11 +252,19 @@
 			projectRoot = "";
 			targets = (
 				3479E8DA1DBE79F200D9591E /* Into The Dalek */,
+				34407B1B1E9D5EA2006A34FF /* Into The DalekTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		34407B1A1E9D5EA2006A34FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3479E8D91DBE79F200D9591E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +278,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		34407B181E9D5EA2006A34FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */,
+				34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */,
+				34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3479E8D71DBE79F200D9591E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +316,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		34407B221E9D5EA4006A34FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3479E8DA1DBE79F200D9591E /* Into The Dalek */;
+			targetProxy = 34407B211E9D5EA4006A34FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3479E8E21DBE79F300D9591E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -256,6 +344,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		34407B231E9D5EA7006A34FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = B875NM54ML;
+				INFOPLIST_FILE = "Into The DalekTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ghostbirdgames.Into-The-DalekTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Into The Dalek.app/Into The Dalek";
+			};
+			name = Debug;
+		};
+		34407B241E9D5EA7006A34FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = B875NM54ML;
+				INFOPLIST_FILE = "Into The DalekTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ghostbirdgames.Into-The-DalekTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Into The Dalek.app/Into The Dalek";
+			};
+			name = Release;
+		};
 		3479E8EB1DBE79F300D9591E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,6 +500,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		34407B251E9D5EA7006A34FF /* Build configuration list for PBXNativeTarget "Into The DalekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34407B231E9D5EA7006A34FF /* Debug */,
+				34407B241E9D5EA7006A34FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3479E8D61DBE79F200D9591E /* Build configuration list for PBXProject "Into The Dalek" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
