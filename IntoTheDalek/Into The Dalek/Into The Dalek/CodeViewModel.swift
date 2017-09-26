@@ -25,18 +25,15 @@ class CrackCodeModel {
     // MARK: - Methods
     
     func generateCode() {
-        // communicates setting doorCode from model to view controller
         codeModel.generateCode()
     }
     
     func enterCode() {
-        // adds an entry into the codesTried
         self.userCode = "\(userAnswer1)\(userAnswer2)\(userAnswer3)"
         self.codesTried.append(self.userCode)
     }
     
     func testCode() -> Result {
-        // tests userCode against the model
         return codeModel.checkCode(userCode: self.userCode)
     }
 

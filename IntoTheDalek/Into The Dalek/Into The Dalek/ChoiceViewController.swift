@@ -13,44 +13,38 @@ class ChoiceViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lblChoiceText: UILabel!
-    @IBOutlet weak var segYesNoOUTLET: UISegmentedControl!
+    @IBOutlet weak var choiceText: UILabel!
+    @IBOutlet weak var yesOrNo: UISegmentedControl!
     
     // MARK: - Properties
     
-    var page: Page?
+    var page: Page!
     
     // MARK: - Apple Functions
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // load choice directions
-        if let page = page {
-            lblChoiceText.text = page.pageText
-        }
+        choiceText.text = page.pageText
     }
     
     // MARK: - Accept or decline mission
     
-    @IBAction func segAcceptOrDeclineACTION(_ sender: AnyObject) {
-        guard var page = self.page else {
-            return
-        }
+    @IBAction func acceptOrDecline(_ sender: UIButton) {
         
-        switch segYesNoOUTLET.selectedSegmentIndex {
+        switch yesOrNo.selectedSegmentIndex {
         case 0: // decline mission
             page.deathNumber = 0
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
             nextViewController.page = page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case 1: // accept mission
             page.pageNumber += 1
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
             nextViewController.page = page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         default: break
         }
     }

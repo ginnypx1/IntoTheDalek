@@ -8,39 +8,32 @@
 
 import UIKit
 
-
 class DeathViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lblLossText: UILabel!
-    @IBOutlet weak var lbldeathQuip: UILabel!
-    @IBOutlet weak var lblDeathText: UILabel!
+    @IBOutlet weak var lossText: UILabel!
+    @IBOutlet weak var deathQuip: UILabel!
+    @IBOutlet weak var deathText: UILabel!
     
     // MARK: - Properties
     
-    var page: Page?
+    var page: Page!
 
     // MARK: - View
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // load the text
-        if let page = page {
-            lblLossText.text = page.endText
-            lbldeathQuip.text = page.deathQuip
-            lblDeathText.text = page.deathText
-        }
+        lossText.text = page.endText
+        deathQuip.text = page.deathQuip
+        deathText.text = page.deathText
     }
     
     // MARK: - Restart Game
     
-    @IBAction func playAgainACTION(_ sender: AnyObject) {
-        // reload title screen
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "titleView") as! ViewController
-        self.present(nextViewController, animated:true, completion:nil)
+    @IBAction func playAgain(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }

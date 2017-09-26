@@ -13,29 +13,24 @@ class VictoryViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lblVictoryText: UILabel!
+    @IBOutlet weak var victoryText: UILabel!
     
     // MARK: - Properties
     
-    var page: Page?
+    var page: Page!
 
     // MARK: - Apple Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let page = page {
-            lblVictoryText.text = page.pageText
-        }
+        victoryText.text = page.pageText
     }
     
     // MARK: - Play Again
     
     @IBAction func playAgain(_ sender: Any) {
-        // segue to title screen
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "titleView") as! ViewController
-        self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }

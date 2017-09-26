@@ -6,7 +6,6 @@
 //  Copyright © 2017 GhostBirdGames. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 enum Result {
@@ -17,7 +16,7 @@ enum Result {
 
 class CrackCode {
     
-    // MARK: Properties
+    // MARK: - Properties
     
     var tries: Int = 0
     var doorCode: String = ""

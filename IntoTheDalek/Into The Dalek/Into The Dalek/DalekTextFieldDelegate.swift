@@ -12,18 +12,15 @@ import UIKit
 class DalekTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        // clears the textField of default text
         textField.text = ""
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // allows use of the return key
         textField.resignFirstResponder()
         return true
     }
     
     func setUpTextField(_ textField: UITextField) {
-        // sets the properties of a textField
         textField.delegate = self
         textField.returnKeyType = UIReturnKeyType.done
         textField.textAlignment = NSTextAlignment.center

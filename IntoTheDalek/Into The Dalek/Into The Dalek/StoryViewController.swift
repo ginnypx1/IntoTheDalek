@@ -13,7 +13,7 @@ class StoryViewController: UIViewController {
 
     // MARK: - Outlets
     
-    @IBOutlet weak var lblTextView: UILabel!
+    @IBOutlet weak var textView: UILabel!
     
     // MARK: - Properties
     
@@ -24,62 +24,60 @@ class StoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        lblTextView.text = page.pageText
+        textView.text = page.pageText
     }
     
     // MARK: - Navigation
     
-    @IBAction func nextPageACTION(_ sender: AnyObject) {
-        // turn page by increasing page number by 1
+    @IBAction func turnPage(_ sender: UIButton) {
         page.pageNumber += 1
         
-        // load the next page
         switch page.pageType {
         case .choiceView:
             // transition to choice/ choiceView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "choiceView") as! ChoiceViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .riddleView:
             // transition to riddle/ riddleView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "riddleView") as! RiddleViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .codeView:
             // transition to crack code/ codeView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "codeView") as! CodeViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .rpssView:
             // transition to RpssView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "rpssView") as! RoshamboViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .laserView:
             // transition to laserView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "laserView") as! LaserViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .jokeView:
             // transition to jokeView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "jokeView") as! JokeViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .victoryView:
             // transition to victoryView
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "victoryView") as! VictoryViewController
             nextViewController.page = self.page
-            self.present(nextViewController, animated:true, completion:nil)
+            navigationController?.pushViewController(nextViewController, animated: true)
         case .storyView:
             // refresh the text
-            lblTextView.text = page.pageText
+            textView.text = page.pageText
         }
     }
 

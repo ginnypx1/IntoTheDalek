@@ -6,7 +6,6 @@
 //  Copyright © 2017 GhostBirdGames. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 enum Throw {
@@ -30,7 +29,6 @@ class Roshambo {
     // MARK: - Methods
     
     func doctorThrows() {
-        // randomly chooses a hand for the Doctor
         let randomNumber = Int(arc4random_uniform(3))
         switch randomNumber {
         case 0: self.doctorHand = Throw.rock
@@ -38,6 +36,7 @@ class Roshambo {
         case 2: self.doctorHand = Throw.sonicScrewdriver
         default: break
         }
+        
         // allows the developer to test
         print("The Doctor throws: \(self.doctorHand)")
     }
@@ -45,7 +44,7 @@ class Roshambo {
     func scoreGame(userHand: Throw) -> RoundResult {
         // allows the developer to test
         print("Player throws: \(userHand)")
-        // determines a game winner
+        
         if doctorHand == userHand {
             return .draw
         } else {

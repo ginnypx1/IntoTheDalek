@@ -17,13 +17,14 @@ class LaserViewController: UIViewController {
     
     // MARK: - Properties
     
-    var page: Page?
+    var page: Page!
     var shotCount: Int = -1
     
     // MARK: - View
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // reset shot count
         shotCount = -1
     }
@@ -34,16 +35,16 @@ class LaserViewController: UIViewController {
         var shot = 0
         while shot <= shotCount {
             if shot < 4 {
-                laserLabels[shot].backgroundColor = UIColor.yellow
+                laserLabels[shot].backgroundColor = .yellow
                 shot += 1
             } else if (shot >= 4) && (shot < 8) {
-                laserLabels[shot].backgroundColor = UIColor.orange
+                laserLabels[shot].backgroundColor = .orange
                 shot += 1
             } else if (shot >= 8) && (shot < 12) {
-                laserLabels[shot].backgroundColor = UIColor.red
+                laserLabels[shot].backgroundColor = .red
                 shot += 1
             } else if (shot >= 12) {
-                laserLabels[shot].backgroundColor = UIColor.brown
+                laserLabels[shot].backgroundColor = .brown
                 shot += 1
             }
         }
@@ -57,42 +58,29 @@ class LaserViewController: UIViewController {
     // MARK: - Display Results
     
     func continueStory() {
-        guard var page = self.page else {
-            return
-        }
         page.pageNumber += 1
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
         nextViewController.page = page
-        self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     func die(deathNumber: Int) {
-        guard var page = self.page else {
-            return
-        }
         page.deathNumber = deathNumber
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
         nextViewController.page = page
-        self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     // MARK: - Determine results
     
     @IBAction func shootLaser(_ sender: Any) {
-        guard self.page != nil else {
-            return
-        }
-        
         if (shotCount < 8) {
-            // die
             self.die(deathNumber: 4)
         } else if (shotCount >= 12) {
-            // die
             self.die(deathNumber: 5)
         } else {
-            // continue story
             self.continueStory()
         }
     }

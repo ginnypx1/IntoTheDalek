@@ -18,12 +18,10 @@ class RoshamboViewModel {
     // MARK: - Methods
     
     func doctorThrows() {
-        // view asks model to pick a hand
         roshamboModel.doctorThrows()
     }
     
     func checkResults(userHand: Throw) -> RoundResult {
-        // view asks model to score the game
         return roshamboModel.scoreGame(userHand: userHand)
     }
 }

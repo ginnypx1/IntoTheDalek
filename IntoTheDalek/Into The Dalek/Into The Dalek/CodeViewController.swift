@@ -13,14 +13,14 @@ class CodeViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var lblCodePart1: UILabel!
-    @IBOutlet weak var lblCodePart2: UILabel!
-    @IBOutlet weak var lblCodePart3: UILabel!
-    @IBOutlet weak var lblCodesTried: UILabel!
+    @IBOutlet weak var codePart1: UILabel!
+    @IBOutlet weak var codePart2: UILabel!
+    @IBOutlet weak var codePart3: UILabel!
+    @IBOutlet weak var codesTried: UILabel!
     
     // MARK: Properties
     
-    var page: Page?
+    var page: Page!
     var codeViewModel = CrackCodeModel()
     
     var labelNumber: Int = 0
@@ -29,28 +29,27 @@ class CodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // generateCode
+        
         codeViewModel.generateCode()
-        // clear text in codes tried
-        lblCodesTried.text?.removeAll()
+        
+        codesTried.text?.removeAll()
         codeViewModel.codesTried.removeAll(keepingCapacity: true)
     }
     
     // MARK: - Enter Code
     
     @IBAction func pressZero(_ sender: Any) {
-        // send 0 to model view and display 0
         labelNumber += 1
-        // add zero to the next label
+        
         switch labelNumber {
         case 1:
-            lblCodePart1.text = "0"
+            codePart1.text = "0"
             codeViewModel.userAnswer1 = 0
         case 2:
-            lblCodePart2.text = "0"
+            codePart2.text = "0"
             codeViewModel.userAnswer2 = 0
         case 3:
-            lblCodePart3.text = "0"
+            codePart3.text = "0"
             codeViewModel.userAnswer3 = 0
             codeViewModel.enterCode()
         default: break
@@ -58,18 +57,17 @@ class CodeViewController: UIViewController {
     }
     
     @IBAction func pressOne(_ sender: Any) {
-        // send 1 to model view and display 1
         labelNumber += 1
-        // add one to the next label
+       
         switch labelNumber {
         case 1:
-            lblCodePart1.text = "1"
+            codePart1.text = "1"
             codeViewModel.userAnswer1 = 1
         case 2:
-            lblCodePart2.text = "1"
+            codePart2.text = "1"
             codeViewModel.userAnswer2 = 1
         case 3:
-            lblCodePart3.text = "1"
+            codePart3.text = "1"
             codeViewModel.userAnswer3 = 1
             codeViewModel.enterCode()
         default: break
@@ -79,41 +77,34 @@ class CodeViewController: UIViewController {
     // MARK: - Display Results
     
     func continueStory() {
-        guard var page = self.page else {
-            return
-        }
         page.pageNumber += 1
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "storyView") as! StoryViewController
         nextViewController.page = page
-        self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
     func die() {
-        guard var page = self.page else {
-            return
-        }
         page.deathNumber = 2
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "deathView") as! DeathViewController
         nextViewController.page = page
-        self.present(nextViewController, animated:true, completion:nil)
+        navigationController?.pushViewController(nextViewController, animated: true)
     }
     
-    @IBAction func crackTheCodeACTION(_ sender: Any) {
-        // when button pushed, check for win or loss and segue
-        
+    @IBAction func crackTheCode(_ sender: Any) {
         // clear info
-        lblCodePart1.text?.removeAll()
-        lblCodePart2.text?.removeAll()
-        lblCodePart3.text?.removeAll()
+        codePart1.text?.removeAll()
+        codePart2.text?.removeAll()
+        codePart3.text?.removeAll()
         labelNumber = 0
         
         // check for win or loss
         switch codeViewModel.testCode() {
         case .win: self.continueStory()
         case .lose: self.die()
-        case .undetermined: lblCodesTried.text = "\(codeViewModel.codesTried)"
+        case .undetermined: codesTried.text = "\(codeViewModel.codesTried)"
         }
     }
+
 }

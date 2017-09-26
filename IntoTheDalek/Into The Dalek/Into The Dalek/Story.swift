@@ -8,7 +8,6 @@
 
 import Foundation
 
-// types of possible pages in the story
 enum PageType {
     case storyView
     case choiceView
@@ -44,7 +43,6 @@ struct Story {
         ["pageText": "  Victory!\n\n  You tumble out of the Dalek... and find yourself back in the control room of the 'Aristotle.'\n\n  The Doctor stares intensely at the 'good' Dalek. You can tell - He is disturbed... The Dalek only saw darkness inside him. You try to reassure him that it all worked out anyways. 'But it would have been nice if we could have figured out how to make them all good...'", "pageType": PageType.storyView],
         ["pageText": "  The good Dalek sends a signal to his mothership. He tells the rest of the Dalek force: 'The 'Aristotle' has been destroyed.' The rebels can now operate completely under the Dalek radar.\n\n  You leave them with a new soldier -- the good Dalek.\n\n  You hop on the Tardis and turn the key.\n\n  A new adventure awaits...", "pageType": PageType.victoryView]] // victoryView text
     
-    // when games are lost, these messages should be displayed
     let endText: [String] = [
         // do not choose to help
         "You are shoved back in your Tardis and released into space.",
@@ -63,10 +61,8 @@ struct Story {
         // tell wrong joke skin
         "'EXFOLIATE!' The Doctor cracks up and smacks his knee. 'HA HA HA HA HA!'\n\n  You look around the inside of the Dalek. You can both tell by the flashing red lights. He isn't amused.\n\n  The link fails. The Daleks attack!"]
     
-    // tag on all the deaths
     let deathText = "Extermination Successful.\n\nThe human race is dead.\n\nCare to rewind the tardis and try it all again?"
     
-    // random joke to go with each death
     let deathQuips: [String] = [
         "YOU ARE AN ENEMY OF THE DALEKS! YOU MUST BE DESTROYED!!",
         "Attack and Destroy!",
