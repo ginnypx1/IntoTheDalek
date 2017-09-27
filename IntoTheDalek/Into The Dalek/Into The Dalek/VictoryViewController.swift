@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class VictoryViewController: UIViewController {
     
     // MARK: - Outlets

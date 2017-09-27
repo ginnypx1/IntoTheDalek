@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class LaserViewController: UIViewController {
     
     // MARK: - Outlets

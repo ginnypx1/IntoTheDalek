@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class JokeViewController: UIViewController {
     
     // MARK: - Properties

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class CodeViewController: UIViewController {
     
     // MARK: - Outlets
@@ -21,7 +20,7 @@ class CodeViewController: UIViewController {
     // MARK: Properties
     
     var page: Page!
-    var codeViewModel = CrackCodeModel()
+    var codeModel = CrackCode()
     
     var labelNumber: Int = 0
     
@@ -30,10 +29,10 @@ class CodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        codeViewModel.generateCode()
+        codeModel.generateCode()
         
         codesTried.text?.removeAll()
-        codeViewModel.codesTried.removeAll(keepingCapacity: true)
+        codeModel.codesTried.removeAll(keepingCapacity: true)
     }
     
     // MARK: - Enter Code
@@ -44,14 +43,14 @@ class CodeViewController: UIViewController {
         switch labelNumber {
         case 1:
             codePart1.text = "0"
-            codeViewModel.userAnswer1 = 0
+            codeModel.userAnswer1 = 0
         case 2:
             codePart2.text = "0"
-            codeViewModel.userAnswer2 = 0
+            codeModel.userAnswer2 = 0
         case 3:
             codePart3.text = "0"
-            codeViewModel.userAnswer3 = 0
-            codeViewModel.enterCode()
+            codeModel.userAnswer3 = 0
+            codeModel.enterCode()
         default: break
         }
     }
@@ -62,14 +61,14 @@ class CodeViewController: UIViewController {
         switch labelNumber {
         case 1:
             codePart1.text = "1"
-            codeViewModel.userAnswer1 = 1
+            codeModel.userAnswer1 = 1
         case 2:
             codePart2.text = "1"
-            codeViewModel.userAnswer2 = 1
+            codeModel.userAnswer2 = 1
         case 3:
             codePart3.text = "1"
-            codeViewModel.userAnswer3 = 1
-            codeViewModel.enterCode()
+            codeModel.userAnswer3 = 1
+            codeModel.enterCode()
         default: break
         }
     }
@@ -100,10 +99,10 @@ class CodeViewController: UIViewController {
         labelNumber = 0
         
         // check for win or loss
-        switch codeViewModel.testCode() {
+        switch codeModel.checkCode() {
         case .win: self.continueStory()
         case .lose: self.die()
-        case .undetermined: codesTried.text = "\(codeViewModel.codesTried)"
+        case .undetermined: codesTried.text = "\(codeModel.codesTried)"
         }
     }
 

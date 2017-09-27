@@ -6,7 +6,6 @@
 //  Copyright © 2017 GhostBirdGames. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class DalekTextFieldDelegate: NSObject, UITextFieldDelegate {

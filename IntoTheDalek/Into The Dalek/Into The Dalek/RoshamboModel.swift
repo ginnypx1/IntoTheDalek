@@ -41,7 +41,7 @@ class Roshambo {
         print("The Doctor throws: \(self.doctorHand)")
     }
     
-    func scoreGame(userHand: Throw) -> RoundResult {
+    func checkResults(userHand: Throw) -> RoundResult {
         // allows the developer to test
         print("Player throws: \(userHand)")
         

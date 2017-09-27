@@ -21,7 +21,14 @@ class CrackCode {
     var tries: Int = 0
     var doorCode: String = ""
     
-    // MARK: - Generates doorCode
+    var userAnswer1: Int = 0
+    var userAnswer2: Int = 0
+    var userAnswer3: Int = 0
+    var codesTried: [String] = []
+    
+    var userCode: String = "000"
+    
+    // MARK: - Methods
     
     func generateCode() {
         let part1 = Int(arc4random_uniform(2))
@@ -33,9 +40,14 @@ class CrackCode {
         print("Door Code: \(self.doorCode)")
     }
     
+    func enterCode() {
+        userCode = "\(userAnswer1)\(userAnswer2)\(userAnswer3)"
+        codesTried.append(userCode)
+    }
+    
     // MARK: - checks for win, loss or keep playing
     
-    func checkCode(userCode: String) -> Result {
+    func checkCode() -> Result {
         if userCode == doorCode {
             return Result.win
         } else if tries < 4 {

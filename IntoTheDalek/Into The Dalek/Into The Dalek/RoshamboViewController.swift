@@ -17,7 +17,7 @@ class RoshamboViewController: UIViewController {
     // MARK: - Properties
     
     var page: Page!
-    var roshamboViewModel = RoshamboViewModel()
+    var roshamboGame = Roshambo()
     
     // MARK: - View
     
@@ -50,7 +50,7 @@ class RoshamboViewController: UIViewController {
     }
     
     func determineResults(userHand: Throw) {
-        switch roshamboViewModel.checkResults(userHand: userHand) {
+        switch roshamboGame.checkResults(userHand: userHand) {
         case .win: // you win, transition to death
             self.die()
         case .lose: // you lose, continue story
@@ -63,17 +63,17 @@ class RoshamboViewController: UIViewController {
     // MARK: - select rock, paper or sonic screwdriver
     
     @IBAction func chooseRock(_ sender: Any) {
-        roshamboViewModel.doctorThrows()
+        roshamboGame.doctorThrows()
         determineResults(userHand: Throw.rock)
     }
     
     @IBAction func choosePaper(_ sender: Any) {
-        roshamboViewModel.doctorThrows()
+        roshamboGame.doctorThrows()
         determineResults(userHand: Throw.paper)
     }
     
     @IBAction func chooseSonicScrewdriver(_ sender: Any) {
-        roshamboViewModel.doctorThrows()
+        roshamboGame.doctorThrows()
         determineResults(userHand: Throw.sonicScrewdriver)
     }
 

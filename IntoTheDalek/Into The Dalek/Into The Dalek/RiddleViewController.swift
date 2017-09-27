@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class RiddleViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Outlets

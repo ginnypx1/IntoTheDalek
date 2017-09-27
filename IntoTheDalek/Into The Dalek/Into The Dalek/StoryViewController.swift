@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class StoryViewController: UIViewController {
 
     // MARK: - Outlets

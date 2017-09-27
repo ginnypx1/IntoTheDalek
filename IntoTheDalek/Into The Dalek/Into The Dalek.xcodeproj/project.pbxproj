@@ -11,9 +11,8 @@
 		3404ABB81E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABB71E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift */; };
 		3404ABBA1E788C8500CA6CD9 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABB91E788C8500CA6CD9 /* PageModel.swift */; };
 		3404ABC01E78BB2D00CA6CD9 /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABBF1E78BB2D00CA6CD9 /* CodeModel.swift */; };
-		3404ABC21E78BC9F00CA6CD9 /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */; };
 		3404ABC41E78CA3500CA6CD9 /* RoshamboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABC31E78CA3500CA6CD9 /* RoshamboModel.swift */; };
-		3404ABC61E78CBD300CA6CD9 /* RoshamboViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */; };
+		3421CC4F1F7C4FED00CC2AED /* StoryModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421CC4E1F7C4FED00CC2AED /* StoryModelTests.swift */; };
 		34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B281E9D5EDC006A34FF /* PageModelTests.swift */; };
 		34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */; };
 		34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */; };
@@ -49,9 +48,8 @@
 		3404ABB71E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DalekTextFieldDelegate.swift; sourceTree = "<group>"; };
 		3404ABB91E788C8500CA6CD9 /* PageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		3404ABBF1E78BB2D00CA6CD9 /* CodeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
-		3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		3404ABC31E78CA3500CA6CD9 /* RoshamboModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboModel.swift; sourceTree = "<group>"; };
-		3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboViewModel.swift; sourceTree = "<group>"; };
+		3421CC4E1F7C4FED00CC2AED /* StoryModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModelTests.swift; sourceTree = "<group>"; };
 		34407B1C1E9D5EA2006A34FF /* Into The DalekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Into The DalekTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34407B201E9D5EA4006A34FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34407B281E9D5EDC006A34FF /* PageModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModelTests.swift; sourceTree = "<group>"; };
@@ -94,12 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3421CC4D1F7C4FCD00CC2AED /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3421CC4E1F7C4FED00CC2AED /* StoryModelTests.swift */,
+				34407B281E9D5EDC006A34FF /* PageModelTests.swift */,
+				34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */,
+				34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */,
+			);
+			path = "Model Tests";
+			sourceTree = "<group>";
+		};
 		3431B4A61E9BD4BF0057ADDC /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3404ABB31E787D9F00CA6CD9 /* RiddleViewKeyboardExtension.swift */,
-				3404ABC11E78BC9F00CA6CD9 /* CodeViewModel.swift */,
-				3404ABC51E78CBD300CA6CD9 /* RoshamboViewModel.swift */,
 				3404ABB71E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift */,
 			);
 			name = View;
@@ -136,10 +143,8 @@
 		34407B1D1E9D5EA4006A34FF /* Into The DalekTests */ = {
 			isa = PBXGroup;
 			children = (
+				3421CC4D1F7C4FCD00CC2AED /* Model Tests */,
 				34407B201E9D5EA4006A34FF /* Info.plist */,
-				34407B281E9D5EDC006A34FF /* PageModelTests.swift */,
-				34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */,
-				34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */,
 			);
 			path = "Into The DalekTests";
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */,
+				3421CC4F1F7C4FED00CC2AED /* StoryModelTests.swift in Sources */,
 				34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */,
 				34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */,
 			);
@@ -300,7 +306,6 @@
 				3494B94A1E765C4F00BFBC7D /* RoshamboViewController.swift in Sources */,
 				3404ABB41E787D9F00CA6CD9 /* RiddleViewKeyboardExtension.swift in Sources */,
 				3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */,
-				3404ABC21E78BC9F00CA6CD9 /* CodeViewModel.swift in Sources */,
 				3404ABC01E78BB2D00CA6CD9 /* CodeModel.swift in Sources */,
 				3479E8E11DBE79F300D9591E /* TitleViewController.swift in Sources */,
 				3479E8F91DBE7AA100D9591E /* RiddleViewController.swift in Sources */,
@@ -308,7 +313,6 @@
 				3404ABB81E787FEC00CA6CD9 /* DalekTextFieldDelegate.swift in Sources */,
 				3404ABC41E78CA3500CA6CD9 /* RoshamboModel.swift in Sources */,
 				3479E8F71DBE7A8F00D9591E /* ChoiceViewController.swift in Sources */,
-				3404ABC61E78CBD300CA6CD9 /* RoshamboViewModel.swift in Sources */,
 				3479E8DF1DBE79F300D9591E /* AppDelegate.swift in Sources */,
 				34B7FF341DE2024A00B30BCE /* JokeViewController.swift in Sources */,
 				34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */,

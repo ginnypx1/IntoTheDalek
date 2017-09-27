@@ -15,18 +15,20 @@ class PageModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // init page
         sut = Page()
     }
     
     override func tearDown() {
-        // deinit page
         sut = nil
         super.tearDown()
     }
     
+    // MARK: - Test Page Properties
+    
     func test_Story_Exists() {
         let story = sut.story
+        XCTAssertNotNil(story)
+        
         let firstPart = story.storyText[0]
         let pageText = firstPart["pageText"] as! String
         let pageType = firstPart["pageType"] as! PageType
@@ -34,6 +36,61 @@ class PageModelTests: XCTestCase {
         let expectedPageType = PageType.storyView
         XCTAssertEqual(pageText, expectedPageText)
         XCTAssertEqual(pageType, expectedPageType)
+    }
+    
+    func test_PageNumber_Exists() {
+        let pageNumber = sut.pageNumber
+        XCTAssertNotNil(pageNumber)
+    }
+    
+    func test_DeathNumber_Exists() {
+        let deathNumber = sut.deathNumber
+        XCTAssertNotNil(deathNumber)
+    }
+    
+    func test_PageText_Exists() {
+        let story = sut.story
+        let firstPart = story.storyText[0]
+        let pageText = firstPart["pageText"] as! String
+        XCTAssertNotNil(pageText)
+        XCTAssertNotEqual(pageText, "")
+    }
+    
+    func test_PageType_Exists() {
+        let story = sut.story
+        let firstPart = story.storyText[0]
+        let pageType = firstPart["pageType"] as! PageType
+        XCTAssertNotNil(pageType)
+    }
+    
+    func test_DeathText_Exists() {
+        let deathText = sut.deathText
+        XCTAssertNotNil(deathText)
+        XCTAssertNotEqual(deathText, "")
+    }
+    
+    func test_EndText_Exists() {
+        let endText = sut.endText
+        XCTAssertNotNil(endText)
+        XCTAssertNotEqual(endText, "")
+    }
+    
+    func test_DeathQuip_Exists() {
+        let deathQuip = sut.deathQuip
+        XCTAssertNotNil(deathQuip)
+        XCTAssertNotEqual(deathQuip, "")
+    }
+    
+    // MARK: - Test initial property values
+    
+    func test_PageNumber_IsInitiallyZero() {
+        let pageNumber = sut.pageNumber
+        XCTAssertEqual(pageNumber, 0)
+    }
+    
+    func test_DeathNumber_IsInitiallyZero() {
+        let deathNumber = sut.deathNumber
+        XCTAssertEqual(deathNumber, 0)
     }
     
     func test_PageText_SetsAsExpected() {
@@ -48,17 +105,15 @@ class PageModelTests: XCTestCase {
         XCTAssertEqual(pageType, expectedPageType)
     }
     
-    func test_DeathText_Exists() {
+    func test_DeathText_SetsAsExpected() {
         let deathText = sut.deathText
         let expectedDeathText = "Extermination Successful.\n\nThe human race is dead.\n\nCare to rewind the tardis and try it all again?"
-        
         XCTAssertEqual(deathText, expectedDeathText)
     }
     
     func test_EndText_SetsAsExpected() {
         let endText = sut.endText
         let expectedEndText = "You are shoved back in your Tardis and released into space."
-        
         XCTAssertEqual(endText, expectedEndText)
     }
     

@@ -8,6 +8,17 @@
 
 import UIKit
 
+enum PageType {
+    case storyView
+    case choiceView
+    case riddleView
+    case codeView
+    case rpssView
+    case laserView
+    case jokeView
+    case victoryView
+}
+
 struct Page {
     
     // MARK: -  Properties

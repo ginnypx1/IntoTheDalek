@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class ChoiceViewController: UIViewController {
     
     // MARK: - Outlets
