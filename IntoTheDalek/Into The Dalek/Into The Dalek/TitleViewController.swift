@@ -10,6 +10,8 @@ import UIKit
 
 class TitleViewController: UIViewController {
     
+    @IBOutlet weak var startButton: UIButton!
+    
     // MARK: - Start Game
 
     @IBAction func startGame(_ sender: UIButton) {

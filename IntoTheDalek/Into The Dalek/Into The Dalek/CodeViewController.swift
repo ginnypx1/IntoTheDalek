@@ -17,6 +17,11 @@ class CodeViewController: UIViewController {
     @IBOutlet weak var codePart3: UILabel!
     @IBOutlet weak var codesTried: UILabel!
     
+    @IBOutlet weak var crackCodeButton: UIButton!
+    @IBOutlet weak var zeroButton: UIButton!
+    @IBOutlet weak var oneButton: UIButton!
+    
+    
     // MARK: Properties
     
     var page: Page!

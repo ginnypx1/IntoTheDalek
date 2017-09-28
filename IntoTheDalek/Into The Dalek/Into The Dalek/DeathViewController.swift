@@ -15,6 +15,7 @@ class DeathViewController: UIViewController {
     @IBOutlet weak var lossText: UILabel!
     @IBOutlet weak var deathQuip: UILabel!
     @IBOutlet weak var deathText: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
     
     // MARK: - Properties
     

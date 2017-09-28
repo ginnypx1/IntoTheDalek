@@ -14,6 +14,7 @@ class RiddleViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var riddleText: UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var solveRiddleButton: UIButton!
     
     // MARK: - Properties
     

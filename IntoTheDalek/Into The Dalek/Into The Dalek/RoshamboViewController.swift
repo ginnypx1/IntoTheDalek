@@ -14,6 +14,10 @@ class RoshamboViewController: UIViewController {
     
     @IBOutlet weak var resultsLabel: UILabel!
     
+    @IBOutlet weak var screwdriverButton: UIButton!
+    @IBOutlet weak var paperButton: UIButton!
+    @IBOutlet weak var rockButton: UIButton!
+    
     // MARK: - Properties
     
     var page: Page!
@@ -64,17 +68,17 @@ class RoshamboViewController: UIViewController {
     
     @IBAction func chooseRock(_ sender: Any) {
         roshamboGame.doctorThrows()
-        determineResults(userHand: Throw.rock)
+        determineResults(userHand: .rock)
     }
     
     @IBAction func choosePaper(_ sender: Any) {
         roshamboGame.doctorThrows()
-        determineResults(userHand: Throw.paper)
+        determineResults(userHand: .paper)
     }
     
     @IBAction func chooseSonicScrewdriver(_ sender: Any) {
         roshamboGame.doctorThrows()
-        determineResults(userHand: Throw.sonicScrewdriver)
+        determineResults(userHand: .sonicScrewdriver)
     }
 
 }

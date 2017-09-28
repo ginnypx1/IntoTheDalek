@@ -14,6 +14,9 @@ class LaserViewController: UIViewController {
 
     @IBOutlet var laserLabels: [UILabel]!
     
+    @IBOutlet weak var loadButton: UIButton!
+    @IBOutlet weak var shootButton: UIButton!
+    
     // MARK: - Properties
     
     var page: Page!

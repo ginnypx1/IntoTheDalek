@@ -16,6 +16,14 @@
 		34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B281E9D5EDC006A34FF /* PageModelTests.swift */; };
 		34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */; };
 		34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */; };
+		344743CD1F7D50C70079D3AA /* TitleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743CC1F7D50C70079D3AA /* TitleViewControllerTests.swift */; };
+		344743CF1F7D52080079D3AA /* StoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743CE1F7D52080079D3AA /* StoryViewControllerTests.swift */; };
+		344743D11F7D557C0079D3AA /* DeathViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743D01F7D557C0079D3AA /* DeathViewControllerTests.swift */; };
+		344743D31F7D57F60079D3AA /* ChoiceViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743D21F7D57F60079D3AA /* ChoiceViewControllerTests.swift */; };
+		344743D51F7D5A8B0079D3AA /* RiddleViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743D41F7D5A8B0079D3AA /* RiddleViewControllerTests.swift */; };
+		344743D71F7D5CC10079D3AA /* CodeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743D61F7D5CC10079D3AA /* CodeViewControllerTests.swift */; };
+		344743D91F7D67DC0079D3AA /* RoshamboViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743D81F7D67DC0079D3AA /* RoshamboViewControllerTests.swift */; };
+		344743DB1F7D6A340079D3AA /* LaserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344743DA1F7D6A340079D3AA /* LaserViewControllerTests.swift */; };
 		3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3455AC381DC3CE61001C3580 /* DeathViewController.swift */; };
 		3479E8DF1DBE79F300D9591E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8DE1DBE79F300D9591E /* AppDelegate.swift */; };
 		3479E8E11DBE79F300D9591E /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3479E8E01DBE79F300D9591E /* TitleViewController.swift */; };
@@ -55,6 +63,14 @@
 		34407B281E9D5EDC006A34FF /* PageModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageModelTests.swift; sourceTree = "<group>"; };
 		34407B2A1E9D5EEB006A34FF /* CodeModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeModelTests.swift; sourceTree = "<group>"; };
 		34407B2C1E9D5EFB006A34FF /* RoshamboModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoshamboModelTests.swift; sourceTree = "<group>"; };
+		344743CC1F7D50C70079D3AA /* TitleViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewControllerTests.swift; sourceTree = "<group>"; };
+		344743CE1F7D52080079D3AA /* StoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewControllerTests.swift; sourceTree = "<group>"; };
+		344743D01F7D557C0079D3AA /* DeathViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathViewControllerTests.swift; sourceTree = "<group>"; };
+		344743D21F7D57F60079D3AA /* ChoiceViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewControllerTests.swift; sourceTree = "<group>"; };
+		344743D41F7D5A8B0079D3AA /* RiddleViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiddleViewControllerTests.swift; sourceTree = "<group>"; };
+		344743D61F7D5CC10079D3AA /* CodeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewControllerTests.swift; sourceTree = "<group>"; };
+		344743D81F7D67DC0079D3AA /* RoshamboViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboViewControllerTests.swift; sourceTree = "<group>"; };
+		344743DA1F7D6A340079D3AA /* LaserViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserViewControllerTests.swift; sourceTree = "<group>"; };
 		3455AC381DC3CE61001C3580 /* DeathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathViewController.swift; sourceTree = "<group>"; };
 		3479E8DB1DBE79F300D9591E /* Into The Dalek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Into The Dalek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3479E8DE1DBE79F300D9591E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,9 +160,25 @@
 			isa = PBXGroup;
 			children = (
 				3421CC4D1F7C4FCD00CC2AED /* Model Tests */,
+				344743CB1F7D50AC0079D3AA /* Controller Tests */,
 				34407B201E9D5EA4006A34FF /* Info.plist */,
 			);
 			path = "Into The DalekTests";
+			sourceTree = "<group>";
+		};
+		344743CB1F7D50AC0079D3AA /* Controller Tests */ = {
+			isa = PBXGroup;
+			children = (
+				344743CC1F7D50C70079D3AA /* TitleViewControllerTests.swift */,
+				344743CE1F7D52080079D3AA /* StoryViewControllerTests.swift */,
+				344743D01F7D557C0079D3AA /* DeathViewControllerTests.swift */,
+				344743D21F7D57F60079D3AA /* ChoiceViewControllerTests.swift */,
+				344743D41F7D5A8B0079D3AA /* RiddleViewControllerTests.swift */,
+				344743D61F7D5CC10079D3AA /* CodeViewControllerTests.swift */,
+				344743D81F7D67DC0079D3AA /* RoshamboViewControllerTests.swift */,
+				344743DA1F7D6A340079D3AA /* LaserViewControllerTests.swift */,
+			);
+			path = "Controller Tests";
 			sourceTree = "<group>";
 		};
 		3479E8D21DBE79F200D9591E = {
@@ -289,10 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				344743D91F7D67DC0079D3AA /* RoshamboViewControllerTests.swift in Sources */,
 				34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */,
+				344743D11F7D557C0079D3AA /* DeathViewControllerTests.swift in Sources */,
+				344743D51F7D5A8B0079D3AA /* RiddleViewControllerTests.swift in Sources */,
+				344743CD1F7D50C70079D3AA /* TitleViewControllerTests.swift in Sources */,
 				3421CC4F1F7C4FED00CC2AED /* StoryModelTests.swift in Sources */,
 				34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */,
+				344743CF1F7D52080079D3AA /* StoryViewControllerTests.swift in Sources */,
 				34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */,
+				344743D31F7D57F60079D3AA /* ChoiceViewControllerTests.swift in Sources */,
+				344743DB1F7D6A340079D3AA /* LaserViewControllerTests.swift in Sources */,
+				344743D71F7D5CC10079D3AA /* CodeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

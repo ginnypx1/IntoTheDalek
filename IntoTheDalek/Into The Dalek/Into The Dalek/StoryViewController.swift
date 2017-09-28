@@ -13,6 +13,7 @@ class StoryViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var textView: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     // MARK: - Properties
     
