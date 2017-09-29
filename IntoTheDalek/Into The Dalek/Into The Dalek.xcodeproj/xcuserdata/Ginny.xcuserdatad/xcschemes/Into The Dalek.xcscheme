@@ -40,6 +40,16 @@
                ReferencedContainer = "container:Into The Dalek.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "34D86A8E1F7EB2A100574004"
+               BuildableName = "Into The DalekUITests.xctest"
+               BlueprintName = "Into The DalekUITests"
+               ReferencedContainer = "container:Into The Dalek.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

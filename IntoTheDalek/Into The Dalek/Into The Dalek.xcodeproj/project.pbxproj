@@ -41,10 +41,18 @@
 		34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D439D31DE0C342004C8B54 /* LaserViewController.swift */; };
 		34D86A881F7EAA3300574004 /* JokeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A871F7EAA3300574004 /* JokeViewControllerTests.swift */; };
 		34D86A8A1F7EAA4100574004 /* VictoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A891F7EAA4100574004 /* VictoryViewControllerTests.swift */; };
+		34D86A921F7EB2A100574004 /* Into_The_DalekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A911F7EB2A100574004 /* Into_The_DalekUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		34407B211E9D5EA4006A34FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3479E8D31DBE79F200D9591E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3479E8DA1DBE79F200D9591E;
+			remoteInfo = "Into The Dalek";
+		};
+		34D86A941F7EB2A100574004 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3479E8D31DBE79F200D9591E /* Project object */;
 			proxyType = 1;
@@ -92,6 +100,9 @@
 		34D439D31DE0C342004C8B54 /* LaserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserViewController.swift; sourceTree = "<group>"; };
 		34D86A871F7EAA3300574004 /* JokeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewControllerTests.swift; sourceTree = "<group>"; };
 		34D86A891F7EAA4100574004 /* VictoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryViewControllerTests.swift; sourceTree = "<group>"; };
+		34D86A8F1F7EB2A100574004 /* Into The DalekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Into The DalekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D86A911F7EB2A100574004 /* Into_The_DalekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Into_The_DalekUITests.swift; sourceTree = "<group>"; };
+		34D86A931F7EB2A100574004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +114,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3479E8D81DBE79F200D9591E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D86A8C1F7EB2A100574004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,6 +210,7 @@
 			children = (
 				3479E8DD1DBE79F300D9591E /* Into The Dalek */,
 				34407B1D1E9D5EA4006A34FF /* Into The DalekTests */,
+				34D86A901F7EB2A100574004 /* Into The DalekUITests */,
 				3479E8DC1DBE79F300D9591E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,6 +220,7 @@
 			children = (
 				3479E8DB1DBE79F300D9591E /* Into The Dalek.app */,
 				34407B1C1E9D5EA2006A34FF /* Into The DalekTests.xctest */,
+				34D86A8F1F7EB2A100574004 /* Into The DalekUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +238,15 @@
 				3479E8EA1DBE79F300D9591E /* Info.plist */,
 			);
 			path = "Into The Dalek";
+			sourceTree = "<group>";
+		};
+		34D86A901F7EB2A100574004 /* Into The DalekUITests */ = {
+			isa = PBXGroup;
+			children = (
+				34D86A911F7EB2A100574004 /* Into_The_DalekUITests.swift */,
+				34D86A931F7EB2A100574004 /* Info.plist */,
+			);
+			path = "Into The DalekUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,13 +287,31 @@
 			productReference = 3479E8DB1DBE79F300D9591E /* Into The Dalek.app */;
 			productType = "com.apple.product-type.application";
 		};
+		34D86A8E1F7EB2A100574004 /* Into The DalekUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D86A961F7EB2A100574004 /* Build configuration list for PBXNativeTarget "Into The DalekUITests" */;
+			buildPhases = (
+				34D86A8B1F7EB2A100574004 /* Sources */,
+				34D86A8C1F7EB2A100574004 /* Frameworks */,
+				34D86A8D1F7EB2A100574004 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34D86A951F7EB2A100574004 /* PBXTargetDependency */,
+			);
+			name = "Into The DalekUITests";
+			productName = "Into The DalekUITests";
+			productReference = 34D86A8F1F7EB2A100574004 /* Into The DalekUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3479E8D31DBE79F200D9591E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = GhostBirdGames;
 				TargetAttributes = {
@@ -280,6 +327,12 @@
 						DevelopmentTeam = B875NM54ML;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+					};
+					34D86A8E1F7EB2A100574004 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 4D9KH6G8PV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3479E8DA1DBE79F200D9591E;
 					};
 				};
 			};
@@ -298,6 +351,7 @@
 			targets = (
 				3479E8DA1DBE79F200D9591E /* Into The Dalek */,
 				34407B1B1E9D5EA2006A34FF /* Into The DalekTests */,
+				34D86A8E1F7EB2A100574004 /* Into The DalekUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,6 +371,13 @@
 				3479E8E91DBE79F300D9591E /* LaunchScreen.storyboard in Resources */,
 				3479E8E61DBE79F300D9591E /* Assets.xcassets in Resources */,
 				3479E8E41DBE79F300D9591E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D86A8D1F7EB2A100574004 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +429,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34D86A8B1F7EB2A100574004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D86A921F7EB2A100574004 /* Into_The_DalekUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -375,6 +444,11 @@
 			isa = PBXTargetDependency;
 			target = 3479E8DA1DBE79F200D9591E /* Into The Dalek */;
 			targetProxy = 34407B211E9D5EA4006A34FF /* PBXContainerItemProxy */;
+		};
+		34D86A951F7EB2A100574004 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3479E8DA1DBE79F200D9591E /* Into The Dalek */;
+			targetProxy = 34D86A941F7EB2A100574004 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -567,6 +641,48 @@
 			};
 			name = Release;
 		};
+		34D86A971F7EB2A100574004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D9KH6G8PV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Into The DalekUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ginnyPennekamp.Into-The-DalekUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Into The Dalek";
+			};
+			name = Debug;
+		};
+		34D86A981F7EB2A100574004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4D9KH6G8PV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Into The DalekUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ginnyPennekamp.Into-The-DalekUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Into The Dalek";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +709,15 @@
 			buildConfigurations = (
 				3479E8EE1DBE79F300D9591E /* Debug */,
 				3479E8EF1DBE79F300D9591E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34D86A961F7EB2A100574004 /* Build configuration list for PBXNativeTarget "Into The DalekUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D86A971F7EB2A100574004 /* Debug */,
+				34D86A981F7EB2A100574004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
