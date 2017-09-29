@@ -10,6 +10,10 @@ import UIKit
 
 class JokeViewController: UIViewController {
     
+    @IBOutlet weak var crossRoadJokeButton: UIButton!
+    @IBOutlet weak var skinJokeButton: UIButton!
+    @IBOutlet weak var appleJokeButton: UIButton!
+    
     // MARK: - Properties
     
     var page: Page!

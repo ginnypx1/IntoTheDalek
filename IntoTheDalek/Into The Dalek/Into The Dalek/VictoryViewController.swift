@@ -13,6 +13,7 @@ class VictoryViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var victoryText: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
     
     // MARK: - Properties
     

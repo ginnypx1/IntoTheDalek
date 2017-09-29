@@ -39,6 +39,8 @@
 		34B7FF341DE2024A00B30BCE /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B7FF331DE2024A00B30BCE /* JokeViewController.swift */; };
 		34B7FF381DE20F2900B30BCE /* VictoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */; };
 		34D439D41DE0C342004C8B54 /* LaserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D439D31DE0C342004C8B54 /* LaserViewController.swift */; };
+		34D86A881F7EAA3300574004 /* JokeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A871F7EAA3300574004 /* JokeViewControllerTests.swift */; };
+		34D86A8A1F7EAA4100574004 /* VictoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A891F7EAA4100574004 /* VictoryViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		34B7FF331DE2024A00B30BCE /* JokeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		34B7FF371DE20F2900B30BCE /* VictoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VictoryViewController.swift; sourceTree = "<group>"; };
 		34D439D31DE0C342004C8B54 /* LaserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaserViewController.swift; sourceTree = "<group>"; };
+		34D86A871F7EAA3300574004 /* JokeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewControllerTests.swift; sourceTree = "<group>"; };
+		34D86A891F7EAA4100574004 /* VictoryViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 				344743D61F7D5CC10079D3AA /* CodeViewControllerTests.swift */,
 				344743D81F7D67DC0079D3AA /* RoshamboViewControllerTests.swift */,
 				344743DA1F7D6A340079D3AA /* LaserViewControllerTests.swift */,
+				34D86A871F7EAA3300574004 /* JokeViewControllerTests.swift */,
+				34D86A891F7EAA4100574004 /* VictoryViewControllerTests.swift */,
 			);
 			path = "Controller Tests";
 			sourceTree = "<group>";
@@ -325,9 +331,11 @@
 				34407B291E9D5EDC006A34FF /* PageModelTests.swift in Sources */,
 				344743D11F7D557C0079D3AA /* DeathViewControllerTests.swift in Sources */,
 				344743D51F7D5A8B0079D3AA /* RiddleViewControllerTests.swift in Sources */,
+				34D86A881F7EAA3300574004 /* JokeViewControllerTests.swift in Sources */,
 				344743CD1F7D50C70079D3AA /* TitleViewControllerTests.swift in Sources */,
 				3421CC4F1F7C4FED00CC2AED /* StoryModelTests.swift in Sources */,
 				34407B2B1E9D5EEB006A34FF /* CodeModelTests.swift in Sources */,
+				34D86A8A1F7EAA4100574004 /* VictoryViewControllerTests.swift in Sources */,
 				344743CF1F7D52080079D3AA /* StoryViewControllerTests.swift in Sources */,
 				34407B2D1E9D5EFC006A34FF /* RoshamboModelTests.swift in Sources */,
 				344743D31F7D57F60079D3AA /* ChoiceViewControllerTests.swift in Sources */,

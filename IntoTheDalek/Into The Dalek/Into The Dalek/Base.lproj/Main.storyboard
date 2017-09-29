@@ -261,13 +261,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WUz-1M-m1e">
-                                <rect key="frame" x="0.0" y="28" width="0.0" height="475"/>
+                                <rect key="frame" x="24" y="28" width="272" height="475"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tardis" translatesAutoresizingMaskIntoConstraints="NO" id="fsZ-Mi-LfW">
-                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="233.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="233.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoryText" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-P6-0nL">
-                                        <rect key="frame" x="0.0" y="241.5" width="0.0" height="233.5"/>
+                                        <rect key="frame" x="0.0" y="241.5" width="272" height="233.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -275,7 +275,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43v-09-e7w">
-                                <rect key="frame" x="0.0" y="511" width="0.0" height="57"/>
+                                <rect key="frame" x="0.0" y="511" width="320" height="57"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Play Again">
@@ -300,6 +300,7 @@
                         <viewLayoutGuide key="safeArea" id="D2w-4R-wd9"/>
                     </view>
                     <connections>
+                        <outlet property="playAgainButton" destination="43v-09-e7w" id="XfF-jy-BQF"/>
                         <outlet property="victoryText" destination="GxD-P6-0nL" id="kDB-sN-IzB"/>
                     </connections>
                 </viewController>
@@ -875,6 +876,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g2w-hP-Epn"/>
                     </view>
+                    <connections>
+                        <outlet property="appleJokeButton" destination="Jb2-Qb-Sem" id="lKu-3j-LUg"/>
+                        <outlet property="crossRoadJokeButton" destination="Fn0-J3-gWu" id="l5z-bc-jsk"/>
+                        <outlet property="skinJokeButton" destination="PlF-KK-Msb" id="5ME-CZ-7nL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdW-Bl-tQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
