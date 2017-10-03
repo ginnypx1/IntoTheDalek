@@ -42,6 +42,7 @@
 		34D86A881F7EAA3300574004 /* JokeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A871F7EAA3300574004 /* JokeViewControllerTests.swift */; };
 		34D86A8A1F7EAA4100574004 /* VictoryViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A891F7EAA4100574004 /* VictoryViewControllerTests.swift */; };
 		34D86A921F7EB2A100574004 /* Into_The_DalekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D86A911F7EB2A100574004 /* Into_The_DalekUITests.swift */; };
+		34FE05D31F84263F00EE9ADF /* AccessibilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FE05D21F84263F00EE9ADF /* AccessibilityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		34D86A8F1F7EB2A100574004 /* Into The DalekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Into The DalekUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34D86A911F7EB2A100574004 /* Into_The_DalekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Into_The_DalekUITests.swift; sourceTree = "<group>"; };
 		34D86A931F7EB2A100574004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34FE05D21F84263F00EE9ADF /* AccessibilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				3479E8E51DBE79F300D9591E /* Assets.xcassets */,
 				3479E8E71DBE79F300D9591E /* LaunchScreen.storyboard */,
 				3479E8EA1DBE79F300D9591E /* Info.plist */,
+				34FE05D21F84263F00EE9ADF /* AccessibilityManager.swift */,
 			);
 			path = "Into The Dalek";
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				3404ABBA1E788C8500CA6CD9 /* PageModel.swift in Sources */,
 				34B7FF381DE20F2900B30BCE /* VictoryViewController.swift in Sources */,
 				3494B94A1E765C4F00BFBC7D /* RoshamboViewController.swift in Sources */,
+				34FE05D31F84263F00EE9ADF /* AccessibilityManager.swift in Sources */,
 				3404ABB41E787D9F00CA6CD9 /* RiddleViewKeyboardExtension.swift in Sources */,
 				3455AC391DC3CE61001C3580 /* DeathViewController.swift in Sources */,
 				3404ABC01E78BB2D00CA6CD9 /* CodeModel.swift in Sources */,

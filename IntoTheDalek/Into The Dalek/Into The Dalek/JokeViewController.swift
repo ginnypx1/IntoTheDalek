@@ -18,6 +18,14 @@ class JokeViewController: UIViewController {
     
     var page: Page!
     
+    // MARK: - View
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        applyAccessibility()
+    }
+    
     // MARK: - Continue Story
     
     func continueStory() {

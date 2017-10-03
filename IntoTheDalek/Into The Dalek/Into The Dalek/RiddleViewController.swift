@@ -28,6 +28,7 @@ class RiddleViewController: UIViewController, UITextFieldDelegate {
         riddleTextFieldDelegate.setUpTextField(textField)
         
         riddleText.text = page.pageText
+        applyAccessibility()
     }
     
     override func viewWillAppear(_ animated: Bool) {

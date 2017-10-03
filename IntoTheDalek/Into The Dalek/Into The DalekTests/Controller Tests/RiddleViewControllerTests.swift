@@ -52,6 +52,10 @@ class RiddleViewControllerTests: XCTestCase {
         XCTAssertNotNil(delegate)
     }
     
+    func test_riddleTextFieldDelegate_IsCorrect() {
+        XCTAssertTrue(sut.textField.delegate is DalekTextFieldDelegate)
+    }
+    
     // TODO: - Test text field sets up correctly
     // TODO: - Test keyboard notifications
     

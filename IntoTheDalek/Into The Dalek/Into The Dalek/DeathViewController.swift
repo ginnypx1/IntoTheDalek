@@ -29,6 +29,7 @@ class DeathViewController: UIViewController {
         lossText.text = page.endText
         deathQuip.text = page.deathQuip
         deathText.text = page.deathText
+        applyAccessibility()
     }
     
     // MARK: - Restart Game

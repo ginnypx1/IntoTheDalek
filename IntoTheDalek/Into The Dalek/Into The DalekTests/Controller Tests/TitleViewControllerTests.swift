@@ -25,7 +25,6 @@ class TitleViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -35,8 +34,8 @@ class TitleViewControllerTests: XCTestCase {
         let startButton = sut.startButton
         XCTAssertNotNil(startButton)
     }
-    
-    // TODO: Test start button has startGame() target
+
+    // TODO: Test startButton calls startGame()
     // TODO: Test startGame() segues to storyView
     
     

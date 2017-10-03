@@ -27,6 +27,9 @@ class LaserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AccessibilityManager.applyDynamicText(to: loadButton)
+        AccessibilityManager.applyDynamicText(to: shootButton)
+        
         // reset shot count
         shotCount = -1
     }
@@ -38,15 +41,19 @@ class LaserViewController: UIViewController {
         while shot <= shotCount {
             if shot < 4 {
                 laserLabels[shot].backgroundColor = .yellow
+                laserLabels[shot].accessibilityLabel = "Yellow"
                 shot += 1
             } else if (shot >= 4) && (shot < 8) {
                 laserLabels[shot].backgroundColor = .orange
+                laserLabels[shot].accessibilityLabel = "Orange"
                 shot += 1
             } else if (shot >= 8) && (shot < 12) {
                 laserLabels[shot].backgroundColor = .red
+                laserLabels[shot].accessibilityLabel = "Red"
                 shot += 1
             } else if (shot >= 12) {
                 laserLabels[shot].backgroundColor = .brown
+                laserLabels[shot].accessibilityLabel = "Brown"
                 shot += 1
             }
         }

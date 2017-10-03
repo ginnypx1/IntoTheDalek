@@ -25,6 +25,7 @@ class StoryViewController: UIViewController {
         super.viewDidLoad()
 
         textView.text = page.pageText
+        applyAccessibility()
     }
     
     // MARK: - Navigation
@@ -77,7 +78,9 @@ class StoryViewController: UIViewController {
             navigationController?.pushViewController(nextViewController, animated: true)
         case .storyView:
             // refresh the text
-            textView.text = page.pageText
+            let pageText = page.pageText
+            textView.text = pageText
+            textView.accessibilityLabel = pageText
         }
     }
 

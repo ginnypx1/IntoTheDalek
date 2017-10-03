@@ -25,6 +25,7 @@ class ChoiceViewController: UIViewController {
         super.viewDidLoad()
 
         choiceText.text = page.pageText
+        applyAccessibility()
     }
     
     // MARK: - Accept or decline mission

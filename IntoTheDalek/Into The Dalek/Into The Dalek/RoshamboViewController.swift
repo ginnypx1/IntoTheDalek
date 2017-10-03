@@ -29,12 +29,15 @@ class RoshamboViewController: UIViewController {
         super.viewDidLoad()
         
         resultsLabel.text = page.pageText
+        applyAccessibility()
     }
     
     // MARK: - Display Results
     
     func displayDraw() {
-        resultsLabel.text = "It's a draw!\nChoose again."
+        let drawText = "It's a draw!\nChoose again."
+        resultsLabel.text = drawText
+        resultsLabel.accessibilityLabel = drawText
     }
     
     func continueStory() {

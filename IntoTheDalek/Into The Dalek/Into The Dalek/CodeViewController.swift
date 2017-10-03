@@ -38,6 +38,8 @@ class CodeViewController: UIViewController {
         
         codesTried.text?.removeAll()
         codeModel.codesTried.removeAll(keepingCapacity: true)
+        
+        AccessibilityManager.applyDynamicText(to: crackCodeButton)
     }
     
     // MARK: - Enter Code
@@ -49,12 +51,22 @@ class CodeViewController: UIViewController {
         case 1:
             codePart1.text = "0"
             codeModel.userAnswer1 = 0
+            
+            codePart1.accessibilityLabel = "0"
+            codePart1.accessibilityValue = "0"
         case 2:
             codePart2.text = "0"
             codeModel.userAnswer2 = 0
+            
+            codePart2.accessibilityLabel = "0"
+            codePart2.accessibilityValue = "0"
         case 3:
             codePart3.text = "0"
             codeModel.userAnswer3 = 0
+            
+            codePart3.accessibilityLabel = "0"
+            codePart3.accessibilityValue = "0"
+            
             codeModel.enterCode()
         default: break
         }
@@ -67,12 +79,22 @@ class CodeViewController: UIViewController {
         case 1:
             codePart1.text = "1"
             codeModel.userAnswer1 = 1
+            
+            codePart1.accessibilityLabel = "1"
+            codePart1.accessibilityValue = "1"
         case 2:
             codePart2.text = "1"
             codeModel.userAnswer2 = 1
+            
+            codePart2.accessibilityLabel = "1"
+            codePart2.accessibilityValue = "1"
         case 3:
             codePart3.text = "1"
             codeModel.userAnswer3 = 1
+            
+            codePart3.accessibilityLabel = "1"
+            codePart3.accessibilityValue = "1"
+            
             codeModel.enterCode()
         default: break
         }
@@ -107,7 +129,10 @@ class CodeViewController: UIViewController {
         switch codeModel.checkCode() {
         case .win: self.continueStory()
         case .lose: self.die()
-        case .undetermined: codesTried.text = "\(codeModel.codesTried)"
+        case .undetermined:
+            let triedCodes = "\(codeModel.codesTried)"
+            codesTried.text = triedCodes
+            codesTried.accessibilityLabel = triedCodes
         }
     }
 

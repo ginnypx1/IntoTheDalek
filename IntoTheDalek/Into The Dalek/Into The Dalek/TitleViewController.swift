@@ -10,7 +10,17 @@ import UIKit
 
 class TitleViewController: UIViewController {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var startButton: UIButton!
+    
+    // MARK: - View
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        AccessibilityManager.applyDynamicText(to: startButton)
+    }
     
     // MARK: - Start Game
 

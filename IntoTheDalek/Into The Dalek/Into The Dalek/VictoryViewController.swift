@@ -25,6 +25,7 @@ class VictoryViewController: UIViewController {
         super.viewDidLoad()
 
         victoryText.text = page.pageText
+        applyAccessibility()
     }
     
     // MARK: - Play Again
