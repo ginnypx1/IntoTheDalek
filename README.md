@@ -29,6 +29,10 @@ To check out "Into The Dalek" on the web: http://ginnypx1.github.io/IntoTheDalek
 
 Start the Tardis, sit back and enjoy.
 
+## Technical Information
+
+The "Into the Dalek" iOS app has been updated for Swift 4.0 and iOS 11. It has both unit and UI tests integrated, as well as VoiceOver and Dynamic Text accessibility support.
+
 ** Improvements
 
 Original art needs to be loaded into both the web and iOS versions of "Into the Dalek".
